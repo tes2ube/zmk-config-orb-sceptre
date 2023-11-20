@@ -17,11 +17,44 @@
 
 / {
     behaviors {
-        L1_DAN: L1_DAN {
+        DAN_L1: DAN_L1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "L1_DAN";
+            label = "DAN_L1";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&tog 1>;
+        };
+
+        HT_CAP: HT_CAP {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_CAP";
+            bindings = <&kp>, <&caps_word>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+        };
+
+        DAN_CAP: DAN_CAP {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DAN_CAP";
+            #binding-cells = <0>;
+            bindings = <&HT_CAP LSHIFT 0>, <&kp CAPS>;
+        };
+
+        HT_LNUM: HT_LNUM {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_LNUM";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        DAN_L1_L2: DAN_L1_L2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DAN_L1_L2";
+            #binding-cells = <0>;
+            bindings = <&HT_LNUM 1 1>, <&HT_LNUM 2 2>;
         };
     };
 
@@ -36,10 +69,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE  &kp Q        &kp W       &kp E       &kp R         &kp T      &kp Y      &kp U          &kp I           &kp O            &kp P            &trans
-&trans     &kp A        &kp S       &kp D       &kp F         &kp G      &kp H      &kp J          &kp K           &kp L            &kp SEMI         &kp SQT
-&trans     &mt LCTRL Z  &mt LALT X  &mt LGUI C  &mt LSHIFT V  &kp B      &kp N      &mt RSHIFT M   &mt RGUI COMMA  &mt RALT PERIOD  &mt RCTRL SLASH  &trans
-                                    &trans      &mo 1         &kp RET    &kp SPACE  &kp BACKSPACE  &trans
+&kp GRAVE  &kp Q        &kp W       &kp E       &kp R         &kp T       &kp Y      &kp U          &kp I           &kp O            &kp P            &kp SLASH
+&kp TAB    &lt 1 A      &lt 2 S     &lt 3 D     &kp F         &kp G       &kp H      &kp J          &lt 3 K         &lt 2 L          &lt 1 SEMI       &kp SQT
+&trans     &mt LCTRL Z  &mt LALT X  &mt LGUI C  &mt LSHIFT V  &kp B       &kp N      &mt RSHIFT M   &mt RGUI COMMA  &mt RALT PERIOD  &mt RCTRL SLASH  &gresc
+                                    &kp ESC     &DAN_L1_L2    &DAN_CAP    &kp SPACE  &kp BACKSPACE  &kp ENTER
             >;
         };
 
@@ -51,10 +84,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp SLASH     &kp MINUS  &kp N7  &kp N8    &kp N9  &trans       &trans   &trans  &trans    &trans  &trans  &trans
-&kp ASTERISK  &kp PLUS   &kp N4  &kp N5    &kp N6  &kp EQUAL    &trans   &trans  &trans    &trans  &trans  &trans
-&kp LSHIFT    &kp N0     &kp N1  &kp N2    &kp N3  &kp ENTER    &trans   &trans  &trans    &trans  &trans  &trans
-                                 &kp LGUI  &trans  &kp SPACE    &kp RET  &trans  &kp RALT
+&kp SLASH     &kp MINUS  &kp N7  &kp N8  &kp N9  &trans       &trans  &kp LBRC  &kp RBRC  &kp LT  &kp GT  &kp CARET
+&kp ASTERISK  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp EQUAL    &trans  &kp LPAR  &kp RPAR  &trans  &trans  &trans
+&kp LSHIFT    &kp N0     &kp N1  &kp N2  &kp N3  &kp ENTER    &trans  &kp LBKT  &kp RBKT  &trans  &trans  &trans
+                                 &to 0   &trans  &trans       &trans  &trans    &trans
             >;
         };
 
@@ -69,7 +102,7 @@
 &kp TAB    &trans    &kp UP    &trans     &trans  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans    &trans     &trans  &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                               &trans     &trans  &kp SPACE    &kp RET    &trans     &kp RALT
+                               &to 0      &trans  &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
