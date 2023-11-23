@@ -56,6 +56,114 @@
             #binding-cells = <0>;
             bindings = <&HT_LNUM 1 1>, <&HT_LNUM 2 2>;
         };
+
+        M_F1_F13: M_F1_F13 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F1_F13";
+            bindings = <&kp F1>, <&kp F13>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F2_F14: M_F2_F14 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F2_F14";
+            bindings = <&kp F2>, <&kp F14>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F3_F15: M_F3_F15 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F3_F15";
+            bindings = <&kp F3>, <&kp F15>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F4_F16: M_F4_F16 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F4_F16";
+            bindings = <&kp F4>, <&kp F16>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F5_F17: M_F5_F17 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F5_F17";
+            bindings = <&kp F5>, <&kp F17>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F6_F18: M_F6_F18 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F6_F18";
+            bindings = <&kp F6>, <&kp F18>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F7_F19: M_F7_F19 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F7_F19";
+            bindings = <&kp F7>, <&kp F19>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F8_F20: M_F8_F20 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F8_F20";
+            bindings = <&kp F8>, <&kp F20>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F9_F21: M_F9_F21 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F9_F21";
+            bindings = <&kp F9>, <&kp F21>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F10_F22: M_F10_F22 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F10_F22";
+            bindings = <&kp F10>, <&kp F22>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F11_F23: M_F11_F23 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F11_F23";
+            bindings = <&kp F11>, <&kp F23>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        M_F12_F24: M_F12_F24 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_F12_F24";
+            bindings = <&kp F12>, <&kp F24>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -71,7 +179,7 @@
             bindings = <
 &kp GRAVE  &kp Q        &kp W       &kp E       &kp R         &kp T       &kp Y      &kp U          &kp I           &kp O            &kp P            &kp SLASH
 &kp TAB    &lt 1 A      &lt 2 S     &lt 3 D     &kp F         &kp G       &kp H      &kp J          &lt 3 K         &lt 2 L          &lt 1 SEMI       &kp SQT
-&trans     &mt LCTRL Z  &mt LALT X  &mt LGUI C  &mt LSHIFT V  &kp B       &kp N      &mt RSHIFT M   &mt RGUI COMMA  &mt RALT PERIOD  &mt RCTRL SLASH  &trans
+&trans     &mt LCTRL Z  &mt LALT X  &mt LGUI C  &mt LSHIFT V  &kp B       &kp N      &mt RSHIFT M   &mt RGUI COMMA  &mt RALT PERIOD  &mt RCTRL SLASH  &kp EXCL
                                     &kp ESC     &DAN_L1_L2    &DAN_CAP    &kp SPACE  &kp BACKSPACE  &kp ENTER
             >;
         };
@@ -87,7 +195,7 @@
 &kp SLASH     &kp MINUS  &kp N7  &kp N8  &kp N9  &trans       &trans  &kp LBRC  &kp RBRC  &kp LT  &kp GT  &kp CARET
 &kp ASTERISK  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp EQUAL    &trans  &kp LPAR  &kp RPAR  &trans  &trans  &trans
 &kp LSHIFT    &kp N0     &kp N1  &kp N2  &kp N3  &kp ENTER    &trans  &kp LBKT  &kp RBKT  &trans  &trans  &trans
-                                 &to 0   &trans  &trans       &trans  &trans    &trans
+                                 &to 0   &trans  &trans       &trans  &kp DEL   &trans
             >;
         };
 
@@ -99,10 +207,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans    &kp UP    &trans     &trans     &trans       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp HOME   &kp END      &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &trans    &trans    &trans     &kp PG_UP  &kp PG_DN    &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                            &to 0      &trans     &trans       &trans     &trans     &trans
+&trans     &trans    &kp UP    &trans     &trans     &trans       &M_F9_F21  &M_F10_F22  &M_F11_F23  &M_F12_F24  &trans  &trans
+&trans     &kp LEFT  &kp DOWN  &kp RIGHT  &kp HOME   &kp END      &M_F5_F17  &M_F6_F18   &M_F7_F19   &M_F8_F20   &trans  &trans
+&kp LSHFT  &trans    &trans    &trans     &kp PG_UP  &kp PG_DN    &M_F1_F13  &M_F2_F14   &M_F3_F15   &M_F4_F16   &trans  &trans
+                               &to 0      &trans     &trans       &trans     &trans      &trans
             >;
         };
 
