@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -174,7 +173,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        home {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -182,10 +181,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE                 &kp Q        &kp W       &kp E       &kp R         &kp T       &kp Y      &kp U          &kp I           &kp O            &kp P            &kp SLASH
-&kp TAB                   &lt 1 A      &lt 2 S     &lt 3 D     &kp F         &kp G       &kp H      &kp J          &lt 3 K         &lt 2 L          &lt 1 SEMI       &kp SQT
+&kp LSHFT                 &kp LSHFT    &kp W       &kp E       &kp R         &kp T       &kp Y      &kp U          &kp I           &kp O            &kp P            &kp LBKT
+&kp LSHFT                 &kp LSHFT    &lt 2 S     &lt 3 D     &kp F         &kp G       &kp H      &kp J          &lt 3 K         &lt 2 L          &lt 1 SEMI       &kp SQT
 &kp C_AL_KEYBOARD_LAYOUT  &mt LCTRL Z  &mt LALT X  &mt LGUI C  &mt LSHIFT V  &kp B       &kp N      &mt RSHIFT M   &mt RGUI COMMA  &mt RALT PERIOD  &mt RCTRL SLASH  &kp EXCL
-                                                   &kp ESC     &DAN_L1_L2    &DAN_CAP    &kp SPACE  &kp BACKSPACE  &kp ENTER
+                                                   &lt 3 ESC   &DAN_L1_L2    &DAN_CAP    &kp SPACE  &kp BACKSPACE  &kp ENTER
             >;
         };
 
@@ -197,14 +196,14 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp SLASH     &kp MINUS  &kp N7  &kp N8  &kp N9  &trans       &trans  &trans    &trans    &trans    &trans           &kp BSLH
-&kp ASTERISK  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp EQUAL    &trans  &kp LPAR  &kp RPAR  &kp LBRC  &kp RIGHT_BRACE  &trans
-&kp LSHIFT    &kp N0     &kp N1  &kp N2  &kp N3  &kp ENTER    &trans  &kp LBKT  &kp RBKT  &kp LT    &kp GT           &trans
-                                 &to 0   &trans  &trans       &trans  &kp DEL   &trans
+&kp SLASH     &kp MINUS  &kp N7  &kp N8  &kp N9  &trans       &kp C_VOL_UP  &kp K_PREV  &kp K_PP  &kp K_NEXT  &trans           &kp RBKT
+&kp ASTERISK  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp EQUAL    &kp C_VOL_DN  &kp LPAR    &kp RPAR  &kp LBRC    &kp RIGHT_BRACE  &kp BACKSLASH
+&kp LSHIFT    &kp N0     &kp N1  &kp N2  &kp N3  &kp ENTER    &kp K_MUTE    &kp LBKT    &kp RBKT  &kp LT      &kp GT           &trans
+                                 &to 0   &trans  &trans       &trans        &kp DEL     &trans
             >;
         };
 
-        arrow- {
+        arrow-ctrl {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -219,12 +218,12 @@
             >;
         };
 
-        layer_3 {
+        rh-rgb {
             bindings = <
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(67,100,50)  &rgb_ug RGB_COLOR_HSB(112,100,48)  &rgb_ug RGB_COLOR_HSB(186,100,50)  &rgb_ug RGB_COLOR_HSB(245,100,50)  &rgb_ug RGB_COLOR_HSB(287,100,50)
-&kp C_VOL_UP  &kp K_MUTE    &kp C_BRI_DN  &kp C_REWIND  &kp           &kp             &rgb_ug RGB_TOG                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SAI                    &rgb_ug RGB_HUI                    &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF
-&kp C_VOL_DN  &kp C_BRI_UP  &kp C_FF      &kp C_SLOW    &kp           &kp             &rgb_ug RGB_COLOR_HSB(0,0,0)     &rgb_ug RGB_BRD                   &rgb_ug RGB_SAD                    &rgb_ug RGB_HUD                    &rgb_ug RGB_SPD                    &rgb_ug RGB_EFR
-                                          &kp K_PREV    &kp K_PP      &kp K_NEXT      &kp                              &kp                               &kp
+&kp LBKT   &kp P     &kp O    &kp I      &kp U          &kp Y        &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(67,100,50)  &rgb_ug RGB_COLOR_HSB(112,100,48)  &rgb_ug RGB_COLOR_HSB(186,100,50)  &rgb_ug RGB_COLOR_HSB(245,100,50)  &rgb_ug RGB_COLOR_HSB(287,100,50)
+&kp APOS   &kp SEMI  &kp L    &kp K      &kp J          &kp H        &rgb_ug RGB_TOG                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SAI                    &rgb_ug RGB_HUI                    &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF
+&kp SPACE  &kp FSLH  &kp DOT  &kp COMMA  &kp M          &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)     &rgb_ug RGB_BRD                   &rgb_ug RGB_SAD                    &rgb_ug RGB_HUD                    &rgb_ug RGB_SPD                    &rgb_ug RGB_EFR
+                              &trans     &kp BACKSPACE  &kp ENTER    &kp C_VOL_DN                     &kp K_MUTE                        &kp C_VOL_UP
             >;
         };
     };
