@@ -19,18 +19,12 @@
 
 &lt {
     flavor = "balanced";
-    quick-tap-ms = <125>;
-    require-prior-idle-ms = <150>;
-    tapping-term-ms = <150>;
-    hold-trigger-on-release;
+    tapping-term-ms = <100>;
 };
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <125>;
-    tapping-term-ms = <150>;
-    require-prior-idle-ms = <150>;
-    hold-trigger-on-release;
+    tapping-term-ms = <100>;
 };
 
 / {
@@ -42,9 +36,7 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <100>;
         };
 
         DAN_CAP: DAN_CAP {
@@ -53,7 +45,7 @@
             #binding-cells = <0>;
             bindings = <&HT_CAP LSHIFT 0>, <&kp CAPS>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
 
         HT_LNUM: HT_LNUM {
@@ -62,9 +54,7 @@
             bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
         };
 
@@ -74,7 +64,7 @@
             #binding-cells = <0>;
             bindings = <&HT_LNUM 1 1>, <&HT_LNUM 2 2>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
 
         M_F1_F13: M_F1_F13 {
@@ -191,9 +181,7 @@
             bindings = <&MLm1>, <&MLt1>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
         };
 
@@ -203,9 +191,7 @@
             bindings = <&MLm2>, <&MLt2>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
         };
 
@@ -215,9 +201,7 @@
             bindings = <&MLm3>, <&MLt3>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
         };
 
@@ -227,9 +211,7 @@
             bindings = <&MLm0>, <&MLt0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
         };
 
@@ -239,9 +221,7 @@
             bindings = <&MLm1>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
         };
 
@@ -251,9 +231,7 @@
             bindings = <&MLm2>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
         };
 
@@ -263,9 +241,7 @@
             bindings = <&MLm3>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
         };
 
@@ -275,9 +251,7 @@
             bindings = <&MLm0>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
         };
     };
