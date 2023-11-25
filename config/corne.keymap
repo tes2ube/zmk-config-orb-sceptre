@@ -191,8 +191,8 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp Q                     &kp W        &kp W       &kp E       &kp R         &kp T       &kp Y      &kp U          &kp I           &kp O            &kp P            &kp LBKT
-&kp TAB                   &lt 1 A      &lt 2 S     &lt 3 D     &kp F         &kp G       &kp H      &kp J          &lt 3 K         &lt 2 L          &lt 1 SEMI       &kp SQT
+&kp TAB                   &kp Q        &kp W       &kp E       &kp R         &kp T       &kp Y      &kp U          &kp I           &kp O            &kp P            &kp LBKT
+&trans                    &lt 1 A      &lt 2 S     &lt 3 D     &kp F         &kp G       &kp H      &kp J          &lt 3 K         &lt 2 L          &lt 1 SEMI       &kp SQT
 &kp C_AL_KEYBOARD_LAYOUT  &mt LCTRL Z  &mt LALT X  &mt LGUI C  &mt LSHIFT V  &kp B       &kp N      &mt RSHIFT M   &mt RGUI COMMA  &mt RALT PERIOD  &mt RCTRL SLASH  &kp EXCL
                                                    &lt 3 ESC   &DAN_L1_L2    &DAN_CAP    &kp SPACE  &kp BACKSPACE  &kp ENTER
             >;
