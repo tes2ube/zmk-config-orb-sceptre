@@ -42,7 +42,9 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
         };
 
         DAN_CAP: DAN_CAP {
@@ -50,6 +52,8 @@
             label = "DAN_CAP";
             #binding-cells = <0>;
             bindings = <&HT_CAP LSHIFT 0>, <&kp CAPS>;
+
+            tapping-term-ms = <150>;
         };
 
         HT_LNUM: HT_LNUM {
@@ -58,14 +62,19 @@
             bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
         };
 
         DAN_L1_L2: DAN_L1_L2 {
             compatible = "zmk,behavior-tap-dance";
             label = "DAN_L1_L2";
             #binding-cells = <0>;
-            bindings = <&HT_LNUM 1 1>, <&HT_LNUM 2 2>;
+            bindings = <&HT_L1 0 0>, <&HT_L2 0 0>;
+
+            tapping-term-ms = <150>;
         };
 
         M_F1_F13: M_F1_F13 {
@@ -175,9 +184,160 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        HT_L1: HT_L1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_L1";
+            bindings = <&MLm1>, <&MLt1>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
+
+        HT_L2: HT_L2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_L2";
+            bindings = <&MLm2>, <&MLt2>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
+
+        HT_L3: HT_L3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_L3";
+            bindings = <&MLm3>, <&MLt3>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
+
+        HT_L0: HT_L0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_L0";
+            bindings = <&MLm0>, <&MLt0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
+
+        HT_AZ1: HT_AZ1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_AZ1";
+            bindings = <&MLm1>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
+
+        HT_AZ2: HT_AZ2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_AZ2";
+            bindings = <&MLm2>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
+
+        HT_AZ3: HT_AZ3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_AZ3";
+            bindings = <&MLm3>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
+
+        HT_AZ0: HT_AZ0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_AZ0";
+            bindings = <&MLm0>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
     };
 
     macros {
+        MLm1: MLm1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 1 &rgb_ug RGB_COLOR_HSB(50,100,50)>;
+            label = "MLM1";
+        };
+
+        MLm2: MLm2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 2 &rgb_ug RGB_COLOR_HSB(122,100,50)>;
+            label = "MLM2";
+        };
+
+        MLm3: MLm3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 3 &rgb_ug RGB_COLOR_HSB(272,100,50)>;
+            label = "MLM3";
+        };
+
+        MLt1: MLt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 1 &rgb_ug RGB_COLOR_HSB(50,100,50)>;
+            label = "MLT1";
+        };
+
+        MLt2: MLt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 2 &rgb_ug RGB_COLOR_HSB(122,100,50)>;
+            label = "MLT2";
+        };
+
+        MLt3: MLt3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 3 &rgb_ug RGB_COLOR_HSB(272,100,50)>;
+            label = "MLT3";
+        };
+
+        MLm0: MLm0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 0 &rgb_ug RGB_COLOR_HSB(360,100,50)>;
+            label = "MLM0";
+        };
+
+        MLt0: MLt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 0 &rgb_ug RGB_COLOR_HSB(360,100,50)>;
+            label = "MLT0";
+        };
     };
 
     keymap {
@@ -191,10 +351,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                   &kp Q        &kp W       &kp E       &kp R         &kp T       &kp Y      &kp U          &kp I           &kp O            &kp P            &kp LBKT
-&trans                    &lt 1 A      &lt 2 S     &lt 3 D     &kp F         &kp G       &kp H      &kp J          &lt 3 K         &lt 2 L          &lt 1 SEMI       &kp SQT
-&kp C_AL_KEYBOARD_LAYOUT  &mt LCTRL Z  &mt LALT X  &mt LGUI C  &mt LSHIFT V  &kp B       &kp N      &mt RSHIFT M   &mt RGUI COMMA  &mt RALT PERIOD  &mt RCTRL SLASH  &kp EXCL
-                                                   &lt 3 ESC   &DAN_L1_L2    &DAN_CAP    &kp SPACE  &kp BACKSPACE  &kp ENTER
+&kp TAB                   &kp Q        &kp W        &kp E          &kp R         &kp T       &kp Y    &kp U         &kp I           &kp O            &kp P            &kp LBKT
+&trans                    &HT_AZ1 0 A  &HT_AZ2 0 S  &HT_AZ3 0 D    &kp F         &kp G       &kp H    &kp J         &HT_AZ3 0 K     &HT_AZ2 0 L      &HT_AZ1 0 SEMI   &kp SQT
+&kp C_AL_KEYBOARD_LAYOUT  &mt LCTRL Z  &mt LALT X   &mt LGUI C     &mt LSHIFT V  &kp B       &kp N    &mt RSHIFT M  &mt RGUI COMMA  &mt RALT PERIOD  &mt RCTRL SLASH  &kp EXCL
+                                                    &HT_AZ3 0 ESC  &DAN_L1_L2    &DAN_CAP    &kp RET  &kp SPACE     &kp BSPC
             >;
         };
 
@@ -209,7 +369,7 @@
 &kp LBKT      &kp APOS  &kp N7  &kp N8  &kp N9  &kp E                &kp C_VOL_UP  &kp K_PREV  &kp K_PP   &kp K_NEXT      &trans     &kp RBKT
 &kp ASTERISK  &kp RBRC  &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET    &kp C_VOL_DN  &kp LPAR    &kp RPAR   &kp UNDERSCORE  &kp PLUS   &kp BACKSLASH
 &kp LSHIFT    &kp N0    &kp N1  &kp N2  &kp N3  &kp ENTER            &kp K_MUTE    &kp MINUS   &kp EQUAL  &kp LS(W)       &kp LS(E)  &trans
-                                &to 0   &trans  &trans               &trans        &kp DEL     &trans
+                                &MLt0   &trans  &trans               &trans        &trans      &kp DEL
             >;
         };
 
