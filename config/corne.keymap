@@ -26,7 +26,7 @@
 };
 
 &key_repeat {
-    usage-pages = <HID_USAGE_KEY HID_USAGE_CUSTOMER>;
+    usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
 };
 
 /* Homerow mods
@@ -300,6 +300,16 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
         };
+
+        HT_RPT: HT_RPT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_RPT";
+            bindings = <&key_repeat>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+        };
     };
 
     macros {
@@ -374,10 +384,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         num-sym {
             bindings = <
-&kp LBKT      &kp APOS  &kp N7  &kp N8  &kp N9  &kp E                &kp C_VOL_UP  &kp K_PREV  &kp K_PP   &kp K_NEXT      &trans     &kp RBKT
-&kp ASTERISK  &kp RBRC  &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET    &kp C_VOL_DN  &kp LPAR    &kp RPAR   &kp UNDERSCORE  &kp PLUS   &kp BACKSLASH
-&kp LSHIFT    &kp N0    &kp N1  &kp N2  &kp N3  &kp ENTER            &kp K_MUTE    &kp MINUS   &kp EQUAL  &kp LS(W)       &kp LS(E)  &trans
-                                &to 0   &trans  &trans               &trans        &trans      &kp DEL
+&kp LBKT      &kp APOS  &kp N7  &kp N8  &kp N9  &kp E                &HT_RPT 0 C_VOL_UP  &kp K_PREV  &kp K_PP   &kp K_NEXT      &trans     &kp RBKT
+&kp ASTERISK  &kp RBRC  &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET    &HT_RPT 0 C_VOL_DN  &kp LPAR    &kp RPAR   &kp UNDERSCORE  &kp PLUS   &kp BACKSLASH
+&kp LSHIFT    &kp N0    &kp N1  &kp N2  &kp N3  &kp ENTER            &kp K_MUTE          &kp MINUS   &kp EQUAL  &kp LS(W)       &kp LS(E)  &trans
+                                &to 0   &trans  &trans               &trans              &trans      &kp DEL
             >;
         };
 
