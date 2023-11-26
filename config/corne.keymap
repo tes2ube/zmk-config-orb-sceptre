@@ -366,10 +366,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&kp C_AL_KEYBOARD_LAYOUT  &kp Q           &kp W          &kp E          &kp R            &kp T       &kp Y    &kp U            &kp I              &kp O                    &kp P               &kp LBKT
-&kp TAB                   &LXT_L 1 A      &LXT_L 2 S     &LXT_L 3 D     &kp F            &kp G       &kp H    &kp J            &LXT_R 3 K         &LXT_R 2 L               &LXT_R 1 SEMI       &kp SQT
-&trans                    &HXT_L LCTRL Z  &HXT_L LALT X  &HXT_L LGUI C  &HXT_L LSHIFT V  &kp B       &kp N    &HXT_R RSHIFT M  &HXT_R RGUI COMMA  &HXT_R RIGHT_ALT PERIOD  &HXT_R RCTRL SLASH  &kp EXCL
-                                                         &LXT_L 3 ESC   &DAN_L1_L2       &DAN_CAP    &kp RET  &kp SPACE        &kp BSPC
+&kp GRAVE  &kp Q           &kp W          &kp E          &kp R            &kp T       &kp Y    &kp U            &kp I              &kp O                    &kp P               &kp LBKT
+&kp TAB    &LXT_L 1 A      &LXT_L 2 S     &LXT_L 3 D     &kp F            &kp G       &kp H    &kp J            &LXT_R 3 K         &LXT_R 2 L               &LXT_R 1 SEMI       &kp SQT
+&trans     &HXT_L LCTRL Z  &HXT_L LALT X  &HXT_L LGUI C  &HXT_L LSHIFT V  &kp B       &kp N    &HXT_R RSHIFT M  &HXT_R RGUI COMMA  &HXT_R RIGHT_ALT PERIOD  &HXT_R RCTRL SLASH  &kp EXCL
+                                          &LXT_L 3 ESC   &DAN_L1_L2       &DAN_CAP    &kp RET  &kp SPACE        &kp BSPC
             >;
         };
 
