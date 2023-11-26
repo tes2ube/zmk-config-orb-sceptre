@@ -291,16 +291,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
 
-        HT_UG: HT_UG {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_UG";
-            bindings = <&key_repeat>, <&rgb_ug>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-        };
-
         HT_RPT: HT_RPT {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_RPT";
@@ -403,8 +393,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         rh-rgb {
             bindings = <
 &kp LBKT   &kp P     &kp O    &kp I      &kp U          &kp Y        &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(67,100,50)  &rgb_ug RGB_COLOR_HSB(112,100,48)  &rgb_ug RGB_COLOR_HSB(186,100,50)  &rgb_ug RGB_COLOR_HSB(245,100,50)  &rgb_ug RGB_COLOR_HSB(287,100,50)
-&kp APOS   &kp SEMI  &kp L    &kp K      &kp J          &kp H        &rgb_ug RGB_TOG                  &HT_UG 0 RGB_BRI                  &HT_UG 0 RGB_SAI                   &HT_UG 0 RGB_HUI                   &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF
-&kp SPACE  &kp FSLH  &kp DOT  &kp COMMA  &kp M          &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)     &HT_UG 0 RGB_BRD                  &HT_UG 0 RGB_HUD                   &HT_UG 0 RGB_HUD                   &rgb_ug RGB_SPD                    &rgb_ug RGB_EFR
+&kp APOS   &kp SEMI  &kp L    &kp K      &kp J          &kp H        &rgb_ug RGB_TOG                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SAI                    &rgb_ug RGB_HUI                    &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF
+&kp SPACE  &kp FSLH  &kp DOT  &kp COMMA  &kp M          &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)     &rgb_ug RGB_BRD                   &rgb_ug RGB_SAD                    &rgb_ug RGB_HUD                    &rgb_ug RGB_SPD                    &rgb_ug RGB_EFR
                               &trans     &kp BACKSPACE  &kp ENTER    &kp C_VOL_DN                     &kp K_MUTE                        &kp C_VOL_UP
             >;
         };
