@@ -26,7 +26,6 @@
 };
 
 &key_repeat {
-    usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
 };
 
 /* Homerow mods
