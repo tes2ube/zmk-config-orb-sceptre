@@ -69,8 +69,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <125>;
         };
 
         DAN_CAP: DAN_CAP {
@@ -79,7 +78,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&HT_CAP LSHIFT 0>, <&kp CAPS>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <125>;
         };
 
         HT_LNUM: HT_LNUM {
