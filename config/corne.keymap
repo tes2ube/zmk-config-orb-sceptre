@@ -440,7 +440,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         btReset {
-            bindings = <&sys_reset>;
+            bindings = <&bt BT_CLR>;
             key-positions = <39 40 41>;
             timeout-ms = <50>;
             slow-release;
