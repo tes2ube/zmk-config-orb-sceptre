@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
@@ -476,7 +477,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         arrow-ctrl {
             bindings = <
-&kp K_UNDO  &kp K_REDO             &kp UP                 &kp C_AL_WWW                &kp C_AL_FILE_BROWSER  &kp K_MENU      &mt PSCRN LC(PSCRN)                     &kp F9    &kp F10     &kp F11  &kp F12  &trans
+&kp K_UNDO  &kp K_REDO             &kp UP                 &kp C_AL_WWW                &kp C_AL_FILE_BROWSER  &kp K_MENU      &mt PSCRN LC(PSCRN)                     &kp F9    &kp F10     &kp F11  &kp F12  &ext_power EP_TOG
 &kp PSCRN   &kp LEFT               &kp DOWN               &kp RIGHT                   &kp HOME               &kp END         &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp F5    &kp F6      &kp F7   &kp F8   &kp K_MUTE
 &kp C_MENU  &HXT_L LCTRL C_AC_CUT  &HXT_L LALT C_AC_COPY  &HXT_L LEFT_GUI C_AC_PASTE  &HXT_L LSHIFT PG_UP    &kp PG_DN       &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS       &kp F1    &kp F2      &kp F3   &kp F4   &kp C_STOP
                                                           &to 0                       &kp C_VOL_DN           &kp C_VOL_UP    &kp K_PREV                              &kp K_PP  &kp K_NEXT
