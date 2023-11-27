@@ -469,7 +469,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <
 &kp LBKT      &kp APOS         &kp N7          &kp N8          &kp N9            &kp E                &kp AT  &kp HASH            &kp DOLLAR         &kp PERCENT        &kp CARET           &kp BACKSLASH
 &kp ASTERISK  &kp RBRC         &kp N4          &kp N5          &kp N6            &kp RIGHT_BRACKET    &trans  &kp LPAR            &kp RPAR           &kp UNDERSCORE     &kp PLUS            &kp PIPE
-&kp LSHIFT    &HXT_L LCTRL N0  &HXT_L LALT N1  &HXT_L LGUI N2  &HXT_R LSHIFT N3  &kp ENTER            &trans  &HXT_R RSHFT MINUS  &HXT_R RGUI EQUAL  &HXT_R RALT LS(W)  &HXT_R RCTRL LS(E)  &trans
+&trans        &HXT_L LCTRL N0  &HXT_L LALT N1  &HXT_L LGUI N2  &HXT_R LSHIFT N3  &kp ENTER            &trans  &HXT_R RSHFT MINUS  &HXT_R RGUI EQUAL  &HXT_R RALT LS(W)  &HXT_R RCTRL LS(E)  &trans
                                                &to 0           &trans            &trans               &trans  &trans              &trans
             >;
         };
@@ -485,10 +485,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         mir-rgb {
             bindings = <
-&kp LBKT   &kp P     &kp O    &kp I      &kp U      &kp Y        &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(67,100,50)  &rgb_ug RGB_COLOR_HSB(112,100,48)  &rgb_ug RGB_COLOR_HSB(186,100,50)  &rgb_ug RGB_COLOR_HSB(245,100,50)  &rgb_ug RGB_COLOR_HSB(287,100,50)
-&kp APOS   &kp SEMI  &kp L    &kp K      &kp J      &kp H        &rgb_ug RGB_TOG                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SAI                    &rgb_ug RGB_HUI                    &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF
-&kp SPACE  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)     &rgb_ug RGB_BRD                   &rgb_ug RGB_SAD                    &rgb_ug RGB_HUD                    &rgb_ug RGB_SPD                    &rgb_ug RGB_EFR
-                              &trans     &kp SPACE  &kp ENTER    &bt BT_PRV                       &bt BT_NXT                        &out OUT_TOG
+&kp LBKT        &kp P     &kp O    &kp I      &kp U      &kp Y        &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(67,100,50)  &rgb_ug RGB_COLOR_HSB(112,100,48)  &rgb_ug RGB_COLOR_HSB(186,100,50)  &rgb_ug RGB_COLOR_HSB(245,100,50)  &rgb_ug RGB_COLOR_HSB(287,100,50)
+&kp APOS        &kp SEMI  &kp L    &kp K      &kp J      &kp H        &rgb_ug RGB_TOG                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SAI                    &rgb_ug RGB_HUI                    &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF
+&sk LEFT_SHIFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)     &rgb_ug RGB_BRD                   &rgb_ug RGB_SAD                    &rgb_ug RGB_HUD                    &rgb_ug RGB_SPD                    &rgb_ug RGB_EFR
+                                   &trans     &kp SPACE  &kp ENTER    &bt BT_PRV                       &bt BT_NXT                        &out OUT_TOG
             >;
         };
     };
