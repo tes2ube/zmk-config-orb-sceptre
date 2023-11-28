@@ -319,7 +319,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_press>,
                 <&mo 2 &rgb_ug RGB_COLOR_HSB(50,100,50)>,
                 <&macro_pause_for_release>,
-                <&macro_release &mo 2 &rgb_ug RGB_COLOR_HSB(0,100,50)>;
+                <&macro_release>,
+                <&mo 2 &rgb_ug RGB_COLOR_HSB(0,100,50)>;
 
             label = "layer";
         };
@@ -464,10 +465,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&kp GRAVE      &kp Q           &kp W          &kp E          &kp R            &kp T       &kp Y    &kp U            &kp I              &kp O                    &kp P               &kp LBKT
-&kp TAB        &LXT_L 1 A      &LXT_L 2 S     &LXT_L 3 D     &kp F            &kp G       &kp H    &kp J            &LXT_R 3 K         &LXT_R 2 L               &LXT_R 1 SEMI       &kp SQT
-&kp AMPERSAND  &HXT_L LCTRL Z  &HXT_L LALT X  &HXT_L LGUI C  &HXT_L LSHIFT V  &kp B       &kp N    &HXT_R RSHIFT M  &HXT_R RGUI COMMA  &HXT_R RIGHT_ALT PERIOD  &HXT_R RCTRL SLASH  &kp EXCL
-                                              &LXT_L 3 ESC   &DAN_L1_L2       &DAN_CAP    &kp RET  &kp SPACE        &M_BKSP_DEL
+&kp GRAVE      &kp Q           &kp W          &kp E          &kp R            &kp T       &kp Y                           &kp U            &kp I              &kp O                    &kp P               &kp LBKT
+&kp TAB        &LXT_L 1 A      &LXT_L 2 S     &LXT_L 3 D     &kp F            &kp G       &kp H                           &kp J            &LXT_R 3 K         &LXT_R 2 L               &LXT_R 1 SEMI       &kp SQT
+&kp AMPERSAND  &HXT_L LCTRL Z  &HXT_L LALT X  &HXT_L LGUI C  &HXT_L LSHIFT V  &kp B       &kp N                           &HXT_R RSHIFT M  &HXT_R RGUI COMMA  &HXT_R RIGHT_ALT PERIOD  &HXT_R RCTRL SLASH  &kp EXCL
+                                              &LXT_L 3 ESC   &DAN_L1_L2       &DAN_CAP    &HXT_R RA(RC(RG(RSHFT))) ENTER  &kp SPACE        &M_BKSP_DEL
             >;
         };
 
