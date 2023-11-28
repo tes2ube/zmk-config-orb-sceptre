@@ -319,8 +319,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_press>,
                 <&mo 2 &rgb_ug RGB_COLOR_HSB(50,100,50)>,
                 <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 2 &rgb_ug RGB_COLOR_HSB(0,100,50)>;
+                <&macro_release &mo 2 &rgb_ug RGB_COLOR_HSB(0,100,50)>;
 
             label = "layer";
         };
