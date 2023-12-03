@@ -73,9 +73,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             tapping-term-ms = <125>;
         };
 
-        DAN_CAP: DAN_CAP {
+        D_CAP: D_CAP {
             compatible = "zmk,behavior-tap-dance";
-            label = "DAN_CAP";
+            label = "D_CAP";
             #binding-cells = <0>;
             bindings = <&HT_CAP LSHIFT 0>, <&kp CAPS>;
 
@@ -174,84 +174,85 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             quick-tap-ms = <150>;
         };
 
-        M_BKSP_DEL: M_BKSP_DEL {
+        M_BKDL: M_BKDL {
             compatible = "zmk,behavior-mod-morph";
-            label = "M_BKSP_DEL";
+            label = "M_BKDL";
             bindings = <&kp BSPC>, <&kp DEL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        D_GRESC: D_GRESC {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_GRESC";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&kp TILDE>;
+        };
+
+        D_APQT: D_APQT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_APQT";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp LS(Q)>;
+        };
+
+        D_CMCL: D_CMCL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_CMCL";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp LS(W)>;
+        };
+
+        D_PDCR: D_PDCR {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_PDCR";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp LS(E)>;
+        };
+
+        D_SCCO: D_SCCO {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_SCCO";
+            #binding-cells = <0>;
+            bindings = <&kp Z>, <&kp LS(Z)>;
+        };
+
+        D_SLQM: D_SLQM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_SLQM";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp LS(LEFT_BRACKET)>;
+        };
     };
 
     macros {
-        MLm1: MLm1 {
+        mp_wrkD: mp_wrkD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 2 &rgb_ug RGB_COLOR_HSB(50,100,50)>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 2 &rgb_ug RGB_COLOR_HSB(0,100,50)>;
-
-            label = "layer";
+            bindings = <&none &kp M &kp G &kp K &kp K &kp D &kp L &kp N8 &kp LS(J) &kp LS(D) &kp LS(A) &kp LS(H) &kp LS(P) &kp LS(S) &kp LS(I) &kp LS(V) &kp N8 &kp G &kp L &kp DOT &kp A &kp H &kp D &kp N4 &kp DOT &kp D &kp L &kp S &kp M &kp S &kp F &kp SEMI>;
+            label = "MP_WRKD";
         };
 
-        MLm2: MLm2 {
+        mp_wrkQ: mp_wrkQ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mo 2 &rgb_ug RGB_COLOR_HSB(122,100,50)>;
-            label = "MLM2";
+            bindings = <&none &kp M &kp I &kp T &kp T &kp E &kp N &kp N8 &kp LS(H) &kp LS(E) &kp LS(A) &kp LS(D) &kp LS(L) &kp LS(O) &kp LS(C) &kp LS(K) &kp N8 &kp I &kp N &kp V &kp A &kp D &kp E &kp N4 &kp V &kp E &kp N &kp O &kp M &kp O &kp U &kp S>;
+            label = "MP_WRKQ";
         };
 
-        MLm3: MLm3 {
+        mp_mac: mp_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mo 3 &rgb_ug RGB_COLOR_HSB(272,100,50)>;
-            label = "MLM3";
-        };
-
-        MLt1: MLt1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 1 &rgb_ug RGB_COLOR_HSB(50,100,50)>;
-            label = "MLT1";
-        };
-
-        MLt2: MLt2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 2 &rgb_ug RGB_COLOR_HSB(122,100,50)>;
-            label = "MLT2";
-        };
-
-        MLt3: MLt3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 3 &rgb_ug RGB_COLOR_HSB(272,100,50)>;
-            label = "MLT3";
-        };
-
-        MLm0: MLm0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mo 0 &rgb_ug RGB_COLOR_HSB(360,100,50)>;
-            label = "MLM0";
-        };
-
-        MLt0: MLt0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 0 &rgb_ug RGB_COLOR_HSB(360,100,50)>;
-            label = "MLT0";
+            bindings = <&none &kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B>;
+            label = "MP_MAC";
         };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        reset {
+        c_reset {
             bindings = <&sys_reset>;
             key-positions = <4 15 26 7 20 33>;
             timeout-ms = <50>;
@@ -260,43 +261,43 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             require-prior-idle-ms = <3000>;
         };
 
-        parL {
+        c_parL {
             bindings = <&kp LPAR>;
             key-positions = <1 2>;
             layers = <0>;
         };
 
-        parR {
+        c_parR {
             bindings = <&kp RPAR>;
             key-positions = <3 4>;
             layers = <0>;
         };
 
-        bktL {
+        c_bktL {
             bindings = <&kp MINUS>;
             key-positions = <7 8>;
             layers = <0>;
         };
 
-        bktR {
+        c_bktR {
             bindings = <&kp EQUAL>;
             key-positions = <10 9>;
             layers = <0>;
         };
 
-        home {
+        c_home {
             bindings = <&kp HOME>;
             key-positions = <15 16>;
             layers = <0>;
         };
 
-        end {
+        c_end {
             bindings = <&kp END>;
             key-positions = <16 17>;
             layers = <0>;
         };
 
-        btReset {
+        c_btReset {
             bindings = <&bt BT_CLR>;
             key-positions = <39 40 41>;
             timeout-ms = <50>;
@@ -304,9 +305,45 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             layers = <3>;
         };
 
-        metaL {
+        c_metaL {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
+        };
+
+        c_cpwd {
+            bindings = <&caps_word>;
+            key-positions = <16 19>;
+        };
+
+        c_brcL {
+            bindings = <&kp UNDER>;
+            key-positions = <5 4>;
+        };
+
+        c_brcR {
+            bindings = <&kp PLUS>;
+            key-positions = <6 7>;
+        };
+
+        cp_wrkD {
+            bindings = <&mp_wrkD>;
+            key-positions = <22 17 13 20>;
+            layers = <3>;
+            require-prior-idle-ms = <1500>;
+        };
+
+        cp_wrkQ {
+            bindings = <&mp_wrkQ>;
+            key-positions = <26 28 32 9>;
+            layers = <3>;
+            require-prior-idle-ms = <1500>;
+        };
+
+        cp_mac {
+            bindings = <&mp_mac>;
+            key-positions = <28 13 8 31>;
+            layers = <3>;
+            require-prior-idle-ms = <1500>;
         };
     };
 
@@ -315,38 +352,46 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&kp GRAVE      &kp Q           &kp W           &kp E          &kp R           &kp T     &kp Y                           &kp U           &kp I          &kp O           &kp P                   &kp LBKT
-&trans         &HXT_L LMETA A  &HXT_L LCTRL S  &HXT_L LALT D  &HXT_L LSHFT F  &kp G     &kp H                           &HXT_R RSHFT J  &HXT_R RALT K  &HXT_R RCTRL L  &HXT_R RMETA SEMICOLON  &kp SQT
-&kp AMPERSAND  &kp Z           &kp X           &kp C          &kp V           &kp B     &kp N                           &kp M           &kp COMMA      &kp DOT         &kp SLASH               &kp EXCL
-                                               &LXT_L 3 ESC   &LXT_L 1 TAB    &trans    &HXT_R RA(RC(RG(RSHFT))) ENTER  &LXT_R 2 SPACE  &M_BKSP_DEL
+&D_GRESC       &D_APQT         &D_CMCL         &D_PDCR        &kp R           &kp T     &kp Y                           &kp U           &kp I          &kp O           &kp P                   &D_SLQM
+&key_repeat    &HXT_L LMETA A  &HXT_L LCTRL S  &HXT_L LALT D  &HXT_L LSHFT F  &kp G     &kp H                           &HXT_R RSHFT J  &HXT_R RALT K  &HXT_R RCTRL L  &HXT_R RMETA SEMICOLON  &kp SQT
+&kp AMPERSAND  &D_SCCO         &kp X           &kp C          &kp V           &kp B     &kp N                           &kp M           &kp COMMA      &kp DOT         &kp SLASH               &kp EXCL
+                                               &LXT_L 3 ESC   &LXT_L 1 TAB    &trans    &HXT_R RA(RC(RG(RSHFT))) ENTER  &LXT_R 2 SPACE  &M_BKDL
             >;
+
+            label = "orb|cptr";
         };
 
         num-sym {
             bindings = <
-&kp LBKT      &kp APOS           &kp N7           &kp N8          &kp N9           &kp E                &kp AT  &kp HASH           &kp DOLLAR        &kp PERCENT              &kp CARET          &kp BACKSLASH
-&kp ASTERISK  &HXT_L LMETA RBRC  &HXT_L LCTRL N4  &HXT_L LALT N5  &HXT_L LSHFT N6  &kp RIGHT_BRACKET    &trans  &HXT_R RSHFT LPAR  &HXT_R RALT RPAR  &HXT_R RCTRL UNDERSCORE  &HXT_R RMETA PLUS  &kp PIPE
-&key_repeat   &kp N0             &kp N1           &kp N2          &kp N3           &kp ENTER            &trans  &kp MINUS          &kp EQUAL         &kp LS(W)                &kp LS(E)          &trans
-                                                  &to 0           &trans           &trans               &trans  &trans             &trans
+&kp LBKT      &kp APOS           &kp N7           &kp N8          &kp N9           &kp E                &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp BACKSLASH
+&kp ASTERISK  &HXT_L LMETA RBRC  &HXT_L LCTRL N4  &HXT_L LALT N5  &HXT_L LSHFT N6  &kp RIGHT_BRACKET    &trans  &trans    &trans      &trans       &trans     &kp PIPE
+&trans        &kp N0             &kp N1           &kp N2          &kp N3           &kp ENTER            &trans  &trans    &trans      &trans       &trans     &trans
+                                                  &to 0           &trans           &trans               &trans  &trans    &trans
             >;
+
+            label = "num|sym";
         };
 
-        arrow-ctrl {
+        nav-system {
             bindings = <
 &kp LC(SLASH)  &kp RC(RS(SLASH))  &kp UP     &trans          &trans        &kp C_MENU      &mt PSCRN LC(PSCRN)  &kp F9            &kp F10         &kp F11          &kp F12          &ext_power EP_TOG
 &trans         &kp LEFT           &kp DOWN   &kp RIGHT       &kp HOME      &kp END         &kp C_FF             &HXT_R RSHFT F5   &HXT_R RALT F6  &HXT_R RCTRL F7  &HXT_R RMETA F8  &kp C_MUTE
 &kp C_MENU     &kp LC(B)          &kp LC(I)  &kp LC(PERIOD)  &kp PG_UP     &kp PG_DN       &kp C_RW             &kp F1            &kp F2          &kp F3           &kp F4           &kp C_STOP
                                              &to 0           &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV           &kp C_PLAY_PAUSE  &kp C_NEXT
             >;
+
+            label = "nav-sys";
         };
 
-        mir-rgb {
+        mir-keeb {
             bindings = <
 &kp LBKT        &kp P     &kp O    &kp I      &kp U      &kp Y        &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(67,100,50)  &rgb_ug RGB_COLOR_HSB(112,100,48)  &rgb_ug RGB_COLOR_HSB(186,100,50)  &rgb_ug RGB_COLOR_HSB(245,100,50)  &rgb_ug RGB_COLOR_HSB(287,100,50)
 &kp APOS        &kp SEMI  &kp L    &kp K      &kp J      &kp H        &rgb_ug RGB_TOG                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SAI                    &rgb_ug RGB_HUI                    &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF
 &sk LEFT_SHIFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)     &rgb_ug RGB_BRD                   &rgb_ug RGB_SAD                    &rgb_ug RGB_HUD                    &rgb_ug RGB_SPD                    &rgb_ug RGB_EFR
                                    &trans     &kp SPACE  &kp ENTER    &bt BT_PRV                       &bt BT_NXT                        &out OUT_TOG
             >;
+
+            label = "mir|keeb";
         };
     };
 };
