@@ -82,133 +82,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             tapping-term-ms = <125>;
         };
 
-        HT_LNUM: HT_LNUM {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_LNUM";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
-        DAN_L1_L2: DAN_L1_L2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DAN_L1_L2";
-            #binding-cells = <0>;
-            bindings = <&LHXLT_L 1 1>, <&LHXLT_L 2 2>;
-
-            tapping-term-ms = <200>;
-        };
-
-        M_F1_F13: M_F1_F13 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F1_F13";
-            bindings = <&kp F1>, <&kp F13>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F2_F14: M_F2_F14 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F2_F14";
-            bindings = <&kp F2>, <&kp F14>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F3_F15: M_F3_F15 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F3_F15";
-            bindings = <&kp F3>, <&kp F15>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F4_F16: M_F4_F16 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F4_F16";
-            bindings = <&kp F4>, <&kp F16>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F5_F17: M_F5_F17 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F5_F17";
-            bindings = <&kp F5>, <&kp F17>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F6_F18: M_F6_F18 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F6_F18";
-            bindings = <&kp F6>, <&kp F18>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F7_F19: M_F7_F19 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F7_F19";
-            bindings = <&kp F7>, <&kp F19>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F8_F20: M_F8_F20 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F8_F20";
-            bindings = <&kp F8>, <&kp F20>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F9_F21: M_F9_F21 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F9_F21";
-            bindings = <&kp F9>, <&kp F21>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F10_F22: M_F10_F22 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F10_F22";
-            bindings = <&kp F10>, <&kp F22>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F11_F23: M_F11_F23 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F11_F23";
-            bindings = <&kp F11>, <&kp F23>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        M_F12_F24: M_F12_F24 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_F12_F24";
-            bindings = <&kp F12>, <&kp F24>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         LXT_L: LXT_L {
             compatible = "zmk,behavior-hold-tap";
             label = "LXT_L";
@@ -387,50 +260,28 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             require-prior-idle-ms = <3000>;
         };
 
-        parenOpen {
+        parL {
             bindings = <&kp LPAR>;
             key-positions = <1 2>;
             layers = <0>;
         };
 
-        parenClose {
+        parR {
             bindings = <&kp RPAR>;
             key-positions = <3 4>;
             layers = <0>;
         };
 
-        brackOpen {
+        bktL {
             bindings = <&kp MINUS>;
             key-positions = <7 8>;
             layers = <0>;
         };
 
-        brackClose {
+        bktR {
             bindings = <&kp EQUAL>;
             key-positions = <10 9>;
             layers = <0>;
-        };
-
-        braceOpen {
-            bindings = <&kp UNDER>;
-            key-positions = <4 5>;
-            layers = <0>;
-        };
-
-        braceClose {
-            bindings = <&kp PLUS>;
-            key-positions = <6 7>;
-            layers = <0>;
-        };
-
-        lShift {
-            bindings = <&kp LSHIFT>;
-            key-positions = <13 14>;
-        };
-
-        rShift {
-            bindings = <&kp RSHIFT>;
-            key-positions = <21 22>;
         };
 
         home {
@@ -453,10 +304,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             layers = <3>;
         };
 
-        mirBackspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <15 16>;
-            layers = <3>;
+        metaL {
+            bindings = <&kp LMETA>;
+            key-positions = <13 22>;
         };
     };
 
@@ -465,19 +315,19 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&kp GRAVE      &kp Q           &kp W          &kp E          &kp R            &kp T       &kp Y                           &kp U            &kp I              &kp O                    &kp P               &kp LBKT
-&kp TAB        &LXT_L 1 A      &LXT_L 2 S     &LXT_L 3 D     &kp F            &kp G       &kp H                           &kp J            &LXT_R 3 K         &LXT_R 2 L               &LXT_R 1 SEMI       &kp SQT
-&kp AMPERSAND  &HXT_L LCTRL Z  &HXT_L LALT X  &HXT_L LGUI C  &HXT_L LSHIFT V  &kp B       &kp N                           &HXT_R RSHIFT M  &HXT_R RGUI COMMA  &HXT_R RIGHT_ALT PERIOD  &HXT_R RCTRL SLASH  &kp EXCL
-                                              &LXT_L 3 ESC   &DAN_L1_L2       &DAN_CAP    &HXT_R RA(RC(RG(RSHFT))) ENTER  &kp SPACE        &M_BKSP_DEL
+&kp GRAVE      &kp Q           &kp W           &kp E          &kp R           &kp T     &kp Y                           &kp U           &kp I          &kp O           &kp P                   &kp LBKT
+&trans         &HXT_L LMETA A  &HXT_L LCTRL S  &HXT_L LALT D  &HXT_L LSHFT F  &kp G     &kp H                           &HXT_R RSHFT J  &HXT_R RALT K  &HXT_R RCTRL L  &HXT_R RMETA SEMICOLON  &kp SQT
+&kp AMPERSAND  &kp Z           &kp X           &kp C          &kp V           &kp B     &kp N                           &kp M           &kp COMMA      &kp DOT         &kp SLASH               &kp EXCL
+                                               &LXT_L 3 ESC   &LXT_L 1 TAB    &trans    &HXT_R RA(RC(RG(RSHFT))) ENTER  &LXT_R 2 SPACE  &M_BKSP_DEL
             >;
         };
 
         num-sym {
             bindings = <
-&kp LBKT      &kp APOS         &kp N7          &kp N8          &kp N9            &kp E                &kp AT  &kp HASH            &kp DOLLAR         &kp PERCENT        &kp CARET           &kp BACKSLASH
-&kp ASTERISK  &kp RBRC         &kp N4          &kp N5          &kp N6            &kp RIGHT_BRACKET    &trans  &kp LPAR            &kp RPAR           &kp UNDERSCORE     &kp PLUS            &kp PIPE
-&key_repeat   &HXT_L LCTRL N0  &HXT_L LALT N1  &HXT_L LGUI N2  &HXT_R LSHIFT N3  &kp ENTER            &MLm1   &HXT_R RSHFT MINUS  &HXT_R RGUI EQUAL  &HXT_R RALT LS(W)  &HXT_R RCTRL LS(E)  &key_repeat
-                                               &to 0           &trans            &trans               &trans  &trans              &trans
+&kp LBKT      &kp APOS           &kp N7           &kp N8          &kp N9           &kp E                &kp AT  &kp HASH           &kp DOLLAR        &kp PERCENT              &kp CARET          &kp BACKSLASH
+&kp ASTERISK  &HXT_L LMETA RBRC  &HXT_L LCTRL N4  &HXT_L LALT N5  &HXT_L LSHFT N6  &kp RIGHT_BRACKET    &trans  &HXT_R RSHFT LPAR  &HXT_R RALT RPAR  &HXT_R RCTRL UNDERSCORE  &HXT_R RMETA PLUS  &kp PIPE
+&key_repeat   &kp N0             &kp N1           &kp N2          &kp N3           &kp ENTER            &trans  &kp MINUS          &kp EQUAL         &kp LS(W)                &kp LS(E)          &trans
+                                                  &to 0           &trans           &trans               &trans  &trans             &trans
             >;
         };
 
