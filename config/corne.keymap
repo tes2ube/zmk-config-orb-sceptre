@@ -164,16 +164,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
 
-        HT_RPT: HT_RPT {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_RPT";
-            bindings = <&key_repeat>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-        };
-
         M_BKDL: M_BKDL {
             compatible = "zmk,behavior-mod-morph";
             label = "M_BKDL";
@@ -223,6 +213,20 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_SLQM";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LS(LEFT_BRACKET)>;
+        };
+
+        LHRP_L: LHRP_L {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LHRP_L";
+            bindings = <&mo>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
+            hold-trigger-on-release;
         };
     };
 
@@ -345,6 +349,26 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             layers = <3>;
             require-prior-idle-ms = <1500>;
         };
+
+        c_at {
+            bindings = <&kp DLLR>;
+            key-positions = <36 28 27>;
+        };
+
+        c_blsh {
+            bindings = <&kp BSLH>;
+            key-positions = <37 28>;
+        };
+
+        c_pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <37 29>;
+        };
+
+        c_prcnt {
+            bindings = <&kp PRCNT>;
+            key-positions = <36 27>;
+        };
     };
 
     keymap {
@@ -352,24 +376,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&D_GRESC       &D_APQT         &D_CMCL         &D_PDCR        &kp R           &kp T     &kp Y                           &kp U           &kp I          &kp O           &kp P                   &D_SLQM
-&key_repeat    &HXT_L LMETA A  &HXT_L LCTRL S  &HXT_L LALT D  &HXT_L LSHFT F  &kp G     &kp H                           &HXT_R RSHFT J  &HXT_R RALT K  &HXT_R RCTRL L  &HXT_R RMETA SEMICOLON  &kp SQT
-&kp AMPERSAND  &D_SCCO         &kp X           &kp C          &kp V           &kp B     &kp N                           &kp M           &kp COMMA      &kp DOT         &kp SLASH               &kp EXCL
-                                               &LXT_L 3 ESC   &LXT_L 1 TAB    &trans    &HXT_R RA(RC(RG(RSHFT))) ENTER  &LXT_R 2 SPACE  &M_BKDL
+&D_GRESC       &D_APQT         &D_CMCL         &D_PDCR        &kp R           &kp T          &kp Y                           &kp U           &kp I          &kp O           &kp P                   &D_SLQM
+&kp HASH       &HXT_L LMETA A  &HXT_L LCTRL S  &HXT_L LALT D  &HXT_L LSHFT F  &kp G          &kp H                           &HXT_R RSHFT J  &HXT_R RALT K  &HXT_R RCTRL L  &HXT_R RMETA SEMICOLON  &kp SQT
+&kp AMPERSAND  &D_SCCO         &kp X           &kp C          &kp V           &kp B          &kp N                           &kp M           &kp COMMA      &kp DOT         &kp SLASH               &kp EXCL
+                                               &LXT_L 3 ESC   &LXT_L 2 TAB    &LHRP_L 1 0    &HXT_R RA(RC(RG(RSHFT))) ENTER  &LXT_R 1 SPACE  &M_BKDL
             >;
 
             label = "orb|cptr";
-        };
-
-        num-sym {
-            bindings = <
-&kp LBKT      &kp APOS           &kp N7           &kp N8          &kp N9           &kp E                &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp BACKSLASH
-&kp ASTERISK  &HXT_L LMETA RBRC  &HXT_L LCTRL N4  &HXT_L LALT N5  &HXT_L LSHFT N6  &kp RIGHT_BRACKET    &trans  &trans    &trans      &trans       &trans     &kp PIPE
-&trans        &kp N0             &kp N1           &kp N2          &kp N3           &kp ENTER            &trans  &trans    &trans      &trans       &trans     &trans
-                                                  &to 0           &trans           &trans               &trans  &trans    &trans
-            >;
-
-            label = "num|sym";
         };
 
         nav-system {
@@ -381,6 +394,17 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             >;
 
             label = "nav-sys";
+        };
+
+        num-sym {
+            bindings = <
+&kp LBKT      &kp APOS           &kp N7           &kp N8          &kp N9           &kp E                &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp BACKSLASH
+&kp ASTERISK  &HXT_L LMETA RBRC  &HXT_L LCTRL N4  &HXT_L LALT N5  &HXT_L LSHFT N6  &kp RIGHT_BRACKET    &trans  &trans    &trans      &trans       &trans     &kp PIPE
+&kp CARET     &kp N0             &kp N1           &kp N2          &kp N3           &kp ENTER            &trans  &trans    &trans      &trans       &trans     &trans
+                                                  &to 0           &trans           &trans               &trans  &trans    &trans
+            >;
+
+            label = "num|sym";
         };
 
         mir-keeb {
