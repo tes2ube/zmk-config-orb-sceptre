@@ -290,21 +290,21 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         mp_wrkD: mp_wrkD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp M &kp G &kp K &kp K &kp D &kp L &kp N8 &kp LS(J) &kp LS(D) &kp LS(A) &kp LS(H) &kp LS(P) &kp LS(S) &kp LS(I) &kp LS(V) &kp N8 &kp G &kp L &kp DOT &kp A &kp H &kp D &kp N4 &kp DOT &kp D &kp L &kp S &kp M &kp S &kp F &kp SEMI>;
+            bindings = <&none &kp M &kp G &kp K &kp K &kp D &kp L &kp N8 &kp LS(J) &kp LS(D) &kp LS(A) &kp LS(H) &kp LS(P) &kp LS(S) &kp LS(I) &kp LS(V) &kp N8 &kp G &kp L &kp DOT &kp A &kp H &kp D &kp N4 &kp DOT &kp D &kp L &kp S &kp M &kp S &kp F &kp SEMI &kp RET>;
             label = "MP_WRKD";
         };
 
         mp_wrkQ: mp_wrkQ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp M &kp I &kp T &kp T &kp E &kp N &kp N8 &kp LS(H) &kp LS(E) &kp LS(A) &kp LS(D) &kp LS(L) &kp LS(O) &kp LS(C) &kp LS(K) &kp N8 &kp I &kp N &kp V &kp A &kp D &kp E &kp N4 &kp V &kp E &kp N &kp O &kp M &kp O &kp U &kp S>;
+            bindings = <&none &kp M &kp I &kp T &kp T &kp E &kp N &kp N8 &kp LS(H) &kp LS(E) &kp LS(A) &kp LS(D) &kp LS(L) &kp LS(O) &kp LS(C) &kp LS(K) &kp N8 &kp I &kp N &kp V &kp A &kp D &kp E &kp N4 &kp V &kp E &kp N &kp O &kp M &kp O &kp U &kp S &kp RET>;
             label = "MP_WRKQ";
         };
 
         mp_mac: mp_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B>;
+            bindings = <&none &kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B &kp RET>;
             label = "MP_MAC";
         };
 
@@ -315,12 +315,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_press>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(140,100,18)>,
+                <&rgb_ug RGB_COLOR_HSB(0,100,18)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(0,100,18)>;
+                <&rgb_ug RGB_COLOR_HSB(140,100,18)>;
 
             label = "M_ML1";
         };
@@ -337,7 +337,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_release>,
                 <&mo 2>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(0,100,18)>;
+                <&rgb_ug RGB_COLOR_HSB(140,100,18)>;
 
             label = "M_ML2";
         };
@@ -354,7 +354,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_release>,
                 <&mo 3>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(0,100,18)>;
+                <&rgb_ug RGB_COLOR_HSB(140,100,18)>;
 
             label = "M_ML3";
         };
@@ -495,6 +495,16 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_pgdn {
             bindings = <&kp PG_DN>;
             key-positions = <28 29>;
+        };
+
+        c_ug1 {
+            bindings = <&rgb_ug RGB_COLOR_HSB(141,100,18)>;
+            key-positions = <29 30>;
+        };
+
+        c_caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <17 18>;
         };
     };
 
