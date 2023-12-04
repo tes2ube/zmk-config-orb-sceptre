@@ -320,7 +320,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_release>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(116,100,12)>;
+                <&rgb_ug RGB_COLOR_HSB(116,100,7)>;
 
             label = "M_ML1";
         };
@@ -332,12 +332,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_press>,
                 <&mo 2>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(41,100,17)>,
+                <&rgb_ug RGB_COLOR_HSB(35,100,7)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 2>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(116,100,18)>;
+                <&rgb_ug RGB_COLOR_HSB(116,100,7)>;
 
             label = "M_ML2";
         };
@@ -349,7 +349,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_press>,
                 <&mo 3>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(286,100,17)>,
+                <&rgb_ug RGB_COLOR_HSB(286,100,7)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 3>,
@@ -357,6 +357,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&rgb_ug RGB_COLOR_HSB(116,100,7)>;
 
             label = "M_ML3";
+        };
+
+        test: test {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TEST";
         };
     };
 
