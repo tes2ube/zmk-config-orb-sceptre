@@ -350,12 +350,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             require-prior-idle-ms = <1500>;
         };
 
-        c_at {
+        c_dol {
             bindings = <&kp DLLR>;
             key-positions = <36 28 27>;
         };
 
-        c_blsh {
+        c_bslh {
             bindings = <&kp BSLH>;
             key-positions = <37 28>;
         };
@@ -368,6 +368,16 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_prcnt {
             bindings = <&kp PRCNT>;
             key-positions = <36 27>;
+        };
+
+        c_at {
+            bindings = <&kp AT>;
+            key-positions = <13 20>;
+        };
+
+        c_us {
+            bindings = <&kp UNDER>;
+            key-positions = <22 23>;
         };
     };
 
@@ -387,10 +397,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         nav-system {
             bindings = <
-&kp LC(SLASH)  &kp RC(RS(SLASH))  &kp UP     &trans          &trans        &kp C_MENU      &mt PSCRN LC(PSCRN)  &kp F9            &kp F10         &kp F11          &kp F12          &ext_power EP_TOG
-&trans         &kp LEFT           &kp DOWN   &kp RIGHT       &kp HOME      &kp END         &kp C_FF             &HXT_R RSHFT F5   &HXT_R RALT F6  &HXT_R RCTRL F7  &HXT_R RMETA F8  &kp C_MUTE
-&kp C_MENU     &kp LC(B)          &kp LC(I)  &kp LC(PERIOD)  &kp PG_UP     &kp PG_DN       &kp C_RW             &kp F1            &kp F2          &kp F3           &kp F4           &kp C_STOP
-                                             &to 0           &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV           &kp C_PLAY_PAUSE  &kp C_NEXT
+&trans      &kp RC(SLASH)  &kp UP     &kp LS(LC(SLASH))  &trans        &trans          &mt PSCRN LC(PSCRN)  &kp F9            &kp F10         &kp F11          &kp F12          &ext_power EP_TOG
+&trans      &kp LEFT       &kp DOWN   &kp RIGHT          &trans        &trans          &kp C_FF             &HXT_R RSHFT F5   &HXT_R RALT F6  &HXT_R RCTRL F7  &HXT_R RMETA F8  &kp C_MUTE
+&kp C_MENU  &kp LC(B)      &kp LC(I)  &kp LC(PERIOD)     &kp PG_UP     &kp PG_DN       &kp C_RW             &kp F1            &kp F2          &kp F3           &kp F4           &kp C_STOP
+                                      &to 0              &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV           &kp C_PLAY_PAUSE  &kp C_NEXT
             >;
 
             label = "nav-sys";
@@ -398,10 +408,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         num-sym {
             bindings = <
-&kp LBKT      &kp APOS           &kp N7           &kp N8          &kp N9           &kp E                &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp BACKSLASH
-&kp ASTERISK  &HXT_L LMETA RBRC  &HXT_L LCTRL N4  &HXT_L LALT N5  &HXT_L LSHFT N6  &kp RIGHT_BRACKET    &trans  &trans    &trans      &trans       &trans     &kp PIPE
-&kp CARET     &kp N0             &kp N1           &kp N2          &kp N3           &kp ENTER            &trans  &trans    &trans      &trans       &trans     &trans
-                                                  &to 0           &trans           &trans               &trans  &trans    &trans
+&kp LBKT      &kp APOS           &kp N7           &kp N8          &kp N9           &kp E                &trans  &trans  &trans  &trans  &trans  &trans
+&kp ASTERISK  &HXT_L LMETA RBRC  &HXT_L LCTRL N4  &HXT_L LALT N5  &HXT_L LSHFT N6  &kp RIGHT_BRACKET    &trans  &trans  &trans  &trans  &trans  &trans
+&kp CARET     &kp N0             &kp N1           &kp N2          &kp N3           &kp ENTER            &trans  &trans  &trans  &trans  &trans  &trans
+                                                  &to 0           &trans           &trans               &trans  &trans  &trans
             >;
 
             label = "num|sym";
