@@ -320,7 +320,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_release>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(140,100,18)>;
+                <&rgb_ug RGB_COLOR_HSB(116,100,12)>;
 
             label = "M_ML1";
         };
@@ -337,7 +337,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_release>,
                 <&mo 2>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(140,100,18)>;
+                <&rgb_ug RGB_COLOR_HSB(116,100,18)>;
 
             label = "M_ML2";
         };
@@ -354,7 +354,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_release>,
                 <&mo 3>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(140,100,18)>;
+                <&rgb_ug RGB_COLOR_HSB(116,100,7)>;
 
             label = "M_ML3";
         };
@@ -497,8 +497,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <28 29>;
         };
 
-        c_ug1 {
-            bindings = <&rgb_ug RGB_COLOR_HSB(141,100,18)>;
+        c_tg3 {
+            bindings = <&to 3>;
             key-positions = <29 30>;
         };
 
@@ -524,10 +524,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         nav-system {
             bindings = <
-&kp K_CMENU  &kp RC(SLASH)  &kp UP     &kp LS(LC(SLASH))  &trans     &trans       &mt PSCRN LC(PSCRN)  &kp F9           &kp F10         &kp F11          &kp F12          &ext_power EP_TOG
-&kp K_MENU   &kp LEFT       &kp DOWN   &kp RIGHT          &trans     &trans       &trans               &HXT_R RSHFT F5  &HXT_R RALT F6  &HXT_R RCTRL F7  &HXT_R RMETA F8  &trans
-&kp C_MENU   &kp LC(B)      &kp LC(I)  &kp LC(PERIOD)     &kp PG_UP  &kp PG_DN    &trans               &kp F1           &kp F2          &kp F3           &kp F4           &trans
-                                       &to 0              &trans     &trans       &trans               &trans           &trans
+&trans     &kp RC(SLASH)  &kp UP     &kp LS(LC(SLASH))  &trans     &trans       &mt PSCRN LC(PSCRN)  &kp F9           &kp F10         &kp F11          &kp F12          &ext_power EP_TOG
+&trans     &kp LEFT       &kp DOWN   &kp RIGHT          &trans     &trans       &trans               &HXT_R RSHFT F5  &HXT_R RALT F6  &HXT_R RCTRL F7  &HXT_R RMETA F8  &trans
+&kp K_APP  &kp LC(B)      &kp LC(I)  &kp LC(PERIOD)     &kp PG_UP  &kp PG_DN    &trans               &kp F1           &kp F2          &kp F3           &kp F4           &trans
+                                     &to 0              &trans     &trans       &trans               &trans           &trans
             >;
 
             label = "nav-sys";
@@ -549,7 +549,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 &kp LBKT        &kp P     &kp O    &kp I      &kp U      &kp Y        &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(67,100,50)  &rgb_ug RGB_COLOR_HSB(112,100,48)  &rgb_ug RGB_COLOR_HSB(186,100,50)  &rgb_ug RGB_COLOR_HSB(245,100,50)  &rgb_ug RGB_COLOR_HSB(287,100,50)
 &kp APOS        &kp SEMI  &kp L    &kp K      &kp J      &kp H        &rgb_ug RGB_TOG                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SAI                    &rgb_ug RGB_HUI                    &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF
 &sk LEFT_SHIFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)     &rgb_ug RGB_BRD                   &rgb_ug RGB_SAD                    &rgb_ug RGB_HUD                    &rgb_ug RGB_SPD                    &rgb_ug RGB_EFR
-                                   &trans     &kp SPACE  &kp ENTER    &bt BT_PRV                       &bt BT_NXT                        &out OUT_TOG
+                                   &to 0      &kp SPACE  &kp ENTER    &bt BT_PRV                       &bt BT_NXT                        &out OUT_TOG
             >;
 
             label = "mir|keeb";
