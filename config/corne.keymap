@@ -318,12 +318,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_press>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_HUD>,
+                <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_HUD>;
+                <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
 
             label = "M_ML1";
             wait-ms = <5>;
@@ -366,6 +366,51 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "M_ML3";
             wait-ms = <5>;
             tap-ms = <10>;
+        };
+
+        m_bt1: m_bt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &rgb_ug RGB_COLOR_HSB(0,100,48)>;
+            label = "M_BT1";
+            tap-ms = <200>;
+            wait-ms = <200>;
+        };
+
+        m_bt2: m_bt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &rgb_ug RGB_COLOR_HSB(58,100,48)>;
+            label = "M_BT2";
+            tap-ms = <200>;
+            wait-ms = <200>;
+        };
+
+        m_bt3: m_bt3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &rgb_ug RGB_COLOR_HSB(144,100,48)>;
+            label = "M_BT3";
+            tap-ms = <200>;
+            wait-ms = <200>;
+        };
+
+        m_bt4: m_bt4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &rgb_ug RGB_COLOR_HSB(193,100,48)>;
+            label = "M_BT4";
+            tap-ms = <200>;
+            wait-ms = <200>;
+        };
+
+        m_bt5: m_bt5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &rgb_ug RGB_COLOR_HSB(299,100,48)>;
+            label = "M_BT5";
+            tap-ms = <200>;
+            wait-ms = <200>;
         };
     };
 
@@ -555,7 +600,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         mir-keeb {
             bindings = <
-&kp LBKT        &kp P     &kp O    &kp I      &kp U      &kp Y        &gresc                        &gresc           &gresc           &gresc           &gresc           &out OUT_TOG
+&kp LBKT        &kp P     &kp O    &kp I      &kp U      &kp Y        &m_bt1                        &m_bt2           &m_bt3           &m_bt4           &m_bt5           &out OUT_TOG
 &kp APOS        &kp SEMI  &kp L    &kp K      &kp J      &kp H        &rgb_ug RGB_TOG               &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF
 &sk LEFT_SHIFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)  &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR
                                    &to 0      &kp SPACE  &kp ENTER    &trans                        &trans           &trans
