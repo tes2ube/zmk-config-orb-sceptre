@@ -389,7 +389,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         m_bt3: m_bt3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &rgb_ug RGB_COLOR_HSB((20,100,12)>;
+            bindings = <&bt BT_SEL 2 &rgb_ug RGB_COLOR_HSB(20,100,12)>;
             label = "M_BT3";
             tap-ms = <200>;
             wait-ms = <200>;
