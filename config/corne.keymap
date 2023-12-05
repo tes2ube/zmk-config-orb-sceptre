@@ -534,6 +534,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_at {
             bindings = <&kp AT>;
             key-positions = <13 20>;
+            require-prior-idle-ms = <300>;
         };
 
         c_us {
@@ -553,12 +554,22 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_tg3 {
             bindings = <&to 3>;
-            key-positions = <29 30>;
+            key-positions = <16 15 36>;
         };
 
         c_caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <17 18>;
+        };
+
+        m_tg3 {
+            bindings = <&to 2>;
+            key-positions = <16 15 37>;
+        };
+
+        m_tg1 {
+            bindings = <&to 1>;
+            key-positions = <38 16 15>;
         };
     };
 
