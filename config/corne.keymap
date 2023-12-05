@@ -292,6 +292,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&none &kp M &kp G &kp K &kp K &kp D &kp L &kp N8 &kp LS(J) &kp LS(D) &kp LS(A) &kp LS(H) &kp LS(P) &kp LS(S) &kp LS(I) &kp LS(V) &kp N8 &kp G &kp L &kp DOT &kp A &kp H &kp D &kp N4 &kp DOT &kp D &kp L &kp S &kp M &kp S &kp F &kp SEMI &kp RET>;
             label = "MP_WRKD";
+            tap-ms = <40>;
         };
 
         mp_wrkQ: mp_wrkQ {
@@ -299,6 +300,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&none &kp M &kp I &kp T &kp T &kp E &kp N &kp N8 &kp LS(H) &kp LS(E) &kp LS(A) &kp LS(D) &kp LS(L) &kp LS(O) &kp LS(C) &kp LS(K) &kp N8 &kp I &kp N &kp V &kp A &kp D &kp E &kp N4 &kp V &kp E &kp N &kp O &kp M &kp O &kp U &kp S &kp RET>;
             label = "MP_WRKQ";
+            tap-ms = <40>;
         };
 
         mp_mac: mp_mac {
@@ -306,6 +308,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&none &kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B &kp RET>;
             label = "MP_MAC";
+            tap-ms = <40>;
         };
 
         m_mL1: m_mL1 {
@@ -315,14 +318,16 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_press>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>,
+                <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_HUI>;
+                <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
 
             label = "M_ML1";
+            wait-ms = <5>;
+            tap-ms = <15>;
         };
 
         m_mL2: m_mL2 {
@@ -332,14 +337,16 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_press>,
                 <&mo 2>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(35,100,7)>,
+                <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 2>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(116,100,7)>;
+                <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
             label = "M_ML2";
+            wait-ms = <5>;
+            tap-ms = <15>;
         };
 
         m_mL3: m_mL3 {
@@ -349,14 +356,28 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_press>,
                 <&mo 3>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(286,100,7)>,
+                <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 3>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(116,100,7)>;
+                <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
             label = "M_ML3";
+            wait-ms = <5>;
+            tap-ms = <10>;
+        };
+
+        mp_bt: mp_bt {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_1to1 &bt MACRO_PLACEHOLDER &macro_param_2to1 &rgb_ug MACRO_PLACEHOLDER>,
+                <&macro_press>;
+
+            label = "MP_BT";
+            tap-ms = <200>;
+            wait-ms = <200>;
         };
     };
 
@@ -522,17 +543,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "orb|cptr";
         };
 
-        nav-system {
-            bindings = <
-&trans      &kp RC(SLASH)  &kp UP     &kp LS(LC(SLASH))  &trans     &trans       &mt PSCRN LC(PSCRN)  &kp F9           &kp F10         &kp F11          &kp F12          &ext_power EP_TOG
-&kp C_MENU  &kp LEFT       &kp DOWN   &kp RIGHT          &trans     &trans       &trans               &HXT_R RSHFT F5  &HXT_R RALT F6  &HXT_R RCTRL F7  &HXT_R RMETA F8  &trans
-&kp K_APP   &kp LC(B)      &kp LC(I)  &kp LC(PERIOD)     &kp PG_UP  &kp PG_DN    &trans               &kp F1           &kp F2          &kp F3           &kp F4           &trans
-                                      &to 0              &trans     &trans       &trans               &trans           &trans
-            >;
-
-            label = "nav-sys";
-        };
-
         num-sym {
             bindings = <
 &kp LBKT      &kp APOS           &kp N7           &kp N8          &kp N9           &kp E                &trans  &kp C_RW      &kp C_STOP  &kp C_FF      &trans  &trans
@@ -544,12 +554,23 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "num|sym";
         };
 
+        nav-system {
+            bindings = <
+&trans      &kp RC(SLASH)  &kp UP     &kp LS(LC(SLASH))  &trans     &trans       &mt PSCRN LC(PSCRN)  &kp F9           &kp F10         &kp F11          &kp F12          &ext_power EP_TOG
+&kp C_MENU  &kp LEFT       &kp DOWN   &kp RIGHT          &trans     &trans       &trans               &HXT_R RSHFT F5  &HXT_R RALT F6  &HXT_R RCTRL F7  &HXT_R RMETA F8  &trans
+&kp K_APP   &kp LC(B)      &kp LC(I)  &kp LC(PERIOD)     &kp PG_UP  &kp PG_DN    &trans               &kp F1           &kp F2          &kp F3           &kp F4           &trans
+                                      &to 0              &trans     &trans       &trans               &trans           &trans
+            >;
+
+            label = "nav-sys";
+        };
+
         mir-keeb {
             bindings = <
-&kp LBKT        &kp P     &kp O    &kp I      &kp U      &kp Y        &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(67,100,50)  &rgb_ug RGB_COLOR_HSB(112,100,48)  &rgb_ug RGB_COLOR_HSB(186,100,50)  &rgb_ug RGB_COLOR_HSB(245,100,50)  &rgb_ug RGB_COLOR_HSB(287,100,50)
-&kp APOS        &kp SEMI  &kp L    &kp K      &kp J      &kp H        &rgb_ug RGB_TOG                  &rgb_ug RGB_BRI                   &rgb_ug RGB_SAI                    &rgb_ug RGB_HUI                    &rgb_ug RGB_SPI                    &rgb_ug RGB_EFF
-&sk LEFT_SHIFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &key_repeat                      &rgb_ug RGB_BRD                   &rgb_ug RGB_SAD                    &rgb_ug RGB_HUD                    &rgb_ug RGB_SPD                    &rgb_ug RGB_EFR
-                                   &to 0      &kp SPACE  &kp ENTER    &bt BT_PRV                       &bt BT_NXT                        &out OUT_TOG
+&kp LBKT        &kp P     &kp O    &kp I      &kp U      &kp Y        &mp_bt BT_SEL RGB_COLOR_HSB(0,100,4) 0  &mp_bt BT_SEL RGB_COLOR_HSB(132,0,0) 1  &mp_bt BT_SEL RGB_COLOR_HSB(60,100,47) 2  &mp_bt BT_SEL RGB_COLOR_HSB(181,84,51) 3  &mp_bt BT_SEL RGB_COLOR_HSB(314,93,49) 4  &out OUT_TOG
+&kp APOS        &kp SEMI  &kp L    &kp K      &kp J      &kp H        &rgb_ug RGB_TOG                         &rgb_ug RGB_BRI                         &rgb_ug RGB_SAI                           &rgb_ug RGB_HUI                           &rgb_ug RGB_SPI                           &rgb_ug RGB_EFF
+&sk LEFT_SHIFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)            &rgb_ug RGB_BRD                         &rgb_ug RGB_SAD                           &rgb_ug RGB_HUD                           &rgb_ug RGB_SPD                           &rgb_ug RGB_EFR
+                                   &to 0      &kp SPACE  &kp ENTER    &trans                                  &trans                                  &trans
             >;
 
             label = "mir|keeb";
