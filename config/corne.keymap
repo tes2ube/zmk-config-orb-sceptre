@@ -367,18 +367,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             wait-ms = <5>;
             tap-ms = <10>;
         };
-
-        mp_bt: mp_bt {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings =
-                <&macro_param_1to1 &bt MACRO_PLACEHOLDER &macro_param_2to1 &rgb_ug MACRO_PLACEHOLDER>,
-                <&macro_press>;
-
-            label = "MP_BT";
-            tap-ms = <200>;
-            wait-ms = <200>;
-        };
     };
 
     combos {
@@ -567,10 +555,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         mir-keeb {
             bindings = <
-&kp LBKT        &kp P     &kp O    &kp I      &kp U      &kp Y        &mp_bt BT_SEL RGB_COLOR_HSB(0,100,4) 0  &mp_bt BT_SEL RGB_COLOR_HSB(132,0,0) 1  &mp_bt BT_SEL RGB_COLOR_HSB(60,100,47) 2  &mp_bt BT_SEL RGB_COLOR_HSB(181,84,51) 3  &mp_bt BT_SEL RGB_COLOR_HSB(314,93,49) 4  &out OUT_TOG
-&kp APOS        &kp SEMI  &kp L    &kp K      &kp J      &kp H        &rgb_ug RGB_TOG                         &rgb_ug RGB_BRI                         &rgb_ug RGB_SAI                           &rgb_ug RGB_HUI                           &rgb_ug RGB_SPI                           &rgb_ug RGB_EFF
-&sk LEFT_SHIFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)            &rgb_ug RGB_BRD                         &rgb_ug RGB_SAD                           &rgb_ug RGB_HUD                           &rgb_ug RGB_SPD                           &rgb_ug RGB_EFR
-                                   &to 0      &kp SPACE  &kp ENTER    &trans                                  &trans                                  &trans
+&kp LBKT        &kp P     &kp O    &kp I      &kp U      &kp Y        &gresc                        &gresc           &gresc           &gresc           &gresc           &out OUT_TOG
+&kp APOS        &kp SEMI  &kp L    &kp K      &kp J      &kp H        &rgb_ug RGB_TOG               &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF
+&sk LEFT_SHIFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &rgb_ug RGB_COLOR_HSB(0,0,0)  &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR
+                                   &to 0      &kp SPACE  &kp ENTER    &trans                        &trans           &trans
             >;
 
             label = "mir|keeb";
