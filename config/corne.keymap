@@ -619,8 +619,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_paste {
-            bindings = <&kp LC(PERIOD)>;
-            key-positions = <16 14>;
+            bindings = <&kp LC(DOT)>;
+            key-positions = <14 16>;
         };
 
         c_copy {
