@@ -297,7 +297,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         ms_wrkD: ms_wrkD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp M &kp G &kp K &kp K &kp D &kp L &kp N8 &kp LS(J) &kp LS(D) &kp LS(A) &kp LS(H) &kp LS(P) &kp LS(S) &kp LS(I) &kp LS(V) &kp N8 &kp G &kp L &kp DOT &kp A &kp H &kp D &kp N4 &kp DOT &kp D &kp L &kp S &kp M &kp S &kp F &kp SEMI &kp RET>;
+            bindings =
+                <&none &kp M &kp G &kp K &kp K &kp D &kp L &kp N8 &kp LS(J) &kp LS(D) &kp LS(A) &kp LS(H) &kp LS(P) &kp LS(S) &kp LS(I) &kp LS(V) &kp N8 &kp G &kp L &kp DOT &kp A &kp H &kp D &kp N4 &kp DOT &kp D &kp L &kp S &kp M &kp S &kp F &kp SEMI>,
+                <&macro_tap>,
+                <&kp RET>;
+
             label = "MS_WRKD";
             tap-ms = <40>;
         };
@@ -305,7 +309,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         ms_wrkQ: ms_wrkQ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp M &kp I &kp T &kp T &kp E &kp N &kp N8 &kp LS(H) &kp LS(E) &kp LS(A) &kp LS(D) &kp LS(L) &kp LS(O) &kp LS(C) &kp LS(K) &kp N8 &kp I &kp N &kp V &kp A &kp D &kp E &kp N4 &kp V &kp E &kp N &kp O &kp M &kp O &kp U &kp S &kp RET>;
+            bindings =
+                <&none &kp M &kp I &kp T &kp T &kp E &kp N &kp N8 &kp LS(H) &kp LS(E) &kp LS(A) &kp LS(D) &kp LS(L) &kp LS(O) &kp LS(C) &kp LS(K) &kp N8 &kp I &kp N &kp V &kp A &kp D &kp E &kp N4 &kp V &kp E &kp N &kp O &kp M &kp O &kp U &kp S>,
+                <&macro_tap>,
+                <&kp RET>;
+
             label = "MS_WRKQ";
             tap-ms = <40>;
         };
@@ -313,7 +321,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         ms_mac: ms_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B &kp RET>;
+            bindings =
+                <&none &kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B>,
+                <&macro_tap>,
+                <&kp RET>;
+
             label = "MS_MAC";
             tap-ms = <40>;
         };
@@ -571,6 +583,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_pgup {
             bindings = <&kp PAGE_UP>;
             key-positions = <18 19>;
+            timeout-ms = <25>;
         };
 
         c_pgdn {
