@@ -583,13 +583,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_pgup {
             bindings = <&kp PAGE_UP>;
-            key-positions = <18 19>;
+            key-positions = <30 31>;
             require-prior-idle-ms = <200>;
         };
 
         c_pgdn {
             bindings = <&kp PG_DN>;
-            key-positions = <19 20>;
+            key-positions = <31 32>;
             require-prior-idle-ms = <200>;
         };
 
