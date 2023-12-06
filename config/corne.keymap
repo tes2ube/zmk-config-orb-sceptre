@@ -498,6 +498,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_end {
             bindings = <&kp END>;
             key-positions = <16 17>;
+            require-prior-idle-ms = <200>;
         };
 
         c_btReset {
@@ -583,12 +584,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_pgup {
             bindings = <&kp PAGE_UP>;
             key-positions = <18 19>;
-            timeout-ms = <25>;
+            require-prior-idle-ms = <200>;
         };
 
         c_pgdn {
             bindings = <&kp PG_DN>;
             key-positions = <19 20>;
+            require-prior-idle-ms = <200>;
         };
 
         c_tg3 {
@@ -614,16 +616,19 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_spc {
             bindings = <&kp SPACE>;
             key-positions = <25 26 27 28>;
+            timeout-ms = <200>;
         };
 
         c_bspc {
             bindings = <&M_BKDL>;
             key-positions = <25 26>;
+            require-prior-idle-ms = <200>;
         };
 
         c_ret {
             bindings = <&kp ENTER>;
             key-positions = <27 28>;
+            require-prior-idle-ms = <200>;
         };
 
         c_cut {
@@ -634,6 +639,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_paste {
             bindings = <&kp LC(DOT)>;
             key-positions = <14 16>;
+            require-prior-idle-ms = <200>;
         };
 
         c_copy {
