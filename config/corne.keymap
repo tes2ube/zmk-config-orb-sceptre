@@ -423,7 +423,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         ms_and: ms_and {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp A &kp N &kp D &kp SPACE>;
+            bindings = <&kp A &kp L &kp H &kp SPACE>;
             label = "MS_AND";
         };
 
@@ -671,10 +671,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         nav-system {
             bindings = <
-&trans        &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &trans       &trans    &mt PSCRN LC(PSCRN)  &kp F9           &kp F10         &kp F11          &kp F12          &trans
-&trans        &kp LEFT                &kp DOWN   &kp RIGHT                &trans       &trans    &kp K_SCROLL_UP      &HXT_R RSHFT F5  &HXT_R RALT F6  &HXT_R RCTRL F7  &HXT_R RMETA F8  &trans
-&kp LS(HOME)  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp LS(END)  &trans    &kp K_SCROLL_DOWN    &kp F1           &kp F2          &kp F3           &kp F4           &kp K_APP
-                                                 &to 0                    &trans       &trans    &trans               &trans           &trans
+&trans              &trans                  &kp UP     &trans                   &trans               &trans    &mt PSCRN LC(PSCRN)  &kp F9           &kp F10         &kp F11          &kp F12          &trans
+&kp LC(LEFT_ARROW)  &kp LEFT                &kp DOWN   &kp RIGHT                &kp LC(RIGHT_ARROW)  &trans    &kp K_SCROLL_UP      &HXT_R RSHFT F5  &HXT_R RALT F6  &HXT_R RCTRL F7  &HXT_R RMETA F8  &trans
+&kp LS(HOME)        &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp LS(END)          &trans    &kp K_SCROLL_DOWN    &kp F1           &kp F2          &kp F3           &kp F4           &kp K_APP
+                                                       &to 0                    &trans               &trans    &trans               &trans           &trans
             >;
 
             label = "nav-sys";
