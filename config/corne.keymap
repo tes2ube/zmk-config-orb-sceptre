@@ -605,12 +605,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         m_tg3 {
             bindings = <&to 2>;
-            key-positions = <16 15 37>;
+            key-positions = <37 16 15>;
         };
 
         m_tg1 {
             bindings = <&to 1>;
-            key-positions = <38 16 15>;
+            key-positions = <38 15 16>;
         };
 
         c_spc {
