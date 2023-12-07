@@ -541,6 +541,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <26 28 32 9>;
             layers = <3>;
             require-prior-idle-ms = <1500>;
+            timeout-ms = <1000>;
         };
 
         cp_mac {
@@ -548,6 +549,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <13 8 31 4>;
             layers = <3>;
             require-prior-idle-ms = <1500>;
+            timeout-ms = <1000>;
         };
 
         c_dol {
