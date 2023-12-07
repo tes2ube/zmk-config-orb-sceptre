@@ -312,6 +312,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings =
                 <&none &kp M &kp I &kp T &kp T &kp E &kp N &kp N8 &kp LS(H) &kp LS(E) &kp LS(A) &kp LS(D) &kp LS(L) &kp LS(O) &kp LS(C) &kp LS(K) &kp N8 &kp I &kp N &kp V &kp A &kp D &kp E &kp N4 &kp V &kp E &kp N &kp O &kp M &kp O &kp U &kp S>,
                 <&macro_tap>,
+                <&kp RET>,
+                <&macro_release>,
                 <&kp RET>;
 
             label = "MS_WRKQ";
@@ -322,7 +324,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&none &kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B>,
+                <&kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B>,
                 <&macro_tap>,
                 <&kp RET>;
 
@@ -534,19 +536,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <22 17 13 20>;
             layers = <3>;
             require-prior-idle-ms = <1500>;
+            timeout-ms = <1000>;
         };
 
         cp_wrkQ {
             bindings = <&ms_wrkQ>;
             key-positions = <26 28 32 9>;
-            layers = <3>;
-            require-prior-idle-ms = <1500>;
-            timeout-ms = <1000>;
-        };
-
-        cp_mac {
-            bindings = <&ms_mac>;
-            key-positions = <13 8 31 4>;
             layers = <3>;
             require-prior-idle-ms = <1500>;
             timeout-ms = <1000>;
@@ -697,6 +692,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <8 26 10>;
             require-prior-idle-ms = <1000>;
             layers = <3>;
+        };
+
+        cp_mac {
+            bindings = <&ms_mac>;
+            key-positions = <8 31 4 13>;
+            require-prior-idle-ms = <1500>;
+            layers = <3>;
+            timeout-ms = <1000>;
         };
     };
 
