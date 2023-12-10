@@ -217,6 +217,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_SLQM";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LS(LEFT_BRACKET)>;
+
+            tapping-term-ms = <400>;
         };
 
         LHRP_L: LHRP_L {
