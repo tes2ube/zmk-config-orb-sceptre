@@ -185,6 +185,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_APQT";
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp LS(Q)>;
+
+            tapping-term-ms = <400>;
         };
 
         D_CMCL: D_CMCL {
@@ -206,6 +208,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_SCCO";
             #binding-cells = <0>;
             bindings = <&kp Z>, <&kp LS(Z)>;
+
+            tapping-term-ms = <400>;
         };
 
         D_SLQM: D_SLQM {
