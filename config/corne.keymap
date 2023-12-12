@@ -63,25 +63,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
 / {
     behaviors {
-        HT_CAP: HT_CAP {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_CAP";
-            bindings = <&kp>, <&caps_word>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <125>;
-        };
-
-        D_CAP: D_CAP {
-            compatible = "zmk,behavior-tap-dance";
-            label = "D_CAP";
-            #binding-cells = <0>;
-            bindings = <&HT_CAP LSHIFT 0>, <&kp CAPS>;
-
-            tapping-term-ms = <125>;
-        };
-
         M3XT_L: M3XT_L {
             compatible = "zmk,behavior-hold-tap";
             label = "M3XT_L";
