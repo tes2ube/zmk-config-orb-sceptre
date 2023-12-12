@@ -185,7 +185,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LS(E)>;
 
-            tapping-term-ms = <0>;
+            tapping-term-ms = <300>;
         };
 
         D_SCCO: D_SCCO {
