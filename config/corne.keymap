@@ -188,7 +188,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp LS(Q)>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
         };
 
         D_CMCL: D_CMCL {
@@ -196,8 +196,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_CMCL";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp LS(W)>;
-
-            tapping-term-ms = <400>;
         };
 
         D_PDCR: D_PDCR {
@@ -206,7 +204,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LS(E)>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <0>;
         };
 
         D_SCCO: D_SCCO {
@@ -215,7 +213,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp Z>, <&kp LS(Z)>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
         };
 
         D_SLQM: D_SLQM {
@@ -224,7 +222,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LS(LEFT_BRACKET)>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
         };
 
         LHRP_L: LHRP_L {
@@ -303,7 +301,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp AMPS>, <&ms_and>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
         };
     };
 
