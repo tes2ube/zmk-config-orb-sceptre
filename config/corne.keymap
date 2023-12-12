@@ -88,9 +88,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL3>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
             hold-trigger-on-release;
@@ -102,9 +102,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
@@ -116,9 +116,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
@@ -130,9 +130,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
             hold-trigger-on-release;
@@ -144,10 +144,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             flavor = "hold-preferred";
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
         };
 
         LHXLT_R: LHXLT_R {
@@ -156,10 +156,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             flavor = "balanced";
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
@@ -178,6 +178,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_GRESC";
             #binding-cells = <0>;
             bindings = <&kp GRAVE>, <&kp TILDE>;
+
+            tapping-term-ms = <400>;
         };
 
         D_APQT: D_APQT {
@@ -194,6 +196,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_CMCL";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp LS(W)>;
+
+            tapping-term-ms = <400>;
         };
 
         D_PDCR: D_PDCR {
@@ -201,6 +205,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_PDCR";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LS(E)>;
+
+            tapping-term-ms = <400>;
         };
 
         D_SCCO: D_SCCO {
@@ -227,9 +233,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL1>, <&key_repeat>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
             hold-trigger-on-release;
@@ -241,9 +247,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL1>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
@@ -255,9 +261,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL2>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
             hold-trigger-on-release;
@@ -269,9 +275,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
             hold-trigger-on-release;
@@ -283,9 +289,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL3>, <&M_BKDL>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
@@ -296,6 +302,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_AND";
             #binding-cells = <0>;
             bindings = <&kp AMPS>, <&ms_and>;
+
+            tapping-term-ms = <400>;
         };
     };
 
@@ -465,10 +473,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
     combos {
         compatible = "zmk,combos";
 
-        c_reset {
+        c_resetR {
             bindings = <&sys_reset>;
-            key-positions = <4 15 26 7 20 33>;
-            timeout-ms = <50>;
+            key-positions = <30 19 32 31>;
+            timeout-ms = <400>;
             slow-release;
             layers = <3>;
             require-prior-idle-ms = <3000>;
@@ -547,7 +555,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         cp_wrkQ {
             bindings = <&ms_wrkQ>;
-            key-positions = <26 28 32 9>;
+            key-positions = <14 27 28 30>;
             layers = <3>;
             require-prior-idle-ms = <1500>;
             timeout-ms = <1000>;
@@ -604,14 +612,15 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <17 18>;
+            require-prior-idle-ms = <400>;
         };
 
-        m_tg3 {
+        c_tg2 {
             bindings = <&to 2>;
             key-positions = <37 16 15>;
         };
 
-        m_tg1 {
+        c_tg1 {
             bindings = <&to 1>;
             key-positions = <38 15 16>;
         };
@@ -656,7 +665,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_redo {
-            bindings = <&kp LC(FSLH)>;
+            bindings = <&kp LC(LS(FSLH))>;
             key-positions = <13 15>;
         };
 
@@ -702,10 +711,52 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         cp_mac {
             bindings = <&ms_mac>;
-            key-positions = <8 31 4 13>;
+            key-positions = <16 19 20 21>;
             require-prior-idle-ms = <1500>;
             layers = <3>;
             timeout-ms = <1000>;
+        };
+
+        c_bootR {
+            bindings = <&bootloader>;
+            key-positions = <18 31 20 19>;
+            slow-release;
+            require-prior-idle-ms = <3000>;
+            layers = <3>;
+            timeout-ms = <400>;
+        };
+
+        c_bootL {
+            bindings = <&bootloader>;
+            key-positions = <17 16 15 28>;
+            slow-release;
+            require-prior-idle-ms = <3000>;
+            layers = <3>;
+            timeout-ms = <400>;
+        };
+
+        c_resetL {
+            bindings = <&sys_reset>;
+            key-positions = <29 28 27 16>;
+            slow-release;
+            require-prior-idle-ms = <3000>;
+            layers = <3>;
+            timeout-ms = <400>;
+        };
+
+        c_tg3R {
+            bindings = <&to 3>;
+            key-positions = <19 20 41>;
+        };
+
+        c_tg2R {
+            bindings = <&to 2>;
+            key-positions = <19 20 40>;
+        };
+
+        c_tg1R {
+            bindings = <&to 1>;
+            key-positions = <39 19 20>;
         };
     };
 
