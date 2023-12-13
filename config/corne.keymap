@@ -747,7 +747,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_troubR {
             bindings = <&to 4>;
-            key-positions = <29 30 11>;
+            key-positions = <30 11>;
             layers = <3>;
             require-prior-idle-ms = <3000>;
         };
