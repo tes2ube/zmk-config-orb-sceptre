@@ -32,6 +32,7 @@
 };
 
 &caps_word {
+    continue-list = <UNDERSCORE BACKSPACE DELETE SEMI COMMA DOT SLASH>;
 };
 
 /* Homerow mods
