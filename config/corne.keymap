@@ -924,10 +924,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         mir-keeb {
             bindings = <
-&d_slqm   &kp P          &kp O          &kp I         &kp U          &kp Y     &m_bt1           &m_bt2           &m_bt3           &m_bt4                        &m_bt5  &out OUT_TOG
-&kp APOS  &ht_L LMETA A  &ht_L RCTRL S  &ht_L RALT D  &ht_L RSHFT F  &kp H     &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF               &none   &ext_power EP_TOG
-&kp EXCL  &kp FSLH       &kp DOT        &kp COMMA     &kp M          &kp N     &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SPD  &rgb_ug RGB_COLOR_HSB(0,0,0)  &none   &rgb_ug RGB_TOG
-                                        &to 0         &trans         &trans    &trans           &trans           &trans
+&d_slqm   &kp P     &kp O    &kp I      &kp U   &kp Y     &m_bt1           &m_bt2           &m_bt3           &m_bt4                        &m_bt5  &out OUT_TOG
+&kp APOS  &kp A     &kp S    &kp D      &kp F   &kp H     &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF               &none   &ext_power EP_TOG
+&kp EXCL  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SPD  &rgb_ug RGB_COLOR_HSB(0,0,0)  &none   &rgb_ug RGB_TOG
+                             &to 0      &trans  &trans    &trans           &trans           &trans
             >;
 
             label = "mir|keeb";
