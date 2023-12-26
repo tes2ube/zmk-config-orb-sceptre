@@ -360,7 +360,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         m_bt1: m_bt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &rgb_ug RGB_COLOR_HSB(0,100,12) &rgb_ug RGB_BRI &rgb_ug RGB_BRD>;
+            bindings = <&bt BT_SEL 0 &rgb_ug RGB_COLOR_HSB(0,100,12)>;
             label = "M_BT1";
             tap-ms = <200>;
             wait-ms = <200>;
@@ -369,7 +369,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         m_bt2: m_bt2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &rgb_ug RGB_COLOR_HSB(120,100,12) &rgb_ug RGB_BRI &rgb_ug RGB_BRD>;
+            bindings = <&bt BT_SEL 1 &rgb_ug RGB_COLOR_HSB(120,100,12)>;
             label = "M_BT2";
             tap-ms = <200>;
             wait-ms = <200>;
@@ -378,7 +378,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         m_bt3: m_bt3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &rgb_ug RGB_COLOR_HSB(20,100,12) &rgb_ug RGB_BRI &rgb_ug RGB_BRD>;
+            bindings = <&bt BT_SEL 2 &rgb_ug RGB_COLOR_HSB(20,100,12)>;
             label = "M_BT3";
             tap-ms = <200>;
             wait-ms = <200>;
@@ -387,7 +387,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         m_bt4: m_bt4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &rgb_ug RGB_COLOR_HSB(213,100,12) &rgb_ug RGB_BRI &rgb_ug RGB_BRD>;
+            bindings = <&bt BT_SEL 3 &rgb_ug RGB_COLOR_HSB(213,100,12)>;
             label = "M_BT4";
             tap-ms = <200>;
             wait-ms = <200>;
@@ -396,7 +396,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         m_bt5: m_bt5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &rgb_ug RGB_COLOR_HSB(300,100,12) &rgb_ug RGB_BRI &rgb_ug RGB_BRD>;
+            bindings = <&bt BT_SEL 4 &rgb_ug RGB_COLOR_HSB(300,100,12)>;
             label = "M_BT5";
             tap-ms = <200>;
             wait-ms = <200>;
@@ -477,15 +477,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
     combos {
         compatible = "zmk,combos";
 
-        c_resetR {
-            bindings = <&sys_reset>;
-            key-positions = <30 19 32 31>;
-            timeout-ms = <400>;
-            slow-release;
-            layers = <3 6>;
-            require-prior-idle-ms = <3000>;
-        };
-
         c_parL {
             bindings = <&kp LPAR>;
             key-positions = <1 2>;
@@ -523,14 +514,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             layers = <0>;
         };
 
-        c_btReset {
-            bindings = <&bt BT_CLR>;
-            key-positions = <39 40 41>;
-            timeout-ms = <50>;
-            slow-release;
-            layers = <3>;
-        };
-
         c_metaL {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
@@ -541,18 +524,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&caps_word>;
             key-positions = <16 19>;
             layers = <0 1 2>;
-        };
-
-        c_brcL {
-            bindings = <&kp UNDER>;
-            key-positions = <6 7 8>;
-            layers = <0>;
-        };
-
-        c_brcR {
-            bindings = <&kp PLUS>;
-            key-positions = <7 8 9>;
-            layers = <0>;
         };
 
         cp_wrkD {
@@ -622,12 +593,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             layers = <0 2>;
         };
 
-        c_tg3 {
-            bindings = <&to 3>;
-            key-positions = <16 15 36>;
-            layers = <0>;
-        };
-
         c_caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <17 18>;
@@ -637,13 +602,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_cut {
             bindings = <&kp LC(B)>;
-            key-positions = <12 14>;
+            key-positions = <24 26>;
             layers = <0>;
         };
 
         c_paste {
             bindings = <&kp LC(DOT)>;
-            key-positions = <24 26>;
+            key-positions = <14 12>;
             require-prior-idle-ms = <200>;
             layers = <0>;
         };
@@ -654,59 +619,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             layers = <0>;
         };
 
-        c_undo {
-            bindings = <&kp LC(FSLH)>;
-            key-positions = <25 27>;
-            layers = <0 1 2>;
-        };
-
-        c_redo {
-            bindings = <&kp LC(LS(FSLH))>;
-            key-positions = <13 15>;
-            layers = <0 1 2>;
-        };
-
-        c_altdo {
-            bindings = <&kp LC(T)>;
-            key-positions = <1 3>;
-            layers = <0 1 2>;
-        };
-
-        c_bx1 {
-            bindings = <&bt BT_DISC 0>;
-            key-positions = <6 26>;
-            layers = <3>;
-            require-prior-idle-ms = <1000>;
-        };
-
-        c_bx2 {
-            bindings = <&bt BT_DISC 1>;
-            key-positions = <26 7>;
-            layers = <3>;
-            require-prior-idle-ms = <1000>;
-        };
-
-        c_bx3 {
-            bindings = <&bt BT_DISC 2>;
-            key-positions = <8 26>;
-            require-prior-idle-ms = <1000>;
-            layers = <3>;
-        };
-
-        c_bx4 {
-            bindings = <&bt BT_DISC 3>;
-            key-positions = <26 9>;
-            require-prior-idle-ms = <1000>;
-            layers = <3>;
-        };
-
-        c_bx5 {
-            bindings = <&bt BT_DISC 4>;
-            key-positions = <26 10>;
-            require-prior-idle-ms = <1000>;
-            layers = <3>;
-        };
-
         cp_mac {
             bindings = <&ms_mac>;
             key-positions = <16 19 20 21>;
@@ -715,60 +627,15 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             timeout-ms = <1000>;
         };
 
-        c_bootR {
-            bindings = <&bootloader>;
-            key-positions = <18 31 20 19>;
-            slow-release;
-            require-prior-idle-ms = <3000>;
-            layers = <3>;
-            timeout-ms = <400>;
-        };
-
-        c_bootL {
-            bindings = <&bootloader>;
-            key-positions = <17 16 15 28>;
-            slow-release;
-            require-prior-idle-ms = <3000>;
-            layers = <3>;
-            timeout-ms = <400>;
-        };
-
-        c_resetL {
-            bindings = <&sys_reset>;
-            key-positions = <29 28 27 16>;
-            slow-release;
-            require-prior-idle-ms = <3000>;
-            layers = <3>;
-            timeout-ms = <400>;
-        };
-
-        c_tg3R {
-            bindings = <&to 3>;
-            key-positions = <19 20 41>;
-            layers = <0>;
-        };
-
-        c_tg2R {
-            bindings = <&to 2>;
-            key-positions = <19 20 40>;
-            layers = <0>;
-        };
-
-        c_tg1R {
-            bindings = <&to 1>;
-            key-positions = <39 19 20>;
-            layers = <0>;
-        };
-
         c_troubL {
-            bindings = <&to 6>;
+            bindings = <&to 4>;
             key-positions = <0 29>;
             layers = <3>;
             require-prior-idle-ms = <3000>;
         };
 
         c_troubR {
-            bindings = <&to 6>;
+            bindings = <&to 4>;
             key-positions = <30 11>;
             layers = <3>;
             require-prior-idle-ms = <3000>;
@@ -776,42 +643,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_esc {
             bindings = <&kp ESC>;
-            key-positions = <0 1>;
+            key-positions = <12 13>;
             layers = <0>;
-        };
-
-        c_capalt {
-            bindings = <&b_capalt>;
-            key-positions = <15 20>;
-            layers = <0 1>;
-        };
-
-        c_test_L {
-            bindings = <&to 4>;
-            key-positions = <5 24>;
-            require-prior-idle-ms = <3000>;
-            layers = <3>;
-        };
-
-        c_test_R {
-            bindings = <&to 4>;
-            key-positions = <6 35>;
-            require-prior-idle-ms = <3000>;
-            layers = <3>;
-        };
-
-        c_test2_L {
-            bindings = <&to 5>;
-            key-positions = <24 17>;
-            require-prior-idle-ms = <3000>;
-            layers = <3>;
-        };
-
-        c_test2_R {
-            bindings = <&to 5>;
-            key-positions = <35 18>;
-            require-prior-idle-ms = <3000>;
-            layers = <3>;
         };
     };
 
@@ -820,10 +653,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&d_cvk          &d_apqt        &d_cmcl        &d_pdcr           &kp R            &kp T           &kp Y                        &kp U              &kp I         &kp O          &kp P             &d_slqm
-&ht_xvk 0 HASH  &ht_L LMETA A  &ht_L LCTRL S  &ht_L LALT D      &ht_L LSHFT F    &kp G           &kp H                        &ht_R RSHFT J      &ht_R RALT K  &ht_R RCTRL L  &ht_R RMETA SEMI  &kp SQT
-&d_and          &d_scco        &kp X          &kp C             &kp V            &kp B           &kp N                        &kp M              &kp COMMA     &kp DOT        &kp SLASH         &kp EXCL
-                                              &ht_ml3k_L 0 DEL  &ht_l2k_L 0 TAB  &ht_l1rr 0 0    &ht_R LA(LC(LG(LSHFT))) RET  &ht_l1k_R 0 SPACE  &kp BSPC
+&d_cvk          &d_apqt        &d_cmcl        &d_pdcr       &kp R            &kp T           &kp Y                        &kp U              &kp I         &kp O          &kp P             &d_slqm
+&ht_xvk 0 HASH  &ht_L LMETA A  &ht_L LCTRL S  &ht_L LALT D  &ht_L LSHFT F    &kp G           &kp H                        &ht_R RSHFT J      &ht_R RALT K  &ht_R RCTRL L  &ht_R RMETA SEMI  &kp SQT
+&d_and          &d_scco        &kp X          &kp C         &kp V            &kp B           &kp N                        &kp M              &kp COMMA     &kp DOT        &kp SLASH         &kp EXCL
+                                              &kp DELETE    &ht_l2k_L 0 TAB  &ht_l1rr 0 0    &ht_R LA(LC(LG(LSHFT))) RET  &ht_l1k_R 0 SPACE  &kp BSPC
             >;
 
             label = "orb|cptr";
@@ -860,28 +693,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             >;
 
             label = "mir|keeb";
-        };
-
-        testing {
-            bindings = <
-&kp C_MENU_PICK  &m_dubk K_STOP C_STOP           &kp C_MENU_DOWN       &m_dubk K_FIND C_AC_FIND  &m_dubk K_LOCK C_AL_LOCK  &kp SYSREQ      &kp C_PIP                     &kp C_SUBTITLES                 &kp K_UNDO     &kp C_AC_UNDO  &kp K_CUT    &kp C_AC_CUT
-&kp K_EXEC       &m_dubk K_REFRESH C_AC_REFRESH  &kp C_DATA_ON_SCREEN  &kp K_EDIT                &kp EXSEL                 &kp K_CANCEL    &kp C_AC_PROPS                &m_dubk K_SELECT C_MENU_SELECT  &kp C_AC_REDO  &kp C_AC_REDO  &kp K_COPY   &kp C_AC_COPY
-&kp OUT          &kp SEPARATOR                   &kp PRIOR             &kp CRSEL                 &kp CLEAR_AGAIN           &kp CLEAR       &m_dubk K_CANCEL C_AC_CANCEL  &kp C_AC_SEARCH                 &kp C_AC_GOTO  &kp C_AC_ZOOM  &kp K_PASTE  &kp C_AC_PASTE
-                                                                       &to 0                     &trans                    &trans          &trans                        &trans                          &to 0
-            >;
-
-            label = "test";
-        };
-
-        testing2 {
-            bindings = <
-&m_dubk C_MENU_PICK K_SELECT  &kp C_MENU_DECREASE  &kp C_MENU_UP                       &kp C_MENU_INCREASE  &kp C_RED                               &kp C_GREEN                         &kp C_RECALL_LAST  &kp C_MEDIA_GUIDE  &kp C_MEDIA_COMPUTER  &kp C_MEDIA_WWW     &kp C_MEDIA_GAMES  &kp C_MEDIA_MESSAGES
-&kp C_MENU_ESC                &kp C_MENU_LEFT      &kp C_MENU_DOWN                     &kp C_MENU_RIGHT     &kp C_BLUE                              &kp C_YELLOW                        &kp C_MODE_STEP    &kp C_MEDIA_HOME   &kp C_AC_HOME         &kp C_AC_BOOKMARKS  &kp C_AC_CLOSE     &kp C_AC_EXIT
-&kp C_MENU                    &kp C_CHAN_DEC       &kp C_KEYBOARD_INPUT_ASSIST_ACCEPT  &kp C_CHANNEL_INC    &kp C_KEYBOARD_INPUT_ASSIST_NEXT_GROUP  &kp C_KEYBOARD_INPUT_ASSIST_NEXT    &kp C_QUIT         &kp C_HELP         &kp C_AC_NEW          &kp C_AC_OPEN       &kp C_AC_SAVE      &m_dubk K_EDIT C_AC_EDIT
-                                                                                       &to 0                &kp                                     &kp                                 &kp                &kp                &to 0
-            >;
-
-            label = "test2";
         };
 
         troubleshoot {
