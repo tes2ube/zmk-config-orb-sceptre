@@ -550,7 +550,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_bslh {
             bindings = <&kp BSLH>;
-            key-positions = <37 28>;
+            key-positions = <38 29>;
             layers = <0 1>;
         };
 
@@ -629,14 +629,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_troubL {
             bindings = <&to 4>;
-            key-positions = <0 29>;
+            key-positions = <0 37>;
             layers = <3>;
             require-prior-idle-ms = <3000>;
         };
 
         c_troubR {
             bindings = <&to 4>;
-            key-positions = <30 11>;
+            key-positions = <11 40>;
             layers = <3>;
             require-prior-idle-ms = <3000>;
         };
@@ -645,6 +645,76 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp ESC>;
             key-positions = <12 13>;
             layers = <0>;
+        };
+
+        c_bt1 {
+            bindings = <&m_bt1>;
+            key-positions = <38 26>;
+        };
+
+        c_bt2 {
+            bindings = <&m_bt2>;
+            key-positions = <38 27>;
+        };
+
+        c_bt3 {
+            bindings = <&m_bt3>;
+            key-positions = <38 28>;
+        };
+
+        c_bt4 {
+            bindings = <&m_bt4>;
+            key-positions = <38 14>;
+        };
+
+        c_bt5 {
+            bindings = <&m_bt5>;
+            key-positions = <38 15>;
+        };
+
+        c_lhome {
+            bindings = <&to 0>;
+            key-positions = <37 25>;
+        };
+
+        c_lnum {
+            bindings = <&to 1>;
+            key-positions = <37 26>;
+        };
+
+        c_lnav {
+            bindings = <&to 2>;
+            key-positions = <37 27>;
+        };
+
+        c_l3 {
+            bindings = <&to 3>;
+            key-positions = <37 28>;
+        };
+
+        c_l4 {
+            bindings = <&to 4>;
+            key-positions = <37 14>;
+        };
+
+        c_l5 {
+            bindings = <&to 4>;
+            key-positions = <37 15>;
+        };
+
+        c_l6 {
+            bindings = <&to 4>;
+            key-positions = <37 16>;
+        };
+
+        c_ugbri {
+            bindings = <&rgb_ug RGB_BRI>;
+            key-positions = <38 5>;
+        };
+
+        c_ugbrd {
+            bindings = <&rgb_ug RGB_BRD>;
+            key-positions = <38 17>;
         };
     };
 
@@ -675,10 +745,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         nav-system {
             bindings = <
-&trans  &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &trans        &trans         &mt PSCRN LC(PSCRN)                     &kp F9          &kp F10             &kp F11         &kp F12         &m_dubk K_FORWARD C_AC_FORWARD
-&trans  &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)  &kp LS(END)    &m_dubk K_SCROLL_UP C_AC_SCROLL_UP      &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &m_dubk K_BACK C_AC_BACK
-&trans  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp SPACE     &kp RET        &m_dubk K_SCROLL_DOWN C_AC_SCROLL_DOWN  &kp F1          &kp F2              &kp F3          &kp F4          &kp K_APP
-                                           &to 0                    &trans        &trans         &trans                                  &trans          &trans
+&trans  &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)  &kp F9          &kp F10             &kp F11         &kp F12         &m_dubk K_FORWARD C_AC_FORWARD
+&trans  &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &trans               &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &m_dubk K_BACK C_AC_BACK
+&trans  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp SPACE      &kp RET              &trans               &kp F1          &kp F2              &kp F3          &kp F4          &kp K_APP
+                                           &to 0                    &trans         &trans               &trans               &trans          &trans
             >;
 
             label = "nav|func";
