@@ -91,15 +91,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             hold-trigger-on-release;
         };
 
-        md_bkdl: md_bkdl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MD_BKDL";
-            bindings = <&kp BSPC>, <&kp DEL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         d_gresc: d_gresc {
             compatible = "zmk,behavior-tap-dance";
             label = "D_GRESC";
@@ -197,7 +188,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         ht_ml3bk_R: ht_ml3bk_R {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_ML3BK_R";
-            bindings = <&m_mL3>, <&md_bkdl>;
+            bindings = <&m_mL3>, <&none>;
 
             #binding-cells = <2>;
             tapping-term-ms = <210>;
@@ -273,6 +264,16 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             mods = <(MOD_LALT)>;
             continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 LSHFT RSHFT TAB>;
         };
+
+        md_slok: md_slok {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MD_SLOK";
+            bindings = <&ht_R RGUI SEMI>, <&ht_R RGUI COLON>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -305,12 +306,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 1>,
+                <&mo 2>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 1>,
+                <&mo 2>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
 
@@ -324,12 +325,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 2>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 2>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
@@ -498,123 +499,90 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_metaL {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
-            layers = <0 1 2>;
+            layers = <0 2 4>;
         };
 
         c_cpwd {
             bindings = <&caps_word>;
             key-positions = <16 19>;
-            layers = <0 1 2>;
-        };
-
-        cp_wrkD {
-            bindings = <&ms_wrkD>;
-            key-positions = <22 17 13 20>;
-            require-prior-idle-ms = <1500>;
-            timeout-ms = <1000>;
-        };
-
-        cp_wrkQ {
-            bindings = <&ms_wrkQ>;
-            key-positions = <14 27 28 30>;
-            require-prior-idle-ms = <1500>;
-            timeout-ms = <1000>;
+            layers = <0 2 4>;
         };
 
         c_dol {
             bindings = <&kp DLLR>;
             key-positions = <36 28 27>;
-            layers = <0 1>;
+            layers = <0 2>;
         };
 
         c_bslh {
             bindings = <&kp BSLH>;
             key-positions = <38 29>;
-            layers = <0 1>;
+            layers = <0 2>;
         };
 
         c_pipe {
             bindings = <&kp PIPE>;
             key-positions = <37 29>;
-            layers = <0 1>;
+            layers = <0 2>;
         };
 
         c_prcnt {
             bindings = <&kp PRCNT>;
             key-positions = <36 27>;
-            layers = <0 1>;
+            layers = <0 2>;
         };
 
         c_at {
             bindings = <&kp AT>;
             key-positions = <13 20>;
             require-prior-idle-ms = <300>;
-            layers = <0 1>;
+            layers = <0 2>;
         };
 
         c_us {
             bindings = <&kp LS(APOS)>;
             key-positions = <22 23>;
-            layers = <0 1>;
+            layers = <0 2>;
         };
 
         c_pgup {
             bindings = <&kp PAGE_UP>;
             key-positions = <30 31>;
             require-prior-idle-ms = <200>;
-            layers = <0 2>;
+            layers = <0 4>;
         };
 
         c_pgdn {
             bindings = <&kp PG_DN>;
             key-positions = <31 32>;
             require-prior-idle-ms = <200>;
-            layers = <0 2>;
+            layers = <0 4>;
         };
 
         c_caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <17 18>;
             require-prior-idle-ms = <400>;
-            layers = <0 1>;
+            layers = <0 2>;
         };
 
         c_cut {
             bindings = <&kp LC(B)>;
-            key-positions = <24 26>;
+            key-positions = <25 27>;
             layers = <0>;
         };
 
         c_paste {
             bindings = <&kp LC(DOT)>;
-            key-positions = <14 12>;
+            key-positions = <13 15>;
             require-prior-idle-ms = <200>;
             layers = <0>;
         };
 
         c_copy {
             bindings = <&kp LC(I)>;
-            key-positions = <2 0>;
+            key-positions = <3 1>;
             layers = <0>;
-        };
-
-        cp_mac {
-            bindings = <&ms_mac>;
-            key-positions = <16 19 20 21>;
-            require-prior-idle-ms = <1500>;
-            timeout-ms = <1000>;
-        };
-
-        c_troubL {
-            bindings = <&to 3>;
-            key-positions = <0 37>;
-            require-prior-idle-ms = <3000>;
-        };
-
-        c_troubR {
-            bindings = <&to 3>;
-            key-positions = <11 40>;
-            require-prior-idle-ms = <3000>;
         };
 
         c_esc {
@@ -625,27 +593,27 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_bt1 {
             bindings = <&m_bt1>;
-            key-positions = <38 26>;
+            key-positions = <38 2>;
         };
 
         c_bt2 {
             bindings = <&m_bt2>;
-            key-positions = <38 27>;
+            key-positions = <38 4>;
         };
 
         c_bt3 {
             bindings = <&m_bt3>;
-            key-positions = <38 28>;
+            key-positions = <38 15>;
         };
 
         c_bt4 {
             bindings = <&m_bt4>;
-            key-positions = <38 14>;
+            key-positions = <38 26>;
         };
 
         c_bt5 {
             bindings = <&m_bt5>;
-            key-positions = <38 15>;
+            key-positions = <38 28>;
         };
 
         c_lhome {
@@ -654,17 +622,17 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_lnum {
-            bindings = <&to 1>;
+            bindings = <&to 2>;
             key-positions = <37 26>;
         };
 
         c_lnav {
-            bindings = <&to 2>;
+            bindings = <&to 4>;
             key-positions = <37 27>;
         };
 
         c_l3 {
-            bindings = <&to 0>;
+            bindings = <&to 1>;
             key-positions = <37 28>;
         };
 
@@ -702,6 +670,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&rgb_ug RGB_HUD>;
             key-positions = <39 18>;
         };
+
+        c_gamlok {
+            bindings = <&tog 1>;
+            key-positions = <37 36>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -709,29 +683,51 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&d_cvk          &d_apqt        &d_cmcl        &d_pdcr       &kp R            &kp T          &kp Y            &kp U              &kp I         &kp O          &kp P             &d_slqm
-&ht_xvk 0 HASH  &ht_L LMETA A  &ht_L LCTRL S  &ht_L LALT D  &ht_L LSHFT F    &kp G          &kp H            &ht_R RSHFT J      &ht_R RALT K  &ht_R RCTRL L  &ht_R RMETA SEMI  &kp SQT
-&d_and          &d_scco        &kp X          &kp C         &kp V            &kp B          &kp N            &kp M              &kp COMMA     &kp DOT        &kp SLASH         &kp EXCL
-                                              &kp DELETE    &ht_l2k_L 0 TAB  &key_repeat    &ht_R LSHFT RET  &ht_l1k_R 0 SPACE  &kp BSPC
+&d_cvk          &d_apqt        &d_cmcl        &d_pdcr             &kp R            &kp T          &kp Y       &kp U              &kp I         &kp O          &kp P      &d_slqm
+&ht_xvk 0 HASH  &ht_L LMETA A  &ht_L LCTRL S  &ht_L LALT D        &ht_L LSHFT F    &kp G          &kp H       &ht_R RSHFT J      &ht_R RALT K  &ht_R RCTRL L  &md_slok   &kp SQT
+&d_and          &d_scco        &kp X          &kp C               &kp V            &kp B          &kp N       &kp M              &kp COMMA     &kp DOT        &kp SLASH  &kp EXCL
+                                              &ht_l1k_R 0 DELETE  &ht_l2k_L 0 TAB  &key_repeat    &kp RETURN  &ht_l1k_R 0 SPACE  &kp BSPC
             >;
 
             label = "orb|cptr";
         };
 
+        gaming {
+            bindings = <
+&trans  &kp Q  &kp W   &kp E   &trans  &trans    &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &kp A  &kp S   &kp D   &kp F   &trans    &trans  &kp J   &kp K   &kp L   &kp SEMI  &trans
+&trans  &kp Z  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans    &trans
+                       &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "vidjo";
+        };
+
         num-sym {
             bindings = <
-&kp W      &kp LBKT              &kp N7          &kp N8         &kp N9          &kp APOS    &trans  &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP  &m_dubk K_FORWARD C_AC_FORWARD
-&kp E      &ht_L LMETA ASTERISK  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &kp RBRC    &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN  &m_dubk K_BACK C_AC_BACK
-&kp CARET  &kp N0                &kp N1          &kp N2         &kp N3          &kp RBKT    &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans        &trans
+&kp W      &kp LBKT              &kp N7          &kp N8         &kp N9          &kp APOS    &trans  &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP     &m_dubk K_FORWARD C_AC_FORWARD
+&kp E      &ht_L LMETA ASTERISK  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &kp RBRC    &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN     &m_dubk K_BACK C_AC_BACK
+&kp CARET  &kp N0                &kp N1          &kp N2         &kp N3          &kp RBKT    &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &rgb_ug RGB_TOG  &trans
                                                  &to 0          &trans          &trans      &trans  &trans        &trans
             >;
 
             label = "num|sys";
         };
 
+        numadjust {
+            bindings = <
+&trans  &trans    &kp N7  &kp N8  &kp N9  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp STAR  &kp N4  &kp N5  &kp N6  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N0    &kp N1  &kp N2  &kp N3  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "vidnum";
+        };
+
         nav-system {
             bindings = <
-&trans  &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)  &kp F9          &kp F10             &kp F11         &kp F12         &trans
+&trans  &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)  &kp F9          &kp F10             &kp F11         &kp F12         &ext_power EP_TOG
 &trans  &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &trans               &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &out OUT_BLE
 &trans  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp SPACE      &kp RET              &trans               &kp F1          &kp F2              &kp F3          &kp F4          &out OUT_USB
                                            &to 0                    &trans         &trans               &trans               &trans          &trans
@@ -750,16 +746,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
             label = "trouble";
         };
+    };
 
-        gaming {
-            bindings = <
-&trans  &trans  &kp W   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp A   &kp S   &kp D   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
 
-            label = "vidjo";
+        gamenum {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
