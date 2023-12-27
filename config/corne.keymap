@@ -338,25 +338,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             tap-ms = <15>;
         };
 
-        m_mL3: m_mL3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&sl 3>,
-                <&macro_tap>,
-                <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 3>,
-                <&macro_tap>,
-                <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
-
-            label = "M_ML3";
-            wait-ms = <5>;
-            tap-ms = <10>;
-        };
-
         m_bt1: m_bt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -529,7 +510,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cp_wrkD {
             bindings = <&ms_wrkD>;
             key-positions = <22 17 13 20>;
-            layers = <3>;
             require-prior-idle-ms = <1500>;
             timeout-ms = <1000>;
         };
@@ -537,7 +517,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cp_wrkQ {
             bindings = <&ms_wrkQ>;
             key-positions = <14 27 28 30>;
-            layers = <3>;
             require-prior-idle-ms = <1500>;
             timeout-ms = <1000>;
         };
@@ -623,21 +602,18 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&ms_mac>;
             key-positions = <16 19 20 21>;
             require-prior-idle-ms = <1500>;
-            layers = <3>;
             timeout-ms = <1000>;
         };
 
         c_troubL {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <0 37>;
-            layers = <3>;
             require-prior-idle-ms = <3000>;
         };
 
         c_troubR {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <11 40>;
-            layers = <3>;
             require-prior-idle-ms = <3000>;
         };
 
@@ -688,22 +664,22 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_l3 {
-            bindings = <&to 3>;
+            bindings = <&to 0>;
             key-positions = <37 28>;
         };
 
         c_l4 {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <37 14>;
         };
 
         c_l5 {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <37 15>;
         };
 
         c_l6 {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <37 16>;
         };
 
@@ -764,17 +740,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "nav|func";
         };
 
-        mir-keeb {
-            bindings = <
-&d_slqm   &kp P     &kp O    &kp I      &kp U   &kp Y     &m_bt1           &m_bt2           &m_bt3           &m_bt4                        &m_bt5  &out OUT_TOG
-&kp APOS  &kp A     &kp S    &kp D      &kp F   &kp H     &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF               &none   &ext_power EP_TOG
-&kp EXCL  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SPD  &rgb_ug RGB_COLOR_HSB(0,0,0)  &none   &rgb_ug RGB_TOG
-                             &to 0      &trans  &trans    &trans           &trans           &trans
-            >;
-
-            label = "mir|keeb";
-        };
-
         troubleshoot {
             bindings = <
 &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR    &bt BT_CLR  &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1       &bt BT_SEL 0
@@ -784,6 +749,17 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             >;
 
             label = "trouble";
+        };
+
+        gaming {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "vidjo";
         };
     };
 };
