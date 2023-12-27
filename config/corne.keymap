@@ -631,24 +631,17 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <37 27>;
         };
 
-        c_l3 {
-            bindings = <&to 1>;
-            key-positions = <37 28>;
+        c_gamlok {
+            bindings = <&tog 1>;
+            key-positions = <37 36>;
+            layers = <0>;
+            require-prior-idle-ms = <3000>;
         };
 
-        c_l4 {
-            bindings = <&to 3>;
-            key-positions = <37 14>;
-        };
-
-        c_l5 {
-            bindings = <&to 3>;
-            key-positions = <37 15>;
-        };
-
-        c_l6 {
-            bindings = <&to 3>;
-            key-positions = <37 16>;
+        c_ltroub {
+            bindings = <&to 5>;
+            key-positions = <37 0>;
+            require-prior-idle-ms = <3000>;
         };
 
         c_ugbri {
@@ -671,10 +664,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <39 18>;
         };
 
-        c_gamlok {
-            bindings = <&tog 1>;
-            key-positions = <37 36>;
-            layers = <0>;
+        c_ltroubR {
+            bindings = <&to 5>;
+            key-positions = <40 11>;
+            require-prior-idle-ms = <3000>;
         };
     };
 
