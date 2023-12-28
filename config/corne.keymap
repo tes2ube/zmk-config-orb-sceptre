@@ -669,7 +669,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "vidjo";
         };
 
-        num-sym {
+        num-sys {
             bindings = <
 &kp W      &kp LBKT              &kp N7          &kp N8         &kp N9          &kp APOS    &trans  &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP  &rgb_ug RGB_BRI
 &kp E      &ht_L LMETA ASTERISK  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &kp RBRC    &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN  &rgb_ug RGB_BRD
@@ -691,7 +691,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "vidnum";
         };
 
-        nav-system {
+        nav-func {
             bindings = <
 &trans  &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)  &kp F9          &kp F10             &kp F11         &kp F12         &ext_power EP_TOG
 &trans  &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &trans               &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &out OUT_BLE
