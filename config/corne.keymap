@@ -297,12 +297,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 4>,
+                <&mo 5>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 4>,
+                <&mo 5>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
@@ -418,13 +418,41 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "M_CV";
         };
 
-        m_dubk: m_dubk {
+        mp_dubk: mp_dubk {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
-            label = "M_DUBK";
+            label = "MP_DUBK";
             wait-ms = <10>;
             tap-ms = <10>;
+        };
+
+        mp_alt02: mp_alt02 {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N2 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "MP_ALT02";
+        };
+
+        mp_alt3: mp_alt3 {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N3 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "MP_ALT3";
         };
     };
 
@@ -471,13 +499,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_metaL {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
-            layers = <0 2 4>;
+            layers = <0 2 5>;
         };
 
         c_cpwd {
             bindings = <&caps_word>;
             key-positions = <16 19>;
-            layers = <0 2 4>;
+            layers = <0 2 5>;
         };
 
         c_dol {
@@ -521,14 +549,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp PAGE_UP>;
             key-positions = <30 31>;
             require-prior-idle-ms = <200>;
-            layers = <0 4>;
+            layers = <0 5>;
         };
 
         c_pgdn {
             bindings = <&kp PG_DN>;
             key-positions = <31 32>;
             require-prior-idle-ms = <200>;
-            layers = <0 4>;
+            layers = <0 5>;
         };
 
         c_caps {
@@ -599,7 +627,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_lnav {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <37 27>;
         };
 
@@ -611,13 +639,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_ltroub {
-            bindings = <&to 5>;
+            bindings = <&to 6>;
             key-positions = <37 0>;
             require-prior-idle-ms = <3000>;
         };
 
         c_ltroubR {
-            bindings = <&to 5>;
+            bindings = <&to 6>;
             key-positions = <40 11>;
             require-prior-idle-ms = <3000>;
         };
@@ -625,15 +653,15 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cs_dwrk {
             bindings = <&ms_wrkD>;
             key-positions = <17 13 20 22>;
-            layers = <4>;
+            layers = <5>;
             require-prior-idle-ms = <3000>;
             timeout-ms = <500>;
         };
 
         c_wrkQ {
-            bindings = <&ms_wrkD>;
-            key-positions = <17 20 22 26>;
-            layers = <4>;
+            bindings = <&ms_wrkQ>;
+            key-positions = <20 22 26 13>;
+            layers = <5>;
             require-prior-idle-ms = <3000>;
             timeout-ms = <500>;
         };
@@ -641,6 +669,23 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cs_fox {
             bindings = <&ms_mac>;
             key-positions = <4 31 13 8>;
+        };
+
+        c_laltcodes {
+            bindings = <&sl 4>;
+            key-positions = <37 15>;
+        };
+
+        c_dskl {
+            bindings = <&kp LG(LC(LEFT_ARROW))>;
+            key-positions = <38 4>;
+            layers = <0>;
+        };
+
+        c_deskr {
+            bindings = <&kp LG(LC(RIGHT_ARROW))>;
+            key-positions = <38 5>;
+            layers = <0>;
         };
     };
 
@@ -673,7 +718,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <
 &kp W      &kp LBKT              &kp N7          &kp N8         &kp N9          &kp APOS    &trans  &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP  &rgb_ug RGB_BRI
 &kp E      &ht_L LMETA ASTERISK  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &kp RBRC    &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN  &rgb_ug RGB_BRD
-&kp CARET  &kp N0                &kp N1          &kp N2         &kp N3          &kp RBKT    &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans        &rgb_ug RGB_TOG
+&kp CARET  &kp N0                &kp N1          &kp N2         &kp N3          &kp RBKT    &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp RALT      &rgb_ug RGB_TOG
                                                  &to 0          &trans          &trans      &trans  &trans        &trans
             >;
 
@@ -691,12 +736,23 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "vidnum";
         };
 
+        altcodes {
+            bindings = <
+&trans  &mp_alt02 N2 N5  &mp_alt02 N4 N3  &mp_alt02 N3 N3  &trans           &mp_alt02 N3 N7    &trans           &trans           &mp_alt02 N3 N1  &trans           &mp_alt3 N5 N1   &trans
+&trans  &mp_alt02 N2 N8  &mp_alt02 N4 N6  &mp_alt02 N3 N5  &mp_alt02 N5 N1  &mp_alt02 N3 N9    &mp_alt02 N3 N8  &mp_alt02 N5 N0  &mp_alt02 N3 N4  &mp_alt02 N4 N4  &mp_alt02 N2 N6  &trans
+&trans  &mp_alt02 N2 N4  &mp_alt02 N4 N2  &mp_alt02 N3 N2  &trans           &mp_alt02 N3 N6    &trans           &trans           &trans           &trans           &trans           &trans
+                                          &to 0            &trans           &trans             &trans           &trans           &trans
+            >;
+
+            label = "altcodes";
+        };
+
         nav-func {
             bindings = <
-&trans  &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)  &kp F9          &kp F10             &kp F11         &kp F12         &ext_power EP_TOG
-&trans  &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &trans               &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &out OUT_BLE
-&trans  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp SPACE      &kp RET              &trans               &kp F1          &kp F2              &kp F3          &kp F4          &out OUT_USB
-                                           &to 0                    &trans         &trans               &trans               &trans          &trans
+&kp BACKSPACE  &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)  &kp F9          &kp F10             &kp F11         &kp F12         &ext_power EP_TOG
+&kp SPACE      &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &trans               &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &out OUT_BLE
+&kp RET        &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &trans         &trans               &trans               &kp F1          &kp F2              &kp F3          &kp F4          &out OUT_USB
+                                                  &to 0                    &trans         &trans               &trans               &trans          &trans
             >;
 
             label = "nav|func";
