@@ -246,6 +246,27 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        d_plsatk: d_plsatk {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_PLSATK";
+            #binding-cells = <0>;
+            bindings = <&kp RBRC>, <&kp STAR>;
+        };
+
+        d_mindiv: d_mindiv {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_MINDIV";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp LBKT>;
+        };
+
+        d_dotquot: d_dotquot {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_DOTQUOT";
+            #binding-cells = <0>;
+            bindings = <&ht_L LGUI E>, <&kp W>;
+        };
     };
 
     macros {
@@ -716,10 +737,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         num-sys {
             bindings = <
-&kp W      &kp LBKT              &kp N7          &kp N8         &kp N9          &kp APOS    &trans  &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP  &rgb_ug RGB_BRI
-&kp E      &ht_L LMETA ASTERISK  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &kp RBRC    &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN  &rgb_ug RGB_BRD
-&kp CARET  &kp N0                &kp N1          &kp N2         &kp N3          &kp RBKT    &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp RALT      &rgb_ug RGB_TOG
-                                                 &to 0          &trans          &trans      &trans  &trans        &trans
+&kp J     &kp CARET   &kp N7          &kp N8         &kp N9          &d_mindiv    &trans  &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP  &rgb_ug RGB_BRI
+&trans    &d_dotquot  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_plsatk    &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN  &rgb_ug RGB_BRD
+&kp BSPC  &kp N0      &kp N1          &kp N2         &kp N3          &kp RET      &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp RALT      &rgb_ug RGB_TOG
+                                      &to 0          &trans          &trans       &trans  &trans        &trans
             >;
 
             label = "num|sys";
