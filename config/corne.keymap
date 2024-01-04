@@ -877,7 +877,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <
 &kp BACKSPACE  &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)  &kp F9          &kp F10             &kp F11         &kp F12         &ext_power EP_TOG
 &kp SPACE      &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &trans               &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &out OUT_BLE
-&kp RET        &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &trans         &trans               &trans               &kp F1          &kp F2              &kp F3          &kp F4          &out OUT_USB
+&kp RET        &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp K_CMENU    &trans               &trans               &kp F1          &kp F2              &kp F3          &kp F4          &out OUT_USB
                                                   &to 0                    &trans         &trans               &trans               &trans          &trans
             >;
 
