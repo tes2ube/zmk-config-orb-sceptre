@@ -267,6 +267,111 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&ht_L LGUI E>, <&kp W>;
         };
+
+        db_q: db_q {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_Q";
+            #binding-cells = <0>;
+            bindings = <&ht_L P Q>, <&kp LS(Q)>;
+        };
+
+        db_w: db_w {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_W";
+            #binding-cells = <0>;
+            bindings = <&ht_L O W>, <&kp LS(W)>;
+        };
+
+        db_e: db_e {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_E";
+            #binding-cells = <0>;
+            bindings = <&ht_L I E>, <&kp LS(E)>;
+        };
+
+        db_r: db_r {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_R";
+            #binding-cells = <0>;
+            bindings = <&ht_L U R>, <&kp LS(R)>;
+        };
+
+        db_t: db_t {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_T";
+            #binding-cells = <0>;
+            bindings = <&ht_L Y T>, <&kp LS(T)>;
+        };
+
+        db_a: db_a {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_A";
+            #binding-cells = <0>;
+            bindings = <&ht_L SEMI A>, <&kp LS(A)>;
+        };
+
+        db_s: db_s {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_S";
+            #binding-cells = <0>;
+            bindings = <&ht_L L S>, <&kp LS(S)>;
+        };
+
+        db_d: db_d {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_D";
+            #binding-cells = <0>;
+            bindings = <&ht_L K D>, <&kp LS(D)>;
+        };
+
+        db_f: db_f {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_F";
+            #binding-cells = <0>;
+            bindings = <&ht_L J F>, <&kp LS(F)>;
+        };
+
+        db_g: db_g {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_G";
+            #binding-cells = <0>;
+            bindings = <&ht_L H G>, <&kp LS(G)>;
+        };
+
+        db_z: db_z {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_Z";
+            #binding-cells = <0>;
+            bindings = <&ht_L SLASH Z>, <&kp LS(Z)>;
+        };
+
+        db_x: db_x {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_X";
+            #binding-cells = <0>;
+            bindings = <&ht_L DOT X>, <&kp LS(X)>;
+        };
+
+        db_c: db_c {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_C";
+            #binding-cells = <0>;
+            bindings = <&ht_L W C>, <&kp LS(C)>;
+        };
+
+        db_v: db_v {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_V";
+            #binding-cells = <0>;
+            bindings = <&ht_L M V>, <&kp LS(V)>;
+        };
+
+        db_b: db_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DB_B";
+            #binding-cells = <0>;
+            bindings = <&ht_L N B>, <&kp LS(B)>;
+        };
     };
 
     macros {
