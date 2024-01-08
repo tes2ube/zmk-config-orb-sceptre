@@ -711,44 +711,44 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             layers = <0>;
         };
 
-        c_bt1 {
+        c_bt1L {
             bindings = <&m_bt1>;
-            key-positions = <38 26>;
+            key-positions = <38 13>;
         };
 
-        c_bt2 {
+        c_bt2L {
             bindings = <&m_bt2>;
-            key-positions = <38 27>;
-        };
-
-        c_bt3 {
-            bindings = <&m_bt3>;
-            key-positions = <38 28>;
-        };
-
-        c_bt4 {
-            bindings = <&m_bt4>;
             key-positions = <38 14>;
         };
 
-        c_bt5 {
-            bindings = <&m_bt5>;
+        c_bt3L {
+            bindings = <&m_bt3>;
             key-positions = <38 15>;
         };
 
-        c_lhome {
+        c_bt4L {
+            bindings = <&m_bt4>;
+            key-positions = <38 16>;
+        };
+
+        c_bt5L {
+            bindings = <&m_bt5>;
+            key-positions = <38 17>;
+        };
+
+        c_lhomeL {
             bindings = <&to 0>;
-            key-positions = <37 25>;
+            key-positions = <37 13>;
         };
 
-        c_lnum {
+        c_lnumL {
             bindings = <&to 2>;
-            key-positions = <37 26>;
+            key-positions = <37 14>;
         };
 
-        c_lnav {
+        c_lnavL {
             bindings = <&to 4>;
-            key-positions = <37 27>;
+            key-positions = <37 16>;
         };
 
         c_lgamlok {
@@ -789,9 +789,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cs_fox {
             bindings = <&ms_mac>;
             key-positions = <4 31 13 8>;
+            layers = <4>;
         };
 
-        c_laltcodes {
+        c_laltcodesL {
             bindings = <&sl 5>;
             key-positions = <37 15>;
         };
@@ -804,6 +805,51 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_deskr {
             bindings = <&kp LG(LC(RIGHT_ARROW))>;
             key-positions = <38 4 5>;
+        };
+
+        c_laltcodesR {
+            bindings = <&sl 5>;
+            key-positions = <40 20>;
+        };
+
+        c_lhomeR {
+            bindings = <&to 0>;
+            key-positions = <40 22>;
+        };
+
+        c_lnumR {
+            bindings = <&to 2>;
+            key-positions = <40 21>;
+        };
+
+        c_lnavR {
+            bindings = <&to 4>;
+            key-positions = <19 40>;
+        };
+
+        c_bt1R {
+            bindings = <&m_bt1>;
+            key-positions = <39 22>;
+        };
+
+        c_bt2R {
+            bindings = <&m_bt2>;
+            key-positions = <39 21>;
+        };
+
+        c_bt3R {
+            bindings = <&m_bt3>;
+            key-positions = <39 20>;
+        };
+
+        c_bt4R {
+            bindings = <&m_bt4>;
+            key-positions = <19 39>;
+        };
+
+        c_bt5R {
+            bindings = <&m_bt5>;
+            key-positions = <18 39>;
         };
     };
 
