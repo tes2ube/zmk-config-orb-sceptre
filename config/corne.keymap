@@ -423,12 +423,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 5>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 5>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
@@ -580,6 +580,16 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
             label = "MP_ALT3";
         };
+
+        mp_2kto: mp_2kto {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
+
+            label = "MP_2KTO";
+        };
     };
 
     combos {
@@ -588,101 +598,88 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_parL {
             bindings = <&kp LPAR>;
             key-positions = <1 2>;
-            layers = <0>;
         };
 
         c_parR {
             bindings = <&kp RPAR>;
             key-positions = <3 4>;
-            layers = <0>;
         };
 
         c_bktL {
             bindings = <&kp MINUS>;
             key-positions = <7 8>;
-            layers = <0>;
         };
 
         c_bktR {
             bindings = <&kp EQUAL>;
             key-positions = <10 9>;
-            layers = <0>;
         };
 
         c_home {
             bindings = <&kp HOME>;
             key-positions = <15 16>;
-            layers = <0>;
         };
 
         c_end {
             bindings = <&kp END>;
             key-positions = <16 17>;
             require-prior-idle-ms = <200>;
-            layers = <0>;
         };
 
-        c_metaL {
+        c_meta {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
-            layers = <0 2 5>;
+            layers = <0 1 2 3 4>;
         };
 
-        c_cpwd {
-            bindings = <&caps_word>;
+        c_cpto {
+            bindings = <&to 0>;
             key-positions = <16 19>;
-            layers = <0 2 5>;
+            layers = <0>;
         };
 
         c_dol {
             bindings = <&kp DLLR>;
             key-positions = <36 28 27>;
-            layers = <0 2>;
         };
 
         c_bslh {
             bindings = <&kp BSLH>;
             key-positions = <36 27 14>;
-            layers = <0 2>;
         };
 
         c_pipe {
             bindings = <&kp PIPE>;
             key-positions = <36 4>;
-            layers = <0 2>;
         };
 
         c_prcnt {
             bindings = <&kp PRCNT>;
             key-positions = <36 14>;
-            layers = <0 2>;
         };
 
         c_at {
             bindings = <&kp AT>;
             key-positions = <13 20>;
             require-prior-idle-ms = <300>;
-            layers = <0 2>;
+            layers = <0 1 2 3>;
         };
 
         c_us {
             bindings = <&kp LS(APOS)>;
             key-positions = <22 23>;
-            layers = <0 2>;
         };
 
         c_pgup {
             bindings = <&kp PAGE_UP>;
             key-positions = <30 31>;
             require-prior-idle-ms = <200>;
-            layers = <0 5>;
         };
 
         c_pgdn {
             bindings = <&kp PG_DN>;
             key-positions = <31 32>;
             require-prior-idle-ms = <200>;
-            layers = <0 5>;
         };
 
         c_caps {
@@ -695,20 +692,17 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_cut {
             bindings = <&kp LC(B)>;
             key-positions = <25 27>;
-            layers = <0>;
         };
 
         c_paste {
             bindings = <&kp LC(DOT)>;
             key-positions = <13 15>;
             require-prior-idle-ms = <200>;
-            layers = <0>;
         };
 
         c_copy {
             bindings = <&kp LC(I)>;
             key-positions = <3 1>;
-            layers = <0>;
         };
 
         c_esc {
@@ -753,11 +747,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_lnav {
-            bindings = <&to 5>;
+            bindings = <&to 4>;
             key-positions = <37 27>;
         };
 
-        c_gamlok {
+        c_lgamlok {
             bindings = <&tog 1>;
             key-positions = <37 36>;
             layers = <0 1>;
@@ -765,13 +759,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_ltroub {
-            bindings = <&to 6>;
+            bindings = <&to 7>;
             key-positions = <37 0>;
             require-prior-idle-ms = <3000>;
         };
 
         c_ltroubR {
-            bindings = <&to 6>;
+            bindings = <&to 7>;
             key-positions = <40 11>;
             require-prior-idle-ms = <3000>;
         };
@@ -779,7 +773,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cs_dwrk {
             bindings = <&ms_wrkD>;
             key-positions = <17 13 20 22>;
-            layers = <5>;
+            layers = <4>;
             require-prior-idle-ms = <3000>;
             timeout-ms = <500>;
         };
@@ -787,7 +781,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_qwrk {
             bindings = <&ms_wrkQ>;
             key-positions = <20 22 26 13>;
-            layers = <5>;
+            layers = <4>;
             require-prior-idle-ms = <3000>;
             timeout-ms = <500>;
         };
@@ -798,20 +792,18 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_laltcodes {
-            bindings = <&sl 4>;
+            bindings = <&sl 5>;
             key-positions = <37 15>;
         };
 
         c_dskl {
             bindings = <&kp LG(LC(LEFT_ARROW))>;
             key-positions = <38 0 1>;
-            layers = <0>;
         };
 
         c_deskr {
             bindings = <&kp LG(LC(RIGHT_ARROW))>;
             key-positions = <38 4 5>;
-            layers = <0>;
         };
     };
 
@@ -862,17 +854,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "vidnum";
         };
 
-        altcodes {
-            bindings = <
-&trans  &mp_alt02 KP_N2 KP_N5  &mp_alt02 KP_N4 KP_N3  &mp_alt02 KP_N3 KP_N3  &trans                 &mp_alt02 KP_N3 KP_N7    &trans                 &trans                 &mp_alt02 KP_N3 KP_N1  &trans                 &mp_alt3 KP_N5 KP_N1   &trans
-&trans  &mp_alt02 KP_N2 KP_N8  &mp_alt02 KP_N4 KP_N6  &mp_alt02 KP_N3 KP_N5  &mp_alt02 KP_N5 KP_N1  &mp_alt02 KP_N3 KP_N9    &mp_alt02 KP_N3 KP_N8  &mp_alt02 KP_N5 KP_N0  &mp_alt02 KP_N3 KP_N4  &mp_alt02 KP_N4 KP_N4  &mp_alt02 KP_N2 KP_N6  &trans
-&trans  &mp_alt02 KP_N2 KP_N4  &mp_alt02 KP_N4 KP_N2  &mp_alt02 KP_N3 KP_N2  &trans                 &mp_alt02 KP_N3 KP_N6    &trans                 &trans                 &trans                 &trans                 &trans                 &trans
-                                                      &to 0                  &trans                 &trans                   &trans                 &trans                 &trans
-            >;
-
-            label = "altcodes";
-        };
-
         nav-func {
             bindings = <
 &kp BACKSPACE  &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)              &kp F9          &kp F10             &kp F11         &kp F12         &ext_power EP_TOG
@@ -882,6 +863,28 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             >;
 
             label = "nav|func";
+        };
+
+        capsword {
+            bindings = <
+&d_cvk          &d_apqt           &d_cmcl            &d_pdcr           &kp LS(R)       &kp LS(T)          &kp LS(Y)         &kp LS(U)         &kp LS(I)         &kp LS(O)          &kp LS(P)            &d_slqm
+&ht_xvk 0 HASH  &ht_L LGUI LS(A)  &ht_L LCTRL LS(S)  &ht_L LALT LS(D)  &kp LS(F)       &kp LS(G)          &kp LS(H)         &kp LS(J)         &ht_R RALT LS(K)  &ht_R RCTRL LS(L)  &ht_R RGUI LS(SEMI)  &kp SQT
+&kp AMPS        &d_scco           &kp LS(X)          &kp LS(C)         &kp LS(V)       &kp LS(B)          &kp LS(N)         &kp LS(M)         &kp LS(LT)        &kp LS(GT)         &kp LS(QMARK)        &kp EXCL
+                                                     &key_repeat       &mp_2kto TAB 0  &ht_l1k_R 0 DEL    &mp_2kto SPACE 0  &mp_2kto SPACE 0  &kp BSPC
+            >;
+
+            label = "ORB|CPTR";
+        };
+
+        altcodes {
+            bindings = <
+&trans  &mp_alt02 KP_N2 KP_N5  &mp_alt02 KP_N4 KP_N3  &mp_alt02 KP_N3 KP_N3  &trans                 &mp_alt02 KP_N3 KP_N7    &trans                 &trans                 &mp_alt02 KP_N3 KP_N1  &trans                 &mp_alt3 KP_N5 KP_N1   &trans
+&trans  &mp_alt02 KP_N2 KP_N8  &mp_alt02 KP_N4 KP_N6  &mp_alt02 KP_N3 KP_N5  &mp_alt02 KP_N5 KP_N1  &mp_alt02 KP_N3 KP_N9    &mp_alt02 KP_N3 KP_N8  &mp_alt02 KP_N5 KP_N0  &mp_alt02 KP_N3 KP_N4  &mp_alt02 KP_N4 KP_N4  &mp_alt02 KP_N2 KP_N6  &trans
+&trans  &mp_alt02 KP_N2 KP_N4  &mp_alt02 KP_N4 KP_N2  &mp_alt02 KP_N3 KP_N2  &trans                 &mp_alt02 KP_N3 KP_N6    &trans                 &trans                 &trans                 &trans                 &trans                 &trans
+                                                      &to 0                  &trans                 &trans                   &trans                 &trans                 &trans
+            >;
+
+            label = "altcodes";
         };
 
         troubleshoot {
