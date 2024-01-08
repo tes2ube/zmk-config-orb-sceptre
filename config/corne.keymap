@@ -65,7 +65,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
     behaviors {
         ht_L: ht_L {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_L";
+            label = "hold-tap L";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -79,7 +79,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_gresc: d_gresc {
             compatible = "zmk,behavior-tap-dance";
-            label = "D_GRESC";
+            label = "grave-escape";
             #binding-cells = <0>;
             bindings = <&kp GRAVE>, <&kp TILDE>;
 
@@ -97,14 +97,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_cmcl: d_cmcl {
             compatible = "zmk,behavior-tap-dance";
-            label = "D_CMCL";
+            label = "comma-caretLeft";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp LS(W)>;
         };
 
         d_pdcr: d_pdcr {
             compatible = "zmk,behavior-tap-dance";
-            label = "D_PDCR";
+            label = "period-caretRight";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LS(E)>;
 
@@ -113,7 +113,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_scco: d_scco {
             compatible = "zmk,behavior-tap-dance";
-            label = "D_SCCO";
+            label = "semicolon-colon";
             #binding-cells = <0>;
             bindings = <&kp Z>, <&kp LS(Z)>;
 
@@ -122,7 +122,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_slqm: d_slqm {
             compatible = "zmk,behavior-tap-dance";
-            label = "D_SLQM";
+            label = "slash-questionMark";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LS(LEFT_BRACKET)>;
 
@@ -131,7 +131,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         ht_l1rr: ht_l1rr {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_L1RR";
+            label = "holdTap L - keyRepeat";
             bindings = <&m_mL1>, <&key_repeat>;
 
             #binding-cells = <2>;
@@ -145,7 +145,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         ht_l1k_R: ht_l1k_R {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_L1K_R";
+            label = "ht key-momentary layer 1";
             bindings = <&m_mL1>, <&kp>;
 
             #binding-cells = <2>;
@@ -159,7 +159,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         ht_l2k_L: ht_l2k_L {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_L2K_L";
+            label = "ht key-momentary layer 2";
             bindings = <&m_mL2>, <&kp>;
 
             #binding-cells = <2>;
@@ -169,15 +169,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
             hold-trigger-on-release;
-        };
-
-        d_and: d_and {
-            compatible = "zmk,behavior-tap-dance";
-            label = "D_AND";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS>, <&ms_and>;
-
-            tapping-term-ms = <275>;
         };
 
         ht_xvk: ht_xvk {
@@ -759,13 +750,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_ltroub {
-            bindings = <&to 7>;
+            bindings = <&to 8>;
             key-positions = <37 0>;
             require-prior-idle-ms = <3000>;
         };
 
         c_ltroubR {
-            bindings = <&to 7>;
+            bindings = <&to 8>;
             key-positions = <40 11>;
             require-prior-idle-ms = <3000>;
         };
@@ -793,7 +784,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_laltcodesL {
-            bindings = <&sl 5>;
+            bindings = <&sl 7>;
             key-positions = <37 15>;
         };
 
@@ -808,7 +799,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_laltcodesR {
-            bindings = <&sl 5>;
+            bindings = <&sl 7>;
             key-positions = <40 20>;
         };
 
@@ -851,6 +842,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_bt5>;
             key-positions = <18 39>;
         };
+
+        c_lmirror {
+            bindings = <&tog 6>;
+            key-positions = <37 24>;
+        };
     };
 
     keymap {
@@ -867,7 +863,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "orb|cptr";
         };
 
-        gaming {
+        home-gaming {
             bindings = <
 &trans  &kp Q  &kp W   &kp E   &trans  &trans    &trans  &trans  &trans  &trans  &trans    &trans
 &trans  &kp A  &kp S   &kp D   &kp F   &trans    &trans  &kp J   &kp K   &kp L   &kp SEMI  &trans
@@ -911,7 +907,18 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "nav|func";
         };
 
-        capsword {
+        home-mirror {
+            bindings = <
+&trans  &db_q  &db_w  &db_e   &db_r   &db_t     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &db_a  &db_s  &db_d   &db_f   &db_g     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &db_z  &db_x  &db_c   &db_v   &db_b     &trans  &trans  &trans  &trans  &trans  &trans
+                      &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "mir|ror";
+        };
+
+        home-capsword {
             bindings = <
 &d_cvk          &d_apqt           &d_cmcl            &d_pdcr           &kp LS(R)       &kp LS(T)          &kp LS(Y)         &kp LS(U)         &kp LS(I)         &kp LS(O)          &kp LS(P)            &d_slqm
 &ht_xvk 0 HASH  &ht_L LGUI LS(A)  &ht_L LCTRL LS(S)  &ht_L LALT LS(D)  &kp LS(F)       &kp LS(G)          &kp LS(H)         &kp LS(J)         &ht_R RALT LS(K)  &ht_R RCTRL LS(L)  &ht_R RGUI LS(SEMI)  &kp SQT
