@@ -100,6 +100,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "comma-caretLeft";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp LS(W)>;
+
+            tapping-term-ms = <275>;
         };
 
         d_pdcr: d_pdcr {
@@ -243,6 +245,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_PLSATK";
             #binding-cells = <0>;
             bindings = <&kp RBRC>, <&kp STAR>;
+
+            tapping-term-ms = <300>;
         };
 
         d_mindiv: d_mindiv {
@@ -900,6 +904,26 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_lmirror {
             bindings = <&tog 3>;
             key-positions = <37 24>;
+        };
+
+        c_plus {
+            bindings = <&kp RBRC>;
+            key-positions = <10 4>;
+        };
+
+        c_eq {
+            bindings = <&kp RBKT>;
+            key-positions = <26 15>;
+        };
+
+        c_pow {
+            bindings = <&kp CARET>;
+            key-positions = <4 14 32>;
+        };
+
+        c_mul {
+            bindings = <&kp STAR>;
+            key-positions = <31 16 10>;
         };
     };
 
