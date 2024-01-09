@@ -250,6 +250,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_MINDIV";
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp LBKT>;
+
+            tapping-term-ms = <350>;
         };
 
         d_dotquot: d_dotquot {
@@ -362,6 +364,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DB_B";
             #binding-cells = <0>;
             bindings = <&ht_L N B>, <&kp LS(B)>;
+        };
+
+        d_reteql: d_reteql {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_RETEQL";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp RET>, <&kp EQUAL>;
         };
     };
 
@@ -624,7 +634,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_cpto {
-            bindings = <&to 0>;
+            bindings = <&to 6>;
             key-positions = <16 19>;
             layers = <0>;
         };
@@ -876,9 +886,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         num-sys {
             bindings = <
-&kp J     &kp CARET   &kp N7          &kp N8         &kp N9          &d_mindiv    &trans  &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP  &rgb_ug RGB_BRI
+&kp I     &kp CARET   &kp N7          &kp N8         &kp N9          &d_mindiv    &trans  &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP  &rgb_ug RGB_BRI
 &trans    &d_dotquot  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_plsatk    &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN  &rgb_ug RGB_BRD
-&kp BSPC  &kp N0      &kp N1          &kp N2         &kp N3          &kp RET      &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp RALT      &rgb_ug RGB_TOG
+&kp BSPC  &kp N0      &kp N1          &kp N2         &kp N3          &d_reteql    &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp RALT      &rgb_ug RGB_TOG
                                       &to 0          &trans          &trans       &trans  &trans        &trans
             >;
 
