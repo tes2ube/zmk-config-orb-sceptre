@@ -678,7 +678,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_meta {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
-            layers = <0 1 4 5 6>;
+            layers = <0 1 4 5 6 2 3>;
         };
 
         c_cpto {
