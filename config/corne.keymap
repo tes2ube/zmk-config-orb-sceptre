@@ -684,7 +684,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_cpto {
             bindings = <&tog 3>;
             key-positions = <16 19>;
-            layers = <0>;
         };
 
         c_dol {
@@ -902,7 +901,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_lmirror {
-            bindings = <&tog 3>;
+            bindings = <&tog 2>;
             key-positions = <37 24>;
         };
 
