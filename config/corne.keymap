@@ -371,7 +371,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "D_RETEQL";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp RET>, <&kp EQUAL>;
+            bindings = <&kp RET>, <&kp RBKT>;
         };
 
         ht_l1_2spcto0R: ht_l1_2spcto0R {
