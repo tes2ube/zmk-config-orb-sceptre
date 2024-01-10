@@ -65,7 +65,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
     behaviors {
         ht_L: ht_L {
             compatible = "zmk,behavior-hold-tap";
-            label = "hold-tap (left)";
+            label = "HT_L";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -79,7 +79,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_gresc: d_gresc {
             compatible = "zmk,behavior-tap-dance";
-            label = "grave-escape";
+            label = "D_GRESC";
             #binding-cells = <0>;
             bindings = <&kp GRAVE>, <&kp TILDE>;
 
@@ -124,7 +124,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         ht_l1rr_L: ht_l1rr {
             compatible = "zmk,behavior-hold-tap";
-            label = "tap for repeat, hold for num|sys (left)";
+            label = "tap for repeat, hold for numsys (left)";
             bindings = <&m_mL1>, <&key_repeat>;
 
             #binding-cells = <2>;
@@ -138,7 +138,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         ht_l1k_R: ht_l1k_R {
             compatible = "zmk,behavior-hold-tap";
-            label = "tap key, hold for momentary layer num|sys (right)";
+            label = "tap key, hold for momentary layer numsys (right)";
             bindings = <&m_mL1>, <&kp>;
 
             #binding-cells = <2>;
@@ -152,7 +152,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         ht_l2k_L: ht_l2k_L {
             compatible = "zmk,behavior-hold-tap";
-            label = "tap key, hold for momentary layer nav|func (left)";
+            label = "tap key, hold for momentary layer navfunc (left)";
             bindings = <&m_mL2>, <&kp>;
 
             #binding-cells = <2>;
@@ -242,7 +242,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         db_q: db_q {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror QP";
+            label = "hold tap mirror QP";
             #binding-cells = <0>;
             bindings = <&ht_L LS(Q) Q>, <&ht_L LS(P) P>;
 
@@ -251,7 +251,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         db_w: db_w {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror WO";
+            label = "hold tap mirror WO";
             #binding-cells = <0>;
             bindings = <&ht_L LS(W) W>, <&ht_L LS(O) O>;
 
@@ -260,7 +260,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         db_e: db_e {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror EI";
+            label = "hold tap mirror EI";
             #binding-cells = <0>;
             bindings = <&ht_L LS(E) E>, <&ht_L LS(I) I>;
 
@@ -269,84 +269,84 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         db_r: db_r {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror RU";
+            label = "hold tap mirror RU";
             #binding-cells = <0>;
             bindings = <&ht_L LS(R) R>, <&ht_L LS(U) U>;
         };
 
         db_t: db_t {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror TY";
+            label = "hold tap mirror TY";
             #binding-cells = <0>;
             bindings = <&ht_L LS(T) T>, <&ht_L LS(Y) Y>;
         };
 
         db_a: db_a {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror (HRM) A;";
+            label = "hold tap mirror (HRM) A semicolon";
             #binding-cells = <0>;
             bindings = <&ht_L LGUI A>, <&ht_L LS(SEMI) SEMI>;
         };
 
         db_s: db_s {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror (HRM) lctrl SL";
+            label = "hold tap mirror (HRM) lctrl SL";
             #binding-cells = <0>;
             bindings = <&ht_L LCTRL S>, <&ht_L LS(L) L>;
         };
 
         db_d: db_d {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror (HRM) lalt DK";
+            label = "hold tap mirror (HRM) lalt DK";
             #binding-cells = <0>;
             bindings = <&ht_L LALT D>, <&ht_L LS(K) K>;
         };
 
         db_f: db_f {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror (HRM) lshft FJ";
+            label = "hold tap mirror (HRM) lshft FJ";
             #binding-cells = <0>;
             bindings = <&ht_L LSHFT F>, <&ht_L LS(J) J>;
         };
 
         db_g: db_g {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror GH";
+            label = "hold tap mirror GH";
             #binding-cells = <0>;
             bindings = <&ht_L LS(G) G>, <&ht_L LS(H) H>;
         };
 
         db_z: db_z {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror Z fslsh";
+            label = "hold tap mirror Z fslsh";
             #binding-cells = <0>;
             bindings = <&ht_L LS(Z) Z>, <&ht_L LS(SLASH) SLASH>;
         };
 
         db_x: db_x {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror X period";
+            label = "hold tap mirror X period";
             #binding-cells = <0>;
             bindings = <&ht_L LS(X) X>, <&ht_L LS(DOT) DOT>;
         };
 
         db_c: db_c {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror C comma";
+            label = "hold tap mirror C comma";
             #binding-cells = <0>;
             bindings = <&ht_L LS(C) C>, <&ht_L LS(COMMA) COMMA>;
         };
 
         db_v: db_v {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror VM";
+            label = "hold tap mirror VM";
             #binding-cells = <0>;
             bindings = <&ht_L LS(V) V>, <&ht_L LS(M) M>;
         };
 
         db_b: db_b {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror BN";
+            label = "hold tap mirror BN";
             #binding-cells = <0>;
             bindings = <&ht_L LS(B) B>, <&ht_L LS(N) N>;
         };
@@ -361,7 +361,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         ht_l1spcto_R: ht_l1spcto_R {
             compatible = "zmk,behavior-hold-tap";
-            label = "tap space &to layer 0, hold momentary layer num|sys";
+            label = "tap space to layer 0, hold momentary layer numsys";
             bindings = <&m_mL1>, <&m_2spcto>;
 
             #binding-cells = <2>;
@@ -375,7 +375,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         ht_l2tabto0_L: ht_l2tabto0_L {
             compatible = "zmk,behavior-hold-tap";
-            label = "tap tab &to 0, hold momentary layer nav|func";
+            label = "tap tab to 0, hold momentary layer navfunc";
             bindings = <&m_mL2>, <&m_2tabto0>;
 
             #binding-cells = <2>;
@@ -578,7 +578,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "param - alt code 02##";
+            label = "param - alt code 02PP";
         };
 
         mp_alt3: mp_alt3 {
@@ -592,7 +592,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "param - alt code 3##";
+            label = "param - alt code 3PP";
         };
 
         mp_2kto: mp_2kto {
@@ -602,7 +602,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
 
-            label = "param - simultaneous key tap &to layer";
+            label = "param - simultaneous key tap to layer";
         };
 
         m_2spcto: m_2spcto {
@@ -610,7 +610,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp SPACE &to 0>;
 
-            label = "simultaneous space &to 0 layer";
+            label = "simultaneous space to 0 layer";
         };
 
         m_2tabto0: m_2tabto0 {
@@ -618,7 +618,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp TAB &to 0>;
 
-            label = "simultaneous tab tap &to 0 layer";
+            label = "simultaneous tab tap to 0 layer";
         };
     };
 
