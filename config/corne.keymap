@@ -907,10 +907,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&d_cvk          &db_qp     &db_wo    &db_ei           &db_ru       &db_ty             &ht_R LS(Y) Y  &ht_R LS(U) U      &ht_R LS(I) I          &ht_R LS(O) O      &ht_R LS(P) P        &ht_R LS(LBKT) LBKT
-&ht_xvk 0 HASH  &db_asemi  &db_sl    &db_dk           &db_fj       &db_gh             &ht_R LS(H) H  &ht_R RSHFT J      &ht_R RALT K           &ht_R RCTRL L      &ht_R RGUI SEMI      &ht_R LS(SQT) SQT
-&kp AMPS        &db_zslsh  &db_xdot  &db_capos        &db_vm       &db_bn             &ht_R LS(N) N  &ht_R LS(M) M      &ht_R LS(COMMA) COMMA  &ht_R LS(DOT) DOT  &ht_R LS(FSLH) FSLH  &kp EXCL
-                                     &ht_l2k_L 0 TAB  &key_repeat  &ht_l1k_R 0 DEL    &kp RETURN     &ht_l1k_R 0 SPACE  &kp BSPC
+&d_cvk          &db_qp     &db_wo    &db_ei           &db_ru           &db_ty         &ht_R LS(Y) Y  &ht_R LS(U) U      &ht_R LS(I) I          &ht_R LS(O) O      &ht_R LS(P) P        &ht_R LS(LBKT) LBKT
+&ht_xvk 0 HASH  &db_asemi  &db_sl    &db_dk           &db_fj           &db_gh         &ht_R LS(H) H  &ht_R RSHFT J      &ht_R RALT K           &ht_R RCTRL L      &ht_R RGUI SEMI      &ht_R LS(SQT) SQT
+&kp AMPS        &db_zslsh  &db_xdot  &db_capos        &db_vm           &db_bn         &ht_R LS(N) N  &ht_R LS(M) M      &ht_R LS(COMMA) COMMA  &ht_R LS(DOT) DOT  &ht_R LS(FSLH) FSLH  &kp EXCL
+                                     &ht_l1k_R 0 DEL  &ht_l2k_L 0 TAB  &key_repeat    &kp RETURN     &ht_l1k_R 0 SPACE  &kp BSPC
             >;
 
             label = "orb|cptr";
@@ -951,10 +951,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home-capsword {
             bindings = <
-&d_cvk          &ht_L LS(Q) Q     &ht_L LS(W) W      &ht_L LS(E) E       &kp LS(R)    &kp LS(T)          &kp LS(Y)       &kp LS(U)          &kp LS(I)         &kp LS(O)          &kp LS(P)            &ht_R LS(LBKT) LBKT
-&ht_xvk 0 HASH  &ht_L LGUI LS(A)  &ht_L LCTRL LS(S)  &ht_L LALT LS(D)    &kp LS(F)    &kp LS(G)          &kp LS(H)       &kp LS(J)          &ht_R RALT LS(K)  &ht_R RCTRL LS(L)  &ht_R RGUI LS(SEMI)  &kp SQT
-&kp AMPS        &ht_L LS(Z) Z     &kp LS(X)          &kp LS(C)           &kp LS(V)    &kp LS(B)          &kp LS(N)       &kp LS(M)          &kp LS(LT)        &kp LS(GT)         &kp LS(QMARK)        &kp EXCL
-                                                     &ht_l2tabto0_L 0 0  &key_repeat  &ht_l1k_R 0 DEL    &mp_2kto RET 0  &ht_l1spcto_R 0 0  &kp BSPC
+&d_cvk          &ht_L LS(Q) Q     &ht_L LS(W) W      &ht_L LS(E) E     &kp LS(R)           &kp LS(T)      &kp LS(Y)       &kp LS(U)          &kp LS(I)         &kp LS(O)          &kp LS(P)            &ht_R LS(LBKT) LBKT
+&ht_xvk 0 HASH  &ht_L LGUI LS(A)  &ht_L LCTRL LS(S)  &ht_L LALT LS(D)  &kp LS(F)           &kp LS(G)      &kp LS(H)       &kp LS(J)          &ht_R RALT LS(K)  &ht_R RCTRL LS(L)  &ht_R RGUI LS(SEMI)  &kp SQT
+&kp AMPS        &ht_L LS(Z) Z     &kp LS(X)          &kp LS(C)         &kp LS(V)           &kp LS(B)      &kp LS(N)       &kp LS(M)          &kp LS(LT)        &kp LS(GT)         &kp LS(QMARK)        &kp EXCL
+                                                     &ht_l1k_R 0 DEL   &ht_l2tabto0_L 0 0  &key_repeat    &mp_2kto RET 0  &ht_l1spcto_R 0 0  &kp BSPC
             >;
 
             label = "ORB|CPTR";
