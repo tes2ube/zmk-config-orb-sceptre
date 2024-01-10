@@ -269,105 +269,105 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-tap-dance";
             label = "DB_Q";
             #binding-cells = <0>;
-            bindings = <&ht_L P Q>, <&kp LS(Q)>;
+            bindings = <&ht_L LS(Q) Q>, <&kp P>;
         };
 
         db_w: db_w {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_W";
             #binding-cells = <0>;
-            bindings = <&ht_L O W>, <&kp LS(W)>;
+            bindings = <&ht_L LS(W) W>, <&kp O>;
         };
 
         db_e: db_e {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_E";
             #binding-cells = <0>;
-            bindings = <&ht_L I E>, <&kp LS(E)>;
+            bindings = <&ht_L LS(E) E>, <&kp I>;
         };
 
         db_r: db_r {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_R";
             #binding-cells = <0>;
-            bindings = <&ht_L U R>, <&kp LS(R)>;
+            bindings = <&ht_L LS(R) R>, <&kp R>;
         };
 
         db_t: db_t {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_T";
             #binding-cells = <0>;
-            bindings = <&ht_L Y T>, <&kp LS(T)>;
+            bindings = <&ht_L LS(T) T>, <&kp Y>;
         };
 
         db_a: db_a {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_A";
             #binding-cells = <0>;
-            bindings = <&ht_L SEMI A>, <&kp LS(A)>;
+            bindings = <&ht_L LGUI A>, <&kp SEMI>;
         };
 
         db_s: db_s {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_S";
             #binding-cells = <0>;
-            bindings = <&ht_L L S>, <&kp LS(S)>;
+            bindings = <&ht_L LCTRL S>, <&kp L>;
         };
 
         db_d: db_d {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_D";
             #binding-cells = <0>;
-            bindings = <&ht_L K D>, <&kp LS(D)>;
+            bindings = <&ht_L LALT D>, <&kp K>;
         };
 
         db_f: db_f {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_F";
             #binding-cells = <0>;
-            bindings = <&ht_L J F>, <&kp LS(F)>;
+            bindings = <&ht_L LSHFT F>, <&kp J>;
         };
 
         db_g: db_g {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_G";
             #binding-cells = <0>;
-            bindings = <&ht_L H G>, <&kp LS(G)>;
+            bindings = <&ht_L LS(G) G>, <&kp H>;
         };
 
         db_z: db_z {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_Z";
             #binding-cells = <0>;
-            bindings = <&ht_L SLASH Z>, <&kp LS(Z)>;
+            bindings = <&ht_L LS(Z) Z>, <&kp FSLH>;
         };
 
         db_x: db_x {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_X";
             #binding-cells = <0>;
-            bindings = <&ht_L DOT X>, <&kp LS(X)>;
+            bindings = <&ht_L LS(X) X>, <&kp DOT>;
         };
 
         db_c: db_c {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_C";
             #binding-cells = <0>;
-            bindings = <&ht_L W C>, <&kp LS(C)>;
+            bindings = <&ht_L LS(C) C>, <&kp COMMA>;
         };
 
         db_v: db_v {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_V";
             #binding-cells = <0>;
-            bindings = <&ht_L M V>, <&kp LS(V)>;
+            bindings = <&ht_L LS(V) V>, <&kp M>;
         };
 
         db_b: db_b {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_B";
             #binding-cells = <0>;
-            bindings = <&ht_L N B>, <&kp LS(B)>;
+            bindings = <&ht_L LS(B) B>, <&kp N>;
         };
 
         d_reteql: d_reteql {
@@ -437,12 +437,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 4>,
+                <&mo 3>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 4>,
+                <&mo 3>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
 
@@ -456,12 +456,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 6>,
+                <&mo 5>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 6>,
+                <&mo 5>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
@@ -678,11 +678,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_meta {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
-            layers = <0 1 4 5 6 2 3>;
+            layers = <0 1 3 4 5 2>;
         };
 
         c_cpto {
-            bindings = <&tog 3>;
+            bindings = <&tog 2>;
             key-positions = <16 19>;
         };
 
@@ -710,7 +710,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp AT>;
             key-positions = <13 20>;
             require-prior-idle-ms = <300>;
-            layers = <0 1 4 5>;
+            layers = <0 1 3 4>;
         };
 
         c_us {
@@ -734,7 +734,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp CAPSLOCK>;
             key-positions = <17 18>;
             require-prior-idle-ms = <400>;
-            layers = <0 4>;
+            layers = <0 3>;
         };
 
         c_cut {
@@ -790,12 +790,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_lnumL {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <37 14>;
         };
 
         c_lnavL {
-            bindings = <&to 6>;
+            bindings = <&to 5>;
             key-positions = <37 16>;
         };
 
@@ -807,13 +807,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_ltroub {
-            bindings = <&to 8>;
+            bindings = <&to 7>;
             key-positions = <37 0>;
             require-prior-idle-ms = <3000>;
         };
 
         c_ltroubR {
-            bindings = <&to 8>;
+            bindings = <&to 7>;
             key-positions = <40 11>;
             require-prior-idle-ms = <3000>;
         };
@@ -821,7 +821,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cs_dwrk {
             bindings = <&ms_wrkD>;
             key-positions = <17 13 20 22>;
-            layers = <6>;
+            layers = <5>;
             require-prior-idle-ms = <3000>;
             timeout-ms = <500>;
         };
@@ -829,7 +829,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_qwrk {
             bindings = <&ms_wrkQ>;
             key-positions = <20 22 26 13>;
-            layers = <6>;
+            layers = <5>;
             require-prior-idle-ms = <3000>;
             timeout-ms = <500>;
         };
@@ -837,11 +837,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cs_fox {
             bindings = <&ms_mac>;
             key-positions = <4 31 13 8>;
-            layers = <6>;
+            layers = <5>;
         };
 
         c_laltcodesL {
-            bindings = <&sl 7>;
+            bindings = <&sl 6>;
             key-positions = <37 15>;
         };
 
@@ -856,7 +856,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_laltcodesR {
-            bindings = <&sl 7>;
+            bindings = <&sl 6>;
             key-positions = <40 20>;
         };
 
@@ -866,12 +866,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_lnumR {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <40 21>;
         };
 
         c_lnavR {
-            bindings = <&to 6>;
+            bindings = <&to 5>;
             key-positions = <19 40>;
         };
 
@@ -898,11 +898,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_bt5R {
             bindings = <&m_bt5>;
             key-positions = <18 39>;
-        };
-
-        c_lmirror {
-            bindings = <&tog 2>;
-            key-positions = <37 24>;
         };
 
         c_plus {
@@ -951,23 +946,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "vidjo";
         };
 
-        home-mirror {
-            bindings = <
-&trans  &db_q  &db_w  &db_e   &db_r   &db_t     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &db_a  &db_s  &db_d   &db_f   &db_g     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &db_z  &db_x  &db_c   &db_v   &db_b     &trans  &trans  &trans  &trans  &trans  &trans
-                      &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "mir|ror";
-        };
-
         home-capsword {
             bindings = <
 &d_cvk          &d_apqt           &d_cmcl            &d_pdcr           &kp LS(R)            &kp LS(T)          &kp LS(Y)       &kp LS(U)            &kp LS(I)         &kp LS(O)          &kp LS(P)            &d_slqm
 &ht_xvk 0 HASH  &ht_L LGUI LS(A)  &ht_L LCTRL LS(S)  &ht_L LALT LS(D)  &kp LS(F)            &kp LS(G)          &kp LS(H)       &kp LS(J)            &ht_R RALT LS(K)  &ht_R RCTRL LS(L)  &ht_R RGUI LS(SEMI)  &kp SQT
 &kp AMPS        &d_scco           &kp LS(X)          &kp LS(C)         &kp LS(V)            &kp LS(B)          &kp LS(N)       &kp LS(M)            &kp LS(LT)        &kp LS(GT)         &kp LS(QMARK)        &kp EXCL
-                                                     &key_repeat       &ht_l2_2tabto0L 0 0  &ht_l1k_R 0 DEL    &mp_2kto RET 0  &ht_l1_2spcto0R 0 0  &kp BSPC
+                                                     &to 0             &ht_l2_2tabto0L 0 0  &ht_l1k_R 0 DEL    &mp_2kto RET 0  &ht_l1_2spcto0R 0 0  &kp BSPC
             >;
 
             label = "ORB|CPTR";
@@ -1033,8 +1017,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         compatible = "zmk,conditional-layers";
 
         gamenum {
-            if-layers = <1 4>;
-            then-layer = <5>;
+            if-layers = <1 3>;
+            then-layer = <4>;
         };
     };
 };
