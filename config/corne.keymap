@@ -244,118 +244,142 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-tap-dance";
             label = "DB_QP";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(Q) Q>, <&ht_L LS(P) P>;
+            bindings = <&ht_L LS(Q) Q>, <&kp P>;
 
-            tapping-term-ms = <275>;
+            tapping-term-ms = <190>;
         };
 
         db_wo: db_wo {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_WO";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(W) W>, <&ht_L LS(O) O>;
+            bindings = <&ht_L LS(W) W>, <&kp O>;
 
-            tapping-term-ms = <275>;
+            tapping-term-ms = <190>;
         };
 
         db_ei: db_ei {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_EI";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(E) E>, <&ht_L LS(I) I>;
+            bindings = <&ht_L LS(E) E>, <&kp I>;
 
-            tapping-term-ms = <275>;
+            tapping-term-ms = <190>;
         };
 
         db_ru: db_ru {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_RU";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(R) R>, <&ht_L LS(U) U>;
+            bindings = <&ht_L LS(R) R>, <&kp U>;
+
+            tapping-term-ms = <190>;
         };
 
         db_ty: db_ty {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_TY";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(T) T>, <&ht_L LS(Y) Y>;
+            bindings = <&ht_L LS(T) T>, <&kp Y>;
+
+            tapping-term-ms = <190>;
         };
 
         db_asemi: db_asemi {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_ASEMI";
             #binding-cells = <0>;
-            bindings = <&ht_L LGUI A>, <&ht_L LS(SEMI) SEMI>;
+            bindings = <&ht_L LGUI A>, <&kp SEMI>;
+
+            tapping-term-ms = <190>;
         };
 
         db_sl: db_sl {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_SL";
             #binding-cells = <0>;
-            bindings = <&ht_L LCTRL S>, <&ht_L LS(L) L>;
+            bindings = <&ht_L LCTRL S>, <&kp L>;
+
+            tapping-term-ms = <190>;
         };
 
         db_dk: db_dk {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_DK";
             #binding-cells = <0>;
-            bindings = <&ht_L LALT D>, <&ht_L LS(K) K>;
+            bindings = <&ht_L LALT D>, <&kp K>;
+
+            tapping-term-ms = <190>;
         };
 
         db_fj: db_fj {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_FJ";
             #binding-cells = <0>;
-            bindings = <&ht_L LSHFT F>, <&ht_L LS(J) J>;
+            bindings = <&ht_L LSHFT F>, <&kp J>;
+
+            tapping-term-ms = <190>;
         };
 
         db_gh: db_gh {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_GH";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(G) G>, <&ht_L LS(H) H>;
+            bindings = <&ht_L LS(G) G>, <&kp H>;
+
+            tapping-term-ms = <190>;
         };
 
         db_zslsh: db_zslsh {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_ZSLSH";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(Z) Z>, <&ht_L LS(SLASH) SLASH>;
+            bindings = <&ht_L LS(Z) Z>, <&kp SLASH>;
+
+            tapping-term-ms = <190>;
         };
 
         db_xdot: db_xdot {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_XDOT";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(X) X>, <&ht_L LS(DOT) DOT>;
+            bindings = <&ht_L LS(X) X>, <&kp DOT>;
+
+            tapping-term-ms = <190>;
         };
 
         db_capos: db_capos {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_CAPOS";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(C) C>, <&ht_L LS(COMMA) COMMA>;
+            bindings = <&ht_L LS(C) C>, <&kp COMMA>;
+
+            tapping-term-ms = <190>;
         };
 
         db_vm: db_vm {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_VM";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(V) V>, <&ht_L LS(M) M>;
+            bindings = <&ht_L LS(V) V>, <&kp M>;
+
+            tapping-term-ms = <190>;
         };
 
         db_bn: db_bn {
             compatible = "zmk,behavior-tap-dance";
             label = "DB_BN";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(B) B>, <&ht_L LS(N) N>;
+            bindings = <&ht_L LS(B) B>, <&kp N>;
+
+            tapping-term-ms = <190>;
         };
 
         d_reteql: d_reteql {
             compatible = "zmk,behavior-tap-dance";
             label = "D_RETEQL";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <275>;
             bindings = <&kp RET>, <&kp RBKT>;
         };
 
@@ -907,10 +931,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&d_cvk          &db_qp     &db_wo    &db_ei           &db_ru           &db_ty         &ht_R LS(Y) Y  &ht_R LS(U) U      &ht_R LS(I) I          &ht_R LS(O) O      &ht_R LS(P) P        &ht_R LS(LBKT) LBKT
-&ht_xvk 0 HASH  &db_asemi  &db_sl    &db_dk           &db_fj           &db_gh         &ht_R LS(H) H  &ht_R RSHFT J      &ht_R RALT K           &ht_R RCTRL L      &ht_R RGUI SEMI      &ht_R LS(SQT) SQT
-&kp AMPS        &db_zslsh  &db_xdot  &db_capos        &db_vm           &db_bn         &ht_R LS(N) N  &ht_R LS(M) M      &ht_R LS(COMMA) COMMA  &ht_R LS(DOT) DOT  &ht_R LS(FSLH) FSLH  &kp EXCL
-                                     &ht_l1k_R 0 DEL  &ht_l2k_L 0 TAB  &key_repeat    &kp RETURN     &ht_l1k_R 0 SPACE  &kp BSPC
+&d_cvk          &db_qp     &db_wo    &db_ei           &db_ru           &db_ty         &kp Y       &kp U              &kp I         &kp O          &kp P            &ht_R LS(LBKT) LBKT
+&ht_xvk 0 HASH  &db_asemi  &db_sl    &db_dk           &db_fj           &db_gh         &kp H       &ht_R RSHFT J      &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &ht_R LS(SQT) SQT
+&kp AMPS        &db_zslsh  &db_xdot  &db_capos        &db_vm           &db_bn         &kp N       &kp M              &kp COMMA     &kp PERIOD     &kp FSLH         &kp EXCL
+                                     &ht_l1k_R 0 DEL  &ht_l2k_L 0 TAB  &key_repeat    &kp RETURN  &ht_l1k_R 0 SPACE  &kp BSPC
             >;
 
             label = "orb|cptr";
