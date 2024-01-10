@@ -924,6 +924,26 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp STAR>;
             key-positions = <31 16 10>;
         };
+
+        c_asemi {
+            bindings = <&kp SEMI>;
+            key-positions = <13 36>;
+        };
+
+        c_sl {
+            bindings = <&kp L>;
+            key-positions = <36 14>;
+        };
+
+        c_dk {
+            bindings = <&kp K>;
+            key-positions = <36 15>;
+        };
+
+        c_fj {
+            bindings = <&kp J>;
+            key-positions = <36 16>;
+        };
     };
 
     keymap {
@@ -931,10 +951,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&d_cvk          &db_qp     &db_wo    &db_ei           &db_ru           &db_ty         &kp Y       &kp U              &kp I         &kp O          &kp P            &ht_R LS(LBKT) LBKT
-&ht_xvk 0 HASH  &db_asemi  &db_sl    &db_dk           &db_fj           &db_gh         &kp H       &ht_R RSHFT J      &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &ht_R LS(SQT) SQT
-&kp AMPS        &db_zslsh  &db_xdot  &db_capos        &db_vm           &db_bn         &kp N       &kp M              &kp COMMA     &kp PERIOD     &kp FSLH         &kp EXCL
-                                     &ht_l1k_R 0 DEL  &ht_l2k_L 0 TAB  &key_repeat    &kp RETURN  &ht_l1k_R 0 SPACE  &kp BSPC
+&d_cvk          &db_qp        &db_wo         &db_ei           &db_ru           &db_ty         &kp Y       &kp U              &kp I         &kp O          &kp P            &ht_R LS(LBKT) LBKT
+&ht_xvk 0 HASH  &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D     &ht_L LSHFT F    &db_gh         &kp H       &ht_R RSHFT J      &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &ht_R LS(SQT) SQT
+&kp AMPS        &db_zslsh     &db_xdot       &db_capos        &db_vm           &db_bn         &kp N       &kp M              &kp COMMA     &kp PERIOD     &kp FSLH         &kp EXCL
+                                             &ht_l1k_R 0 DEL  &ht_l2k_L 0 TAB  &key_repeat    &kp RETURN  &ht_l1k_R 0 SPACE  &kp BSPC
             >;
 
             label = "orb|cptr";
