@@ -244,7 +244,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-tap-dance";
             label = "DB_QP";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(Q) Q>, <&kp P>;
+            bindings = <&kp Q>, <&kp P>;
 
             tapping-term-ms = <190>;
         };
@@ -253,7 +253,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-tap-dance";
             label = "DB_WO";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(W) W>, <&kp O>;
+            bindings = <&kp W>, <&kp O>;
 
             tapping-term-ms = <190>;
         };
@@ -325,7 +325,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-tap-dance";
             label = "DB_GH";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(G) G>, <&kp H>;
+            bindings = <&kp G>, <&kp H>;
 
             tapping-term-ms = <190>;
         };
@@ -343,7 +343,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-tap-dance";
             label = "DB_XDOT";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(X) X>, <&kp DOT>;
+            bindings = <&kp X>, <&kp DOT>;
 
             tapping-term-ms = <190>;
         };
@@ -361,7 +361,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-tap-dance";
             label = "DB_VM";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(V) V>, <&kp M>;
+            bindings = <&kp V>, <&kp M>;
 
             tapping-term-ms = <190>;
         };
@@ -370,7 +370,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-tap-dance";
             label = "DB_BN";
             #binding-cells = <0>;
-            bindings = <&ht_L LS(B) B>, <&kp N>;
+            bindings = <&kp B>, <&kp N>;
 
             tapping-term-ms = <190>;
         };
