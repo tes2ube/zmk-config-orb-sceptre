@@ -88,9 +88,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_apqt: d_apqt {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap dance ' and ", ";
-
-            #binding-cells = <0>;
+            label = "tap dance single and double quote";
             bindings = <&kp Q>, <&kp LS(Q)>;
 
             tapping-term-ms = <275>;
@@ -98,7 +96,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_cmcl: d_cmcl {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap dance - , and <";
+            label = "tap dance comma and caret left";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp LS(W)>;
 
@@ -107,7 +105,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_pdcr: d_pdcr {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap dance . and >";
+            label = "tap dance period and caret right";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LS(E)>;
 
@@ -116,7 +114,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_scco: d_scco {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap dance ; and :";
+            label = "tap dance semicolon and colon";
             #binding-cells = <0>;
             bindings = <&kp Z>, <&kp LS(Z)>;
 
@@ -125,7 +123,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_slqm: d_slqm {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap dance / and ?";
+            label = "tap dance fslash and question mark";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LS(LEFT_BRACKET)>;
 
@@ -202,7 +200,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_cvk: d_cvk {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap `, hold for copy-paste, 2nd tap ~";
+            label = "tap grave, hold for copy-paste, 2nd tap squiggle";
             #binding-cells = <0>;
             bindings = <&ht_cvk 0 GRAVE>, <&kp TILDE>;
 
@@ -225,7 +223,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_plsatk: d_plsatk {
             compatible = "zmk,behavior-tap-dance";
-            label = "dance, + and *";
+            label = "dance, plus and asterisk";
             #binding-cells = <0>;
             bindings = <&kp RBRC>, <&kp STAR>;
 
@@ -234,7 +232,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_mindiv: d_mindiv {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap dance - and /";
+            label = "tap dance minus and divide";
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp LBKT>;
 
@@ -243,7 +241,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_dotcom: d_dotcom {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap dance . and ,";
+            label = "tap dance period and comma";
             #binding-cells = <0>;
             bindings = <&ht_L LGUI E>, <&kp W>;
 
@@ -328,21 +326,21 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         db_z: db_z {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror Z/";
+            label = "hold tap & mirror Z fslsh";
             #binding-cells = <0>;
             bindings = <&ht_L LS(Z) Z>, <&ht_L LS(SLASH) SLASH>;
         };
 
         db_x: db_x {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror X .";
+            label = "hold tap & mirror X period";
             #binding-cells = <0>;
             bindings = <&ht_L LS(X) X>, <&ht_L LS(DOT) DOT>;
         };
 
         db_c: db_c {
             compatible = "zmk,behavior-tap-dance";
-            label = "hold tap & mirror C ,";
+            label = "hold tap & mirror C comma";
             #binding-cells = <0>;
             bindings = <&ht_L LS(C) C>, <&ht_L LS(COMMA) COMMA>;
         };
@@ -363,7 +361,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         d_reteql: d_reteql {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap dance return and =";
+            label = "tap dance return and equal";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&kp RET>, <&kp RBKT>;
