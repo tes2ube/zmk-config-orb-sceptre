@@ -86,14 +86,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             tapping-term-ms = <350>;
         };
 
-        d_apqt: d_apqt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap dance single and double quote";
-            bindings = <&kp Q>, <&kp LS(Q)>;
-
-            tapping-term-ms = <275>;
-        };
-
         d_cmcl: d_cmcl {
             compatible = "zmk,behavior-tap-dance";
             label = "tap dance comma and caret left";
