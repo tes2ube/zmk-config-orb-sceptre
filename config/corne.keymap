@@ -641,7 +641,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_esc {
             bindings = <&kp ESC>;
-            key-positions = <12 13>;
+            key-positions = <13 14>;
             layers = <0>;
         };
 
