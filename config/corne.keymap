@@ -929,10 +929,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         num-sys {
             bindings = <
-&kp I      &kp CARET  &kp N7          &kp N8         &kp N9          &d_mindiv    &none   &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP  &rgb_ug RGB_BRI
-&kp PRCNT  &d_dotcom  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_plsatk    &none   &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN  &rgb_ug RGB_BRD
-&kp BSPC   &kp N0     &kp N1          &kp N2         &kp N3          &d_reteql    &none   &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp RALT      &rgb_ug RGB_TOG
-                                      &to 0          &trans          &trans       &trans  &trans        &trans
+&kp KP_CLEAR  &kp CARET  &kp N7          &kp N8         &kp N9          &d_mindiv    &none   &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP  &rgb_ug RGB_BRI
+&kp PRCNT     &d_dotcom  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_plsatk    &none   &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN  &rgb_ug RGB_BRD
+&kp BSPC      &kp N0     &kp N1          &kp N2         &kp N3          &d_reteql    &none   &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp RALT      &rgb_ug RGB_TOG
+                                         &to 0          &trans          &trans       &trans  &trans        &trans
             >;
 
             label = "num|sys";
@@ -962,9 +962,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         nav-func {
             bindings = <
-&kp BACKSPACE  &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)              &kp F9          &kp F10             &kp F11         &kp F12         &ext_power EP_TOG
+&none          &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)              &kp F9          &kp F10             &kp F11         &kp F12         &ext_power EP_TOG
 &kp SPACE      &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &mp_2key K_FORWARD C_AC_FORWARD  &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &out OUT_BLE
-&kp RET        &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp K_CMENU    &none                &mp_2key K_BACK C_AC_BACK        &kp F1          &kp F2              &kp F3          &kp F4          &out OUT_USB
+&kp BACKSPACE  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp K_CMENU    &kp RET              &mp_2key K_BACK C_AC_BACK        &kp F1          &kp F2              &kp F3          &kp F4          &out OUT_USB
                                                   &to 0                    &trans         &trans               &trans                           &trans          &trans
             >;
 
