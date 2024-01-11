@@ -895,6 +895,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp N>;
             key-positions = <36 29>;
         };
+
+        c_tab {
+            bindings = <&kp TAB>;
+            key-positions = <27 28>;
+        };
     };
 
     keymap {
