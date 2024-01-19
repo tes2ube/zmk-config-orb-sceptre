@@ -980,9 +980,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         nav-mous {
             bindings = <
-&none          &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mp_2key C_AC_BACK K_BACK  &mp_2key C_AC_FORWARD K_FORWARD  &mmv MOVE 100 100  &mmv MOVE_UP    &mmv MOVE 100 100  &mwh SCROLL_UP
-&kp SPACE      &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &mkp MB3                   &mkp MB1                         &mmv MOVE_LEFT       &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN
-&kp BACKSPACE  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp K_CMENU    &kp RET              &none                      &mkp MB2                         &mwh SCROLL_LEFT     &none           &mwh SCROLL_RIGHT  &kp LC(PSCRN)
+&none          &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mp_2key C_AC_BACK K_BACK  &mp_2key C_AC_FORWARD K_FORWARD  &mmv MOVE 100 100  &mmv MOVE_UP    &mmv MOVE 100 100  &msc SCRL_UP
+&kp SPACE      &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &mkp MB3                   &mkp MB1                         &mmv MOVE_LEFT       &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &msc SCRL_DOWN
+&kp BACKSPACE  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp K_CMENU    &kp RET              &none                      &mkp MB2                         &msc SCRL_LEFT     &none           &msc SCRL_RIGHT  &kp LC(PSCRN)
                                                   &to 0                    &trans         &trans               &trans                     &trans                           &trans
             >;
 
