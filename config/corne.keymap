@@ -918,30 +918,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <27 28>;
         };
 
-        c_btx1 {
-            bindings = <&bt BT_DISC 0>;
-            key-positions = <38 25>;
-        };
-
-        c_btx2 {
-            bindings = <&bt BT_DISC 1>;
-            key-positions = <38 26>;
-        };
-
-        c_btx3 {
-            bindings = <&bt BT_DISC 2>;
-            key-positions = <38 27>;
-        };
-
-        c_btx4 {
-            bindings = <&bt BT_DISC 3>;
-            key-positions = <38 28>;
-        };
-
-        c_btx5 {
-            bindings = <&bt BT_DISC 4>;
-            key-positions = <38 29>;
-        };
     };
 
     keymap {
