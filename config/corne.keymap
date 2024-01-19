@@ -709,13 +709,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_ltroub {
-            bindings = <&to 7>;
+            bindings = <&to 8>;
             key-positions = <0 36 28>;
             require-prior-idle-ms = <3000>;
         };
 
         c_ltroubR {
-            bindings = <&to 7>;
+            bindings = <&to 8>;
             key-positions = <11 31 41>;
             require-prior-idle-ms = <3000>;
         };
@@ -1001,15 +1001,15 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "vidnum";
         };
 
-        nav-func {
+        nav-mous {
             bindings = <
-&none          &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)              &kp F9          &kp F10             &kp F11         &kp F12         &out OUT_BLE
-&kp SPACE      &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &mp_2key K_FORWARD C_AC_FORWARD  &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &out OUT_USB
-&kp BACKSPACE  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp K_CMENU    &kp RET              &mp_2key K_BACK C_AC_BACK        &kp F1          &kp F2              &kp F3          &kp F4          &none
-                                                  &to 0                    &trans         &trans               &trans                           &trans          &trans
+&none          &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mp_2key C_AC_BACK K_BACK  &mp_2key C_AC_FORWARD K_FORWARD  &mmv MOVE -100 -100  &mmv MOVE_UP    &mmv MOVE 100 100  &mwh SCROLL_UP
+&kp SPACE      &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &mkp MB3                   &mkp MB1                         &mmv MOVE_LEFT       &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN
+&kp BACKSPACE  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp K_CMENU    &kp RET              &none                      &mkp MB2                         &mwh SCROLL_LEFT     &none           &mwh SCROLL_RIGHT  &kp LC(PSCRN)
+                                                  &to 0                    &trans         &trans               &trans                     &trans                           &trans
             >;
 
-            label = "nav|func";
+            label = "nav|mous";
         };
 
         altcodes {
@@ -1021,6 +1021,17 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             >;
 
             label = "altcodes";
+        };
+
+        func {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&none  &none  &none  &none  &none  &none    &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none  &none  &none  &none  &none  &none    &none  &kp F1  &kp F2   &kp F3   &kp F4   &none
+                     &to 0  &none  &none    &none  &none   &none
+            >;
+
+            label = "func";
         };
 
         troubleshoot {
@@ -1041,6 +1052,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         gamenum {
             if-layers = <1 3>;
             then-layer = <4>;
+        };
+
+        func {
+            if-layers = <5 3>;
+            then-layer = <7>;
         };
     };
 };
