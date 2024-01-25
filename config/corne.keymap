@@ -914,7 +914,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_space {
             bindings = <&kp SPACE>;
-            key-positions = <27 28 37>;
+            key-positions = <37 16 15>;
         };
 
         c_btx1 {
@@ -940,6 +940,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_btx5 {
             bindings = <&bt BT_DISC 4>;
             key-positions = <38 29>;
+        };
+
+        c_bksp {
+            bindings = <&kp BSPC>;
+            key-positions = <37 14 13>;
         };
     };
 
