@@ -1008,10 +1008,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         nav-func {
             bindings = <
-&none          &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)  &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)              &kp F9          &kp F10             &kp F11         &kp F12         &out OUT_BLE
-&kp SPACE      &kp LEFT                &kp DOWN   &kp RIGHT                &kp LS(HOME)   &kp LS(END)          &mp_2key K_FORWARD C_AC_FORWARD  &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &out OUT_USB
-&kp BACKSPACE  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp K_CMENU    &kp RET              &mp_2key K_BACK C_AC_BACK        &kp F1          &kp F2              &kp F3          &kp F4          &none
-                                                  &to 0                    &trans         &trans               &trans                           &trans          &trans
+&none          &kp LC(LEFT_ARROW)      &kp UP     &kp LC(RIGHT_ARROW)      &kp LC(SLASH)         &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)              &kp F9          &kp F10             &kp F11         &kp F12         &out OUT_BLE
+&kp SPACE      &kp LEFT                &kp DOWN   &kp RIGHT                &ht_L LSHFT LS(HOME)  &kp LS(END)          &mp_2key K_FORWARD C_AC_FORWARD  &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &out OUT_USB
+&kp BACKSPACE  &kp LC(LS(LEFT_ARROW))  &kp LA(E)  &kp LS(LC(RIGHT_ARROW))  &kp K_CMENU           &kp RET              &mp_2key K_BACK C_AC_BACK        &kp F1          &kp F2              &kp F3          &kp F4          &none
+                                                  &to 0                    &trans                &trans               &trans                           &trans          &trans
             >;
 
             label = "nav|func";
