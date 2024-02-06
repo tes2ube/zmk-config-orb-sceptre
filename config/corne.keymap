@@ -57,8 +57,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <165>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <155>;
             require-prior-idle-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
@@ -116,9 +116,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL1>, <&key_repeat>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <160>;
-            require-prior-idle-ms = <160>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
             hold-trigger-on-release;
@@ -130,8 +130,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL1>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <165>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <155>;
             require-prior-idle-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
@@ -144,8 +144,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL2>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <165>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <155>;
             require-prior-idle-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
@@ -242,8 +242,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL1>, <&m_2spcto>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <165>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <155>;
             require-prior-idle-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
@@ -256,8 +256,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL2>, <&m_2tabto0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <165>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <155>;
             require-prior-idle-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
@@ -280,18 +280,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp Q>, <&kp LS(Q)>;
         };
 
-        d_rgbSwitch: d_rgbSwitch {
+        d_ampm: d_ampm {
             compatible = "zmk,behavior-tap-dance";
-            label = "D_RGBSWITCH";
+            label = "D_AMPM";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_ON>, <&rgb_ug RGB_OFF>;
-        };
-
-        d_epSwitch: d_epSwitch {
-            compatible = "zmk,behavior-tap-dance";
-            label = "D_EPSWITCH";
-            #binding-cells = <0>;
-            bindings = <&ext_power EP_ON>, <&ext_power EP_OFF>;
+            bindings = <&m_am>, <&m_pm>;
         };
     };
 
@@ -541,6 +534,20 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
             label = "M_ALT01";
         };
+
+        m_am: m_am {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp M>;
+            label = "M_AM";
+        };
+
+        m_pm: m_pm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp M>;
+            label = "M_PM";
+        };
     };
 
     combos {
@@ -723,23 +730,22 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cs_dwrk {
             bindings = <&ms_wrkD>;
             key-positions = <17 13 20 22>;
-            layers = <5>;
             require-prior-idle-ms = <3000>;
-            timeout-ms = <500>;
+            timeout-ms = <100>;
         };
 
         c_qwrk {
             bindings = <&ms_wrkQ>;
             key-positions = <20 22 26 13>;
-            layers = <5>;
             require-prior-idle-ms = <3000>;
-            timeout-ms = <500>;
+            timeout-ms = <100>;
         };
 
         cs_fox {
             bindings = <&ms_mac>;
             key-positions = <4 31 13 8>;
-            layers = <5>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <3000>;
         };
 
         c_laltcodesL {
@@ -749,12 +755,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_dskl {
             bindings = <&kp LG(LC(LEFT_ARROW))>;
-            key-positions = <38 0 1>;
+            key-positions = <0 1 37>;
         };
 
         c_deskr {
             bindings = <&kp LG(LC(RIGHT_ARROW))>;
-            key-positions = <38 4 5>;
+            key-positions = <4 5 37>;
         };
 
         c_laltcodesR {
@@ -914,7 +920,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_space {
             bindings = <&kp SPACE>;
-            key-positions = <37 16 15>;
+            key-positions = <27 28>;
         };
 
         c_btx1 {
@@ -944,7 +950,32 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_bksp {
             bindings = <&kp BSPC>;
-            key-positions = <37 14 13>;
+            key-positions = <26 25>;
+        };
+
+        c_ins {
+            bindings = <&kp INSERT>;
+            key-positions = <33 34>;
+        };
+
+        c_undo {
+            bindings = <&kp LC(FSLH)>;
+            key-positions = <18 19>;
+        };
+
+        c_redo {
+            bindings = <&kp RC(RS(FSLH))>;
+            key-positions = <19 20>;
+        };
+
+        c_redoalt {
+            bindings = <&kp RC(T)>;
+            key-positions = <20 18>;
+        };
+
+        c_ret {
+            bindings = <&kp RET>;
+            key-positions = <29 28>;
         };
     };
 
@@ -976,7 +1007,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         home-capsword {
             bindings = <
 &d_cvk          &ht_L LS(Q) Q     &ht_L LS(W) W      &ht_L LS(E) E     &kp LS(R)           &kp LS(T)      &kp LS(Y)       &kp LS(U)          &kp LS(I)         &kp LS(O)          &kp LS(P)            &ht_R LS(LBKT) LBKT
-&ht_xvk 0 HASH  &ht_L LGUI LS(A)  &ht_L LCTRL LS(S)  &ht_L LALT LS(D)  &kp LS(F)           &kp LS(G)      &kp LS(H)       &kp LS(J)          &ht_R RALT LS(K)  &ht_R RCTRL LS(L)  &ht_R RGUI LS(SEMI)  &kp SQT
+&ht_xvk 0 HASH  &ht_L LGUI LS(A)  &ht_L LCTRL LS(S)  &ht_L LALT LS(D)  &ht_L LSHFT LS(F)   &kp LS(G)      &kp LS(H)       &ht_R RSHFT RS(J)  &ht_R RALT LS(K)  &ht_R RCTRL LS(L)  &ht_R RGUI LS(SEMI)  &kp SQT
 &kp AMPS        &ht_L LS(Z) Z     &kp LS(X)          &kp LS(C)         &kp LS(V)           &kp LS(B)      &kp LS(N)       &kp LS(M)          &kp LS(LT)        &kp LS(GT)         &kp LS(QMARK)        &kp EXCL
                                                      &ht_l1k_R 0 DEL   &ht_l2tabto0_L 0 0  &key_repeat    &mp_2kto RET 0  &ht_l1spcto_R 0 0  &kp BSPC
             >;
@@ -986,10 +1017,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         num-sys {
             bindings = <
-&kp KP_CLEAR  &kp CARET  &kp N7          &kp N8         &kp N9          &d_mindiv    &none   &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP      &rgb_ug RGB_BRI
-&kp PRCNT     &d_dotcom  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_plsatk    &none   &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN      &rgb_ug RGB_BRD
-&kp BSPC      &kp N0     &kp N1          &kp N2         &kp N3          &d_reteql    &none   &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &ext_power EP_ON  &rgb_ug RGB_ON
-                                         &to 0          &trans          &trans       &trans  &trans        &trans
+&kp CLEAR  &kp CARET  &kp N7          &kp N8         &kp N9          &d_mindiv    &none    &kp C_RW      &kp C_STOP  &kp C_FF      &kp C_BRI_UP      &rgb_ug RGB_BRI
+&kp PRCNT  &d_dotcom  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_plsatk    &kp Z    &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp C_BRI_DN      &rgb_ug RGB_BRD
+&kp BSPC   &kp N0     &kp N1          &kp N2         &kp N3          &d_reteql    &d_ampm  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &ext_power EP_ON  &rgb_ug RGB_ON
+                                      &to 0          &trans          &trans       &trans   &trans        &trans
             >;
 
             label = "num|sys";
