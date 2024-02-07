@@ -597,7 +597,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_dol {
             bindings = <&kp DLLR>;
-            key-positions = <36 28 27>;
+            key-positions = <28 37 29>;
         };
 
         c_bslh {
@@ -966,6 +966,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_redo {
             bindings = <&kp RC(RS(FSLH))>;
             key-positions = <19 20>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <200>;
         };
 
         c_redoalt {
