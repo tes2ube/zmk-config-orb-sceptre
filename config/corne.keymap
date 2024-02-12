@@ -280,9 +280,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp Q>, <&kp LS(Q)>;
         };
 
-        d_ampm: d_ampm {
+        d_ampms: d_ampms {
             compatible = "zmk,behavior-tap-dance";
-            label = "D_AMPM";
+            label = "D_AMPMS";
             #binding-cells = <0>;
             bindings = <&m_am>, <&m_pm>;
         };
@@ -1026,7 +1026,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <
 &kp CLEAR  &kp CARET  &kp N7          &kp N8         &kp N9          &d_mindiv    &none      &kp C_RW            &kp C_STOP       &kp C_FF            &kp C_BRI_UP          &rgb_ug RGB_BRI
 &kp PRCNT  &d_dotcom  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_plsatk    &kp LS(Z)  &ht_R RSHFT C_PREV  &ht_R RALT C_PP  &ht_R RCTRL C_NEXT  &ht_R RMETA C_BRI_DN  &rgb_ug RGB_BRD
-&kp BSPC   &kp N0     &kp N1          &kp N2         &kp N3          &d_reteql    &d_ampm    &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP        &ext_power EP_ON      &rgb_ug RGB_ON
+&kp BSPC   &kp N0     &kp N1          &kp N2         &kp N3          &d_reteql    &d_ampms   &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP        &ext_power EP_ON      &rgb_ug RGB_ON
                                       &to 0          &trans          &trans       &trans     &trans              &trans
             >;
 
