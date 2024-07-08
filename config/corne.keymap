@@ -561,6 +561,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp HOME &kp LS(RET) &kp UP>;
             label = "M_RETUP";
         };
+
+        ms_phnx: ms_rphe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp D &kp FSLH &kp D &kp V &kp G &kp D &kp P &kp N7 &kp R &kp S &kp P &kp A &kp O &kp G &kp K &kp T &kp N4 &kp LS(U) &kp LS(A) &kp LS(M) &kp LS(M) &kp LS(D) &kp LS(O) &kp N4 &kp N &kp G &kp S &kp K &kp A>;
+            label = "MS_RPHE";
+        };
     };
 
     combos {
@@ -1005,6 +1012,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_deskwinR {
             bindings = <&kp LG(LC(LS(RIGHT_ARROW)))>;
             key-positions = <4 5 37 3>;
+        };
+
+        cs_phx {
+            bindings = <&ms_phnx>;
+            key-positions = <19 4 29 21>;
+            require-prior-idle-ms = <3000>;
+            timeout-ms = <100>;
         };
     };
 
