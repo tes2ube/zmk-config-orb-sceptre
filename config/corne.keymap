@@ -298,7 +298,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         ms_wrkD: ms_wrkD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SEMI &kp R &kp D &kp H &kp N2 &kp LS(U) &kp LS(G) &kp LS(N) &kp LS(P) &kp LS(D) &kp LS(K) &kp N4 &kp L &kp S &kp N &kp P &kp D &kp M &kp D &kp L &kp N4 &kp SEMI &kp G &kp K &kp I &kp S &kp M>;
+            bindings = <&kp I &kp D &kp L &kp K &kp D &kp O &kp N8 &kp R &kp A &kp P &kp R &kp A &kp K &kp D &kp N7 &kp LS(I) &kp LS(A) &kp LS(L) &kp LS(S) &kp LS(L) &kp N6 &kp L &kp D &kp O &kp DOT &kp S &kp F &kp SEMI>;
             label = "MS_WRKD";
             tap-ms = <40>;
         };
