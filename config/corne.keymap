@@ -1105,7 +1105,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         troubleshoot {
             bindings = <
 &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR    &bt BT_CLR  &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1       &bt BT_SEL 0
-&bt BT_DISC 0     &bt BT_DISC 1      &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none         &none       &bt BT_DISC 4  &bt BT_DISC 3  &bt BT_DISC 2  &bt BT_DISC 1      &bt BT_DISC 0
+&bt BT_DISC 0     &bt BT_DISC 1      &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &studio_unlock         &studio_unlock       &bt BT_DISC 4  &bt BT_DISC 3  &bt BT_DISC 2  &bt BT_DISC 1      &bt BT_DISC 0
 &ext_power EP_ON  &ext_power EP_OFF  &out OUT_BLE   &out OUT_USB   &bootloader    &sys_reset    &sys_reset  &bootloader    &out OUT_USB   &out OUT_BLE   &ext_power EP_OFF  &ext_power EP_ON
                                                     &to 0          &none          &none         &none       &none          &to 0
             >;
