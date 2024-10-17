@@ -674,7 +674,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_cpto {
-            bindings = <&tog 4>;
+            bindings = <&tog 3>;
             key-positions = <16 19>;
         };
 
