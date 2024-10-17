@@ -326,6 +326,33 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             tapping-term-ms = <275>;
             bindings = <&kp SQT>, <&kp DQT>;
         };
+
+        ht_capwspc: ht_capwspc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HT_CAPWSPC";
+            bindings = <&ht_l1spcto_R 0 0>, <&ht_l1k_R 0 SPACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ht_cawpret: ht_cawpret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HT_CAWPRET";
+            bindings = <&mp_2kto RET 0>, <&kp RET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ht_capwtab: ht_capwtab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HT_CAPWTAB";
+            bindings = <&m_2tabto0>, <&ht_l2k_L 0 TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -1091,7 +1118,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <
 &kp EQUAL  &kp Q  &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
 &kp SQT    &kp A  &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp MINUS  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+&kp MINUS  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp EXCL
                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
@@ -1100,10 +1127,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home-capsword {
             bindings = <
-&d_cvk          &d_sqdq           &d_cmcl            &d_pdcr           &kp LS(R)           &kp LS(T)      &kp LS(Y)       &kp LS(U)          &kp LS(I)         &kp LS(O)          &kp LS(P)            &d_slqm
-&ht_xvk 0 HASH  &ht_L LGUI LS(A)  &ht_L LCTRL LS(S)  &ht_L LALT LS(D)  &ht_L LSHFT LS(F)   &kp LS(G)      &kp LS(H)       &ht_R RSHFT RS(J)  &ht_R RALT LS(K)  &ht_R RCTRL LS(L)  &ht_R RGUI LS(SEMI)  &kp SQT
-&d_andins       &d_scco           &kp LS(X)          &kp LS(C)         &kp LS(V)           &kp LS(B)      &kp LS(N)       &kp LS(M)          &kp LS(LT)        &kp LS(GT)         &kp LS(QMARK)        &kp EXCL
-                                                     &ht_l1k_R 0 DEL   &ht_l2tabto0_L 0 0  &key_repeat    &mp_2kto RET 0  &ht_l1spcto_R 0 0  &kp BSPC
+&d_cvk          &d_sqdq           &d_cmcl            &d_pdcr           &kp LS(R)          &kp LS(T)      &kp LS(Y)    &kp LS(U)          &kp LS(I)         &kp LS(O)          &kp LS(P)            &d_slqm
+&ht_xvk 0 HASH  &ht_L LGUI LS(A)  &ht_L LCTRL LS(S)  &ht_L LALT LS(D)  &ht_L LSHFT LS(F)  &kp LS(G)      &kp LS(H)    &ht_R RSHFT RS(J)  &ht_R RALT LS(K)  &ht_R RCTRL LS(L)  &ht_R RGUI LS(SEMI)  &kp SQT
+&d_andins       &d_scco           &kp LS(X)          &kp LS(C)         &kp LS(V)          &kp LS(B)      &kp LS(N)    &kp LS(M)          &kp LS(LT)        &kp LS(GT)         &kp LS(QMARK)        &kp EXCL
+                                                     &ht_l1k_R 0 DEL   &ht_capwtab        &key_repeat    &ht_cawpret  &ht_capwspc        &kp BSPC
             >;
 
             label = "ORB|CPTR";
