@@ -41,7 +41,19 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 */
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        c.trouble.l {
+            bindings = <&to 1>;
+            key-positions = <36 28 0>;
+        };
+
+        c.trouble.r {
+            bindings = <&to 1>;
+            key-positions = <41 31 11>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
