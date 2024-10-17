@@ -292,6 +292,40 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
             tapping-term-ms = <350>;
         };
+
+        d_revplsatk: d_revplsatk {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_REVPLSATK";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp ASTRK>;
+
+            tapping-term-ms = <300>;
+        };
+
+        d_revmindiv: d_revmindiv {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_REVMINDIV";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp SLASH>;
+
+            tapping-term-ms = <350>;
+        };
+
+        d_revreteq: d_revreteq {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_REVRETEQ";
+            #binding-cells = <0>;
+            tapping-term-ms = <275>;
+            bindings = <&kp RET>, <&kp EQUAL>;
+        };
+
+        d_revsqdq: d_revsqdq {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_REVSQDQ";
+            #binding-cells = <0>;
+            tapping-term-ms = <275>;
+            bindings = <&kp SQT>, <&kp DQT>;
+        };
     };
 
     macros {
@@ -324,12 +358,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 3>,
+                <&mo 4>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
 
@@ -343,12 +377,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 5>,
+                <&mo 7>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 5>,
+                <&mo 7>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
@@ -607,13 +641,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_meta {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
-            layers = <0 1 3 4 5 2>;
+            layers = <0 2 4 6 7 4>;
             require-prior-idle-ms = <200>;
             timeout-ms = <28>;
         };
 
         c_cpto {
-            bindings = <&tog 2>;
+            bindings = <&tog 4>;
             key-positions = <16 19>;
         };
 
@@ -641,7 +675,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp AT>;
             key-positions = <13 20>;
             require-prior-idle-ms = <300>;
-            layers = <0 1 3 4>;
+            layers = <0 2 4 6>;
         };
 
         c_us {
@@ -665,7 +699,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp CAPSLOCK>;
             key-positions = <17 18>;
             require-prior-idle-ms = <400>;
-            layers = <0 3>;
+            layers = <0 4>;
         };
 
         c_cut {
@@ -723,30 +757,30 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_lnumL {
-            bindings = <&to 3>;
+            bindings = <&to 4>;
             key-positions = <14 36>;
         };
 
         c_lnavL {
-            bindings = <&to 5>;
+            bindings = <&to 7>;
             key-positions = <16 36>;
         };
 
         c_lgamlok {
-            bindings = <&tog 1>;
+            bindings = <&tog 2>;
             key-positions = <37 36>;
-            layers = <0 1>;
+            layers = <0 2>;
             require-prior-idle-ms = <3000>;
         };
 
         c_ltroub {
-            bindings = <&to 7>;
+            bindings = <&to 9>;
             key-positions = <0 36 28>;
             require-prior-idle-ms = <3000>;
         };
 
         c_ltroubR {
-            bindings = <&to 7>;
+            bindings = <&to 9>;
             key-positions = <11 31 41>;
             require-prior-idle-ms = <3000>;
         };
@@ -773,7 +807,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_laltcodesL {
-            bindings = <&sl 6>;
+            bindings = <&sl 8>;
             key-positions = <15 36>;
         };
 
@@ -788,7 +822,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_laltcodesR {
-            bindings = <&sl 6>;
+            bindings = <&sl 8>;
             key-positions = <20 41>;
         };
 
@@ -798,12 +832,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_lnumR {
-            bindings = <&to 3>;
+            bindings = <&to 4>;
             key-positions = <21 41>;
         };
 
         c_lnavR {
-            bindings = <&to 5>;
+            bindings = <&to 7>;
             key-positions = <19 41>;
         };
 
@@ -1020,6 +1054,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             require-prior-idle-ms = <3000>;
             timeout-ms = <100>;
         };
+
+        revlok {
+            bindings = <&tog 1>;
+            key-positions = <41 40>;
+            layers = <0 1>;
+            require-prior-idle-ms = <3000>;
+        };
     };
 
     keymap {
@@ -1034,6 +1075,16 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             >;
 
             label = "orb|cptr";
+        };
+
+        home-revit {
+            label = "revit";
+            bindings = <
+&ht_cvk 0 GRAVE  &kp Q         &kp W          &kp E            &kp R            &kp T          &kp Y       &kp U              &kp I         &kp O          &kp P            &d_slqm
+&ht_xvk 0 HASH   &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D     &ht_L LSHFT F    &kp G          &kp H       &ht_R RSHFT J      &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &kp SQT
+&d_andins        &kp Z         &kp X          &kp C            &kp V            &kp B          &kp N       &kp M              &kp COMMA     &kp PERIOD     &kp FSLH         &kp EXCL
+                                              &ht_l1k_R 0 DEL  &ht_l2k_L 0 TAB  &key_repeat    &kp RETURN  &ht_l1k_R 0 SPACE  &kp BSPC
+            >;
         };
 
         home-gaming {
@@ -1067,6 +1118,16 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             >;
 
             label = "num|sys";
+        };
+
+        num-revit {
+            label = "num|rev";
+            bindings = <
+&d_revsqdq  &kp CARET  &kp N7          &kp N8         &kp N9          &d_revmindiv    &none      &kp C_RW            &kp C_STOP       &kp C_FF            &kp C_BRI_UP          &rgb_ug RGB_BRI
+&kp PRCNT   &d_dotcom  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_revplsatk    &kp LS(Z)  &ht_R RSHFT C_PREV  &ht_R RALT C_PP  &ht_R RCTRL C_NEXT  &ht_R RMETA C_BRI_DN  &rgb_ug RGB_BRD
+&none       &kp N0     &kp N1          &kp N2         &kp N3          &d_revreteq     &none      &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP        &ext_power EP_ON      &rgb_ug RGB_ON
+                                       &to 0          &trans          &trans          &trans     &trans              &trans
+            >;
         };
 
         numadjust {
@@ -1104,10 +1165,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         troubleshoot {
             bindings = <
-&bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR    &bt BT_CLR  &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1       &bt BT_SEL 0
-&bt BT_DISC 0     &bt BT_DISC 1      &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &studio_unlock         &studio_unlock       &bt BT_DISC 4  &bt BT_DISC 3  &bt BT_DISC 2  &bt BT_DISC 1      &bt BT_DISC 0
-&ext_power EP_ON  &ext_power EP_OFF  &out OUT_BLE   &out OUT_USB   &bootloader    &sys_reset    &sys_reset  &bootloader    &out OUT_USB   &out OUT_BLE   &ext_power EP_OFF  &ext_power EP_ON
-                                                    &to 0          &none          &none         &none       &none          &to 0
+&bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR        &bt BT_CLR      &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1       &bt BT_SEL 0
+&bt BT_DISC 0     &bt BT_DISC 1      &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &studio_unlock    &studio_unlock  &bt BT_DISC 4  &bt BT_DISC 3  &bt BT_DISC 2  &bt BT_DISC 1      &bt BT_DISC 0
+&ext_power EP_ON  &ext_power EP_OFF  &out OUT_BLE   &out OUT_USB   &bootloader    &sys_reset        &sys_reset      &bootloader    &out OUT_USB   &out OUT_BLE   &ext_power EP_OFF  &ext_power EP_ON
+                                                    &to 0          &none          &none             &none           &none          &to 0
             >;
 
             label = "trouble";
@@ -1118,8 +1179,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         compatible = "zmk,conditional-layers";
 
         gamenum {
-            if-layers = <1 3>;
-            then-layer = <4>;
+            if-layers = <2 4>;
+            then-layer = <6>;
+        };
+
+        revnum {
+            if-layers = <1 4>;
+            then-layer = <5>;
         };
     };
 };
