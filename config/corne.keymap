@@ -865,7 +865,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_lgamlok {
             bindings = <&tog 2>;
-            key-positions = <37 36>;
+            key-positions = <41 40>;
             layers = <0 2>;
             require-prior-idle-ms = <1000>;
         };
@@ -1154,14 +1154,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_revlok {
             bindings = <&m_revlok>;
-            key-positions = <41 40>;
+            key-positions = <37 36>;
             layers = <0>;
             require-prior-idle-ms = <1000>;
         };
 
         c_revunlok {
             bindings = <&m_revunlok>;
-            key-positions = <41 40>;
+            key-positions = <37 36>;
             require-prior-idle-ms = <1000>;
             layers = <1>;
         };
