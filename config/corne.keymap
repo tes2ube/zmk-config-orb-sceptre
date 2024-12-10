@@ -1171,6 +1171,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <16 19>;
             layers = <3>;
         };
+
+        c_glowstep {
+            bindings = <&rgb_ug RGB_EFF>;
+            key-positions = <7 10 32 14>;
+        };
     };
 
     keymap {
