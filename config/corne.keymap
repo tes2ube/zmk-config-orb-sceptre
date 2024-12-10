@@ -353,6 +353,15 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        d_revdotcom: d_revdotcom {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_REVDOTCOM";
+            #binding-cells = <0>;
+            bindings = <&ht_L LGUI PERIOD>, <&kp COMMA>;
+
+            tapping-term-ms = <275>;
+        };
     };
 
     macros {
@@ -367,7 +376,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         ms_wrkQ: ms_wrkQ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp P &kp E &kp D &kp N2 &kp LS(G) &kp LS(I) &kp LS(B) &kp LS(L) &kp LS(E) &kp LS(T) &kp N4 &kp N &kp O &kp B &kp L &kp E &kp M &kp E &kp N &kp N4 &kp S &kp I &kp T &kp C &kp O &kp M>;
+            bindings = <&kp C &kp E &kp N &kp T &kp E &kp R &kp N8 &kp P &kp A &kp L &kp P &kp A &kp T &kp E &kp N7 &kp LS(C) &kp LS(A) &kp LS(N) &kp LS(O) &kp LS(N) &kp N6 &kp N &kp E &kp R &kp V &kp O &kp U &kp S>;
             label = "MS_WRKQ";
             tap-ms = <40>;
         };
@@ -629,6 +638,58 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&none &kp D &kp FSLH &kp D &kp V &kp G &kp D &kp P &kp N7 &kp R &kp S &kp P &kp A &kp O &kp G &kp K &kp T &kp N4 &kp LS(U) &kp LS(A) &kp LS(M) &kp LS(M) &kp LS(D) &kp LS(O) &kp N4 &kp N &kp G &kp S &kp K &kp A>;
             label = "MS_RPHE";
         };
+
+        m_2xesc: m_2xesc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &kp ESC>;
+            label = "M_2XESC";
+            tap-ms = <50>;
+        };
+
+        m_capslok: m_capslok {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&to 3>,
+                <&macro_tap>,
+                <&rgb_ug RGB_SAD &rgb_ug RGB_SAD &rgb_ug RGB_SAD &rgb_ug RGB_SAD &rgb_ug RGB_SAD &rgb_ug RGB_SAD>;
+
+            label = "M_CAPSLOK";
+            wait-ms = <5>;
+            tap-ms = <15>;
+        };
+
+        m_capsunlok: m_capsunlok {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&to 0>,
+                <&macro_tap>,
+                <&rgb_ug RGB_SAI &rgb_ug RGB_SAI &rgb_ug RGB_SAI &rgb_ug RGB_SAI &rgb_ug RGB_SAI &rgb_ug RGB_SAI>;
+
+            label = "M_CAPSUNLOK";
+            wait-ms = <5>;
+            tap-ms = <15>;
+        };
+
+        m_revlok: m_revlok {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 1 &rgb_ug RGB_EFF>;
+            label = "M_REVLOK";
+            wait-ms = <5>;
+            tap-ms = <15>;
+        };
+
+        m_revunlok: m_revunlok {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 1 &rgb_ug RGB_EFR>;
+            label = "M_REVUNLOK";
+            wait-ms = <5>;
+            tap-ms = <15>;
+        };
     };
 
     combos {
@@ -673,9 +734,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             timeout-ms = <28>;
         };
 
-        c_cpto {
-            bindings = <&tog 3>;
+        c_capswrdlok {
+            bindings = <&m_capslok>;
             key-positions = <16 19>;
+            layers = <0 1>;
         };
 
         c_dol {
@@ -690,7 +752,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_pipe {
             bindings = <&kp PIPE>;
-            key-positions = <37 5 3>;
+            key-positions = <37 5 17>;
         };
 
         c_prcnt {
@@ -1082,11 +1144,24 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             timeout-ms = <100>;
         };
 
-        revlok {
-            bindings = <&tog 1>;
+        c_revlok {
+            bindings = <&m_revlok>;
             key-positions = <41 40>;
-            layers = <0 1>;
+            layers = <0>;
             require-prior-idle-ms = <1000>;
+        };
+
+        c_revunlok {
+            bindings = <&m_revunlok>;
+            key-positions = <41 40>;
+            require-prior-idle-ms = <1000>;
+            layers = <1>;
+        };
+
+        c_capswrdunlok {
+            bindings = <&m_capsunlok>;
+            key-positions = <16 19>;
+            layers = <3>;
         };
     };
 
@@ -1109,7 +1184,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <
 &ht_cvk 0 GRAVE  &kp Q         &kp W          &kp E            &kp R            &kp T          &kp Y       &kp U              &kp I         &kp O          &kp P            &d_slqm
 &ht_xvk 0 HASH   &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D     &ht_L LSHFT F    &kp G          &kp H       &ht_R RSHFT J      &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &kp SQT
-&d_andins        &kp Z         &kp X          &kp C            &kp V            &kp B          &kp N       &kp M              &kp COMMA     &kp PERIOD     &kp FSLH         &kp EXCL
+&m_2xesc         &kp Z         &kp X          &kp C            &kp V            &kp B          &kp N       &kp M              &kp COMMA     &kp PERIOD     &kp FSLH         &kp EXCL
                                               &ht_l1k_R 0 DEL  &ht_l2k_L 0 TAB  &key_repeat    &kp RETURN  &ht_l1k_R 0 SPACE  &kp BSPC
             >;
         };
@@ -1138,9 +1213,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         num-sys {
             bindings = <
-&none      &kp CARET  &kp N7          &kp N8         &kp N9          &d_mindiv    &none      &kp C_RW            &kp C_STOP       &kp C_FF            &kp C_BRI_UP          &rgb_ug RGB_BRI
+&kp LCTRL  &d_sqdq    &kp N7          &kp N8         &kp N9          &d_mindiv    &none      &kp C_RW            &kp C_STOP       &kp C_FF            &kp C_BRI_UP          &rgb_ug RGB_BRI
 &kp PRCNT  &d_dotcom  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_plsatk    &kp LS(Z)  &ht_R RSHFT C_PREV  &ht_R RALT C_PP  &ht_R RCTRL C_NEXT  &ht_R RMETA C_BRI_DN  &rgb_ug RGB_BRD
-&kp BSPC   &kp N0     &kp N1          &kp N2         &kp N3          &d_reteql    &d_ampms   &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP        &ext_power EP_ON      &rgb_ug RGB_ON
+&none      &kp N0     &kp N1          &kp N2         &kp N3          &d_reteql    &d_ampms   &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP        &ext_power EP_ON      &rgb_ug RGB_ON
                                       &to 0          &trans          &trans       &trans     &trans              &trans
             >;
 
@@ -1150,10 +1225,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         num-revit {
             label = "num|rev";
             bindings = <
-&d_revsqdq  &kp CARET  &kp N7          &kp N8         &kp N9          &d_revmindiv    &none      &kp C_RW            &kp C_STOP       &kp C_FF            &kp C_BRI_UP          &rgb_ug RGB_BRI
-&kp PRCNT   &d_dotcom  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_revplsatk    &kp LS(Z)  &ht_R RSHFT C_PREV  &ht_R RALT C_PP  &ht_R RCTRL C_NEXT  &ht_R RMETA C_BRI_DN  &rgb_ug RGB_BRD
-&none       &kp N0     &kp N1          &kp N2         &kp N3          &d_revreteq     &none      &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP        &ext_power EP_ON      &rgb_ug RGB_ON
-                                       &to 0          &trans          &trans          &trans     &trans              &trans
+&none      &d_revsqdq    &kp N7          &kp N8         &kp N9          &d_revmindiv    &none      &kp C_RW            &kp C_STOP       &kp C_FF            &kp C_BRI_UP          &rgb_ug RGB_BRI
+&kp PRCNT  &d_revdotcom  &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &d_revplsatk    &kp LS(Z)  &ht_R RSHFT C_PREV  &ht_R RALT C_PP  &ht_R RCTRL C_NEXT  &ht_R RMETA C_BRI_DN  &rgb_ug RGB_BRD
+&none      &kp N0        &kp N1          &kp N2         &kp N3          &d_revreteq     &none      &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP        &ext_power EP_ON      &rgb_ug RGB_ON
+                                         &to 0          &trans          &trans          &trans     &trans              &trans
             >;
         };
 
