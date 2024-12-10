@@ -339,7 +339,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         ht_cawpret: ht_cawpret {
             compatible = "zmk,behavior-mod-morph";
             label = "HT_CAWPRET";
-            bindings = <&mp_2kto RET 0>, <&kp RET>;
+            bindings = <&m_2kpretto>, <&kp RET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -584,7 +584,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         m_2spcto: m_2spcto {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp SPACE &to 0>;
+            bindings = <&macro_tap>, <&kp SPACE &m_capsunlok>;
 
             label = "M_2SPCTO";
         };
@@ -676,7 +676,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         m_revlok: m_revlok {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1 &rgb_ug RGB_EFF>;
+            bindings = <&tog 1 &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
             label = "M_REVLOK";
             wait-ms = <5>;
             tap-ms = <15>;
@@ -685,10 +685,18 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         m_revunlok: m_revunlok {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1 &rgb_ug RGB_EFR>;
+            bindings = <&tog 1 &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
             label = "M_REVUNLOK";
             wait-ms = <5>;
             tap-ms = <15>;
+        };
+
+        m_2kpretto: m_2kpretto {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp RET &m_capsunlok>;
+
+            label = "M_2KPRETTO";
         };
     };
 
