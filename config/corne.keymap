@@ -60,9 +60,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <140>;
+            tapping-term-ms = <155>;
+            quick-tap-ms = <135>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 36 37>;
             hold-trigger-on-release;
@@ -133,11 +133,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL1>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            quick-tap-ms = <165>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 37 40>;
             hold-trigger-on-release;
+            hold-while-undecided;
         };
 
         ht_l2k_L: ht_l2k_L {
@@ -146,10 +147,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&m_mL1>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <145>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39 37>;
             hold-trigger-on-release;
+            hold-while-undecided;
         };
 
         ht_xvk: ht_xvk {
@@ -184,7 +186,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&ht_cvk 0 GRAVE>, <&kp TILDE>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <225>;
         };
 
         ht_R: ht_R {
@@ -193,9 +195,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <140>;
+            tapping-term-ms = <155>;
+            quick-tap-ms = <135>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37>;
             hold-trigger-on-release;
@@ -373,7 +375,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp COLON &kp LS(K) &kp LS(G) &kp LS(I) &kp LS(V) &kp LS(D) &kp LS(O) &kp N9 &kp Y &kp O &kp T &kp D &kp O &kp N7 &kp G &kp L &kp H &kp G &kp A &kp N9 &kp SEMI &kp K &kp A &kp V &kp D &kp SEMI>;
             label = "MS_WRKD";
-            tap-ms = <40>;
+            tap-ms = <60>;
         };
 
         ms_wrkQ: ms_wrkQ {
@@ -381,7 +383,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp LS(S) &kp LS(T) &kp LS(I) &kp LS(C) &kp LS(K) &kp LS(E) &kp LS(R) &kp N9 &kp F &kp R &kp Y &kp E &kp R &kp N7 &kp I &kp N &kp D &kp I &kp A &kp N9 &kp S &kp T &kp A &kp K &kp E &kp S>;
             label = "MS_WRKQ";
-            tap-ms = <40>;
+            tap-ms = <60>;
         };
 
         ms_mac: ms_mac {
@@ -389,7 +391,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B>;
             label = "MS_MAC";
-            tap-ms = <40>;
+            tap-ms = <60>;
         };
 
         m_mL1: m_mL1 {
@@ -408,8 +410,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&rgb_ug RGB_TOG>;
 
             label = "M_ML1";
-            wait-ms = <5>;
-            tap-ms = <15>;
+            wait-ms = <10>;
+            tap-ms = <20>;
         };
 
         m_mL2: m_mL2 {
@@ -425,8 +427,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&rgb_ug RGB_TOG>;
 
             label = "M_ML2";
-            wait-ms = <5>;
-            tap-ms = <15>;
+            wait-ms = <10>;
+            tap-ms = <20>;
         };
 
         m_bt1: m_bt1 {
@@ -639,6 +641,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&none &kp D &kp FSLH &kp D &kp V &kp G &kp D &kp P &kp N7 &kp R &kp S &kp P &kp A &kp O &kp G &kp K &kp T &kp N4 &kp LS(U) &kp LS(A) &kp LS(M) &kp LS(M) &kp LS(D) &kp LS(O) &kp N4 &kp N &kp G &kp S &kp K &kp A>;
             label = "MS_RPHE";
+            tap-ms = <60>;
         };
 
         m_2xesc: m_2xesc {
@@ -652,27 +655,21 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         m_capslok: m_capslok {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&to 3>,
-                <&macro_tap>,
-                <&rgb_ug RGB_SAD &rgb_ug RGB_SAD &rgb_ug RGB_SAD &rgb_ug RGB_SAD &rgb_ug RGB_SAD &rgb_ug RGB_SAD>;
+            bindings = <&to 3>, <&macro_tap>, <&ext_power EP_OFF>;
 
             label = "M_CAPSLOK";
-            wait-ms = <5>;
-            tap-ms = <15>;
+            wait-ms = <15>;
+            tap-ms = <30>;
         };
 
         m_capsunlok: m_capsunlok {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&to 0>,
-                <&macro_tap>,
-                <&rgb_ug RGB_SAI &rgb_ug RGB_SAI &rgb_ug RGB_SAI &rgb_ug RGB_SAI &rgb_ug RGB_SAI &rgb_ug RGB_SAI>;
+            bindings = <&to 0>, <&macro_tap>, <&ext_power EP_ON>;
 
             label = "M_CAPSUNLOK";
-            wait-ms = <5>;
-            tap-ms = <15>;
+            wait-ms = <15>;
+            tap-ms = <30>;
         };
 
         m_revlok: m_revlok {
@@ -716,8 +713,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
 
             label = "XM_ML1";
-            wait-ms = <5>;
-            tap-ms = <15>;
+            wait-ms = <10>;
+            tap-ms = <20>;
         };
 
         xm_mL2: xm_mL2 {
@@ -735,8 +732,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
             label = "XM_ML2";
-            wait-ms = <5>;
-            tap-ms = <15>;
+            wait-ms = <10>;
+            tap-ms = <20>;
         };
     };
 
