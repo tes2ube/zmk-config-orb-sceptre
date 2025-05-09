@@ -410,8 +410,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
 
             label = "M_ML1";
-            wait-ms = <10>;
-            tap-ms = <20>;
+            wait-ms = <5>;
+            tap-ms = <15>;
         };
 
         m_mL2: m_mL2 {
@@ -430,8 +430,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
             label = "M_ML2";
-            wait-ms = <10>;
-            tap-ms = <20>;
+            wait-ms = <5>;
+            tap-ms = <15>;
         };
 
         m_bt1: m_bt1 {
