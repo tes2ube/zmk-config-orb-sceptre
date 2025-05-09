@@ -400,14 +400,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings =
                 <&macro_press>,
                 <&mo 4>,
+                <&macro_wait_time 145>,
                 <&macro_tap>,
-                <&rgb_ug RGB_TOG>,
+                <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 4>,
                 <&macro_tap>,
-                <&macro_tap>,
-                <&rgb_ug RGB_TOG>;
+                <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
 
             label = "M_ML1";
             wait-ms = <10>;
@@ -419,12 +419,15 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 7 &rgb_ug RGB_TOG>,
+                <&mo 7>,
+                <&macro_wait_time 145>,
+                <&macro_tap>,
+                <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 7>,
-                <&macro_press>,
-                <&rgb_ug RGB_TOG>;
+                <&macro_tap>,
+                <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
             label = "M_ML2";
             wait-ms = <10>;
