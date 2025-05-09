@@ -400,7 +400,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings =
                 <&macro_press>,
                 <&mo 4>,
-                <&macro_wait_time 145>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>,
                 <&macro_pause_for_release>,
@@ -410,8 +409,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
 
             label = "M_ML1";
-            wait-ms = <5>;
-            tap-ms = <15>;
+            wait-ms = <10>;
+            tap-ms = <20>;
         };
 
         m_mL2: m_mL2 {
@@ -420,7 +419,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings =
                 <&macro_press>,
                 <&mo 7>,
-                <&macro_wait_time 145>,
                 <&macro_tap>,
                 <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
                 <&macro_pause_for_release>,
@@ -430,8 +428,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD &rgb_ug RGB_HUD>;
 
             label = "M_ML2";
-            wait-ms = <5>;
-            tap-ms = <15>;
+            wait-ms = <10>;
+            tap-ms = <20>;
         };
 
         m_bt1: m_bt1 {
