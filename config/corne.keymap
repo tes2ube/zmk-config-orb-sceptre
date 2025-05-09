@@ -138,7 +138,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 37 40>;
             hold-trigger-on-release;
-            hold-while-undecided;
         };
 
         ht_l2k_L: ht_l2k_L {
@@ -151,7 +150,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39 37>;
             hold-trigger-on-release;
-            hold-while-undecided;
         };
 
         ht_xvk: ht_xvk {
@@ -406,7 +404,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&macro_release>,
                 <&mo 4>,
                 <&macro_tap>,
-                <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>;
+                <&rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI &rgb_ug RGB_HUI>,
+                <&macro_press>;
 
             label = "M_ML1";
             wait-ms = <10>;
