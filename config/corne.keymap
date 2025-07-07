@@ -621,6 +621,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             wait-ms = <10>;
             tap-ms = <20>;
         };
+
+        m_2tabto0: m_2tabto0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp TAB &to 0>;
+
+            label = "M_2TABTO0";
+        };
     };
 
     combos {
