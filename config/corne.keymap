@@ -1089,7 +1089,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                                              &ht_l1k_R 0 DEL  &ht_l2k_L 0 TAB  &key_repeat    &kp RETURN  &ht_l1k_R 0 SPACE  &kp BSPC
             >;
 
-            label = "orb|cptr";
+            label = "spy|qrl";
         };
 
         home-gaming {
@@ -1111,7 +1111,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                                                      &ht_l1k_R 0 DEL   &ht_capwtab        &key_repeat    &ht_cawpret  &ht_capwspc        &kp BSPC
             >;
 
-            label = "ORB|CPTR";
+            label = "SPY|QRL";
         };
 
         num-sys {
