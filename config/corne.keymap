@@ -146,11 +146,29 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&ht_L LSHFT F>, <&kp LS(F)>;
         };
 
-        dlI: dlI {
+        dHshAst: dHshAst {
             compatible = "zmk,behavior-tap-dance";
-            label = "DLI";
+            label = "DHSHAST";
             #binding-cells = <0>;
-            bindings = <&kp G>, <&kp LS(G)>;
+            bindings = <&kp HASH>, <&kp STAR>;
+        };
+
+        dAndPer: dAndPer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DANDPER";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS>, <&kp PERCENT>;
+
+            tapping-term-ms = <350>;
+        };
+
+        dSemCol: dSemCol {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DSEMCOL";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp LS(LBKT)>;
+
+            tapping-term-ms = <275>;
         };
     };
 
