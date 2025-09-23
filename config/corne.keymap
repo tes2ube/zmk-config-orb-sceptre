@@ -15,6 +15,8 @@
 
 &mt { flavor = "balanced"; };
 
+&key_repeat { usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>; };
+
 };
 
 /* Homerow mods
@@ -807,6 +809,12 @@ combos {
         bindings = <&bt BT_SEL 3>;
         key-positions = <38 17>;
     };
+};
+
+macros {
+};
+
+behaviors {
 };
 
 keymap {
