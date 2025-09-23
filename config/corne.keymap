@@ -106,6 +106,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DLP";
             #binding-cells = <0>;
             bindings = <&kp R>, <&kp LS(R)>;
+
+            tapping-term-ms = <275>;
         };
 
         dlY: dlY {
@@ -113,6 +115,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DLY";
             #binding-cells = <0>;
             bindings = <&kp T>, <&kp LS(T)>;
+
+            tapping-term-ms = <300>;
         };
 
         dl_htA: dl_htA {
@@ -120,6 +124,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DL_HTA";
             #binding-cells = <0>;
             bindings = <&ht_L LGUI A>, <&kp LS(A)>;
+
+            tapping-term-ms = <250>;
         };
 
         dl_htO: dl_htO {
@@ -127,6 +133,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DL_HTO";
             #binding-cells = <0>;
             bindings = <&ht_L LCTRL S>, <&kp LS(S)>;
+
+            tapping-term-ms = <250>;
         };
 
         dl_htE: dl_htE {
@@ -134,6 +142,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DL_HTE";
             #binding-cells = <0>;
             bindings = <&ht_L LALT D>, <&kp LS(D)>;
+
+            tapping-term-ms = <250>;
         };
 
         dl_htU: dl_htU {
@@ -141,6 +151,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DL_HTU";
             #binding-cells = <0>;
             bindings = <&ht_L LSHFT F>, <&kp LS(F)>;
+
+            tapping-term-ms = <250>;
         };
 
         dHshAst: dHshAst {
@@ -148,6 +160,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DHSHAST";
             #binding-cells = <0>;
             bindings = <&kp HASH>, <&kp STAR>;
+
+            tapping-term-ms = <350>;
         };
 
         dAndPer: dAndPer {
@@ -173,6 +187,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DLQ";
             #binding-cells = <0>;
             bindings = <&kp X>, <&kp LS(X)>;
+
+            tapping-term-ms = <275>;
         };
 
         dlJ: dlJ {
@@ -180,6 +196,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DLJ";
             #binding-cells = <0>;
             bindings = <&kp C>, <&kp LS(C)>;
+
+            tapping-term-ms = <275>;
         };
 
         dlK: dlK {
@@ -187,6 +205,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DLK";
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp LS(V)>;
+
+            tapping-term-ms = <275>;
         };
 
         dlX: dlX {
@@ -194,6 +214,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DLX";
             #binding-cells = <0>;
             bindings = <&kp B>, <&kp LS(B)>;
+
+            tapping-term-ms = <300>;
         };
 
         dlI: dlI {
@@ -201,6 +223,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "DLI";
             #binding-cells = <0>;
             bindings = <&kp G>, <&kp LS(G)>;
+
+            tapping-term-ms = <300>;
         };
 
         mt_L: mt_L {
@@ -226,45 +250,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 37 40 36>;
             hold-trigger-on-release;
-        };
-
-        x1: x1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "X1";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        x2: x2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "X2";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
-        x3: x3 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "X3";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        x4: x4 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "X4";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-unless-interrupted";
         };
     };
 
@@ -682,10 +667,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&none     &dQuoDbq  &dComCal  &dPrdCar     &dlP         &dlY           &kp Y       &kp U          &kp I         &kp O          &kp P            &none
-&dHshAst  &dl_htA   &dl_htO   &dl_htE      &dl_htU      &dlI           &kp H       &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &kp SQT
-&x1 A B   &x2 A B   &x3 A B   &x4 A B      &dlK         &dlX           &kp N       &kp M          &kp COMMA     &kp PERIOD     &kp FSLH         &kp EXCL
-                              &mt_R 2 DEL  &mt_L 3 TAB  &key_repeat    &kp RETURN  &mt_R 2 SPACE  &kp BSPC
+&none     &dQuoDbq  &dComCal  &dPrdCar     &dlP         &dlY     &kp Y       &kp U          &kp I         &kp O          &kp P            &none
+&dHshAst  &dl_htA   &dl_htO   &dl_htE      &dl_htU      &dlI     &kp H       &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &kp SQT
+&dAndPer  &dSemCol  &dlQ      &dlJ         &dlK         &dlX     &kp N       &kp M          &kp COMMA     &kp PERIOD     &kp FSLH         &kp EXCL
+                              &mt_R 2 DEL  &mt_L 3 TAB  &mo 3    &kp RETURN  &mt_R 2 SPACE  &kp BSPC
             >;
 
             label = "spy|qrl";
