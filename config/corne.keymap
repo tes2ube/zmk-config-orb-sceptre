@@ -15,7 +15,7 @@
 
 &mt { flavor = "balanced"; };
 
-&key_repeat { usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>; };
+};
 
 /* Homerow mods
 
@@ -44,828 +44,830 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 */
 
 / {
-    behaviors {
-        ht_L: ht_L {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_L";
-            bindings = <&kp>, <&kp>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <155>;
-            quick-tap-ms = <135>;
-            require-prior-idle-ms = <125>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 36 37>;
-            hold-trigger-on-release;
-        };
-
-        ht_R: ht_R {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_R";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <155>;
-            quick-tap-ms = <135>;
-            require-prior-idle-ms = <125>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37>;
-            hold-trigger-on-release;
-        };
-
-        dQuoDbq: dQuoDbq {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DQUODBQ";
-            #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp LS(Q)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dComCal: dComCal {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DCOMCAL";
-            #binding-cells = <0>;
-            bindings = <&kp W>, <&kp LS(W)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dPrdCar: dPrdCar {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DPRDCAR";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp E>, <&kp LS(E)>;
-        };
-
-        dlP: dlP {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLP";
-            #binding-cells = <0>;
-            bindings = <&kp R>, <&kp LS(R)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlY: dlY {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLY";
-            #binding-cells = <0>;
-            bindings = <&kp T>, <&kp LS(T)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dl_htA: dl_htA {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DL_HTA";
-            #binding-cells = <0>;
-            bindings = <&ht_L LGUI A>, <&kp LS(A)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dl_htO: dl_htO {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DL_HTO";
-            #binding-cells = <0>;
-            bindings = <&ht_L LCTRL S>, <&kp LS(S)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dl_htE: dl_htE {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DL_HTE";
-            #binding-cells = <0>;
-            bindings = <&ht_L LALT D>, <&kp LS(D)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dl_htU: dl_htU {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DL_HTU";
-            #binding-cells = <0>;
-            bindings = <&ht_L LSHFT F>, <&kp LS(F)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dHshAst: dHshAst {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DHSHAST";
-            #binding-cells = <0>;
-            bindings = <&kp HASH>, <&kp STAR>;
-
-            tapping-term-ms = <275>;
-        };
-
-        dAndPer: dAndPer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DANDPER";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS>, <&kp PERCENT>;
-
-            tapping-term-ms = <275>;
-        };
-
-        dSemCol: dSemCol {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DSEMCOL";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp LS(LBKT)>;
-
-            tapping-term-ms = <275>;
-        };
-
-        dlQ: dlQ {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLQ";
-            #binding-cells = <0>;
-            bindings = <&kp X>, <&kp LS(X)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlJ: dlJ {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLJ";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&kp LS(C)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlK: dlK {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLK";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp LS(V)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlX: dlX {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLX";
-            #binding-cells = <0>;
-            bindings = <&kp B>, <&kp LS(B)>;
-
-            tapping-term-ms = <275>;
-        };
-
-        dlI: dlI {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLI";
-            #binding-cells = <0>;
-            bindings = <&kp G>, <&kp LS(G)>;
-
-            tapping-term-ms = <275>;
-        };
-
-        mt_L: mt_L {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_L";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <145>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 41 40 37>;
-            hold-trigger-on-release;
-        };
-
-        mt_R: mt_R {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_R";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            quick-tap-ms = <140>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 37 40 36>;
-            hold-trigger-on-release;
-        };
-
-        dGrvTld: dGrvTld {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DGRVTLD";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp TILDE>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dFshBsh: dFshBsh {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DFSHBSH";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp BSLH>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlL: dlL {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLL";
-            #binding-cells = <0>;
-            bindings = <&kp P>, <&kp LS(P)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlR: dlR {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLR";
-            #binding-cells = <0>;
-            bindings = <&kp O>, <&kp LS(P)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlC: dlC {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLC";
-            #binding-cells = <0>;
-            bindings = <&kp I>, <&kp LS(I)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlG: dlG {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLG";
-            #binding-cells = <0>;
-            bindings = <&kp U>, <&kp LS(U)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlF: dlF {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLF";
-            #binding-cells = <0>;
-            bindings = <&kp Y>, <&kp LS(Y)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlD: dlD {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLD";
-            #binding-cells = <0>;
-            bindings = <&kp H>, <&kp LS(H)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dQstExc: dQstExc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DQSTEXC";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LBKT)>, <&kp EXCL>;
-
-            tapping-term-ms = <275>;
-        };
-
-        dlZ: dlZ {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLZ";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp LS(SLASH)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlV: dlV {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLV";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp LS(DOT)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlW: dlW {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLW";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp LS(COMMA)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlM: dlM {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLM";
-            #binding-cells = <0>;
-            bindings = <&kp M>, <&kp LS(M)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dlB: dlB {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLB";
-            #binding-cells = <0>;
-            bindings = <&kp N>, <&kp LS(N)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dDshAt: dDshAt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DDSHAT";
-            #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp AT>;
-
-            tapping-term-ms = <275>;
-        };
+behaviors {
+    ht_L: ht_L {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HT_L";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <155>;
+        quick-tap-ms = <135>;
+        require-prior-idle-ms = <125>;
+        flavor = "balanced";
+        hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 36 37>;
+        hold-trigger-on-release;
     };
 
-    macros {
-        ms_wrkD: ms_wrkD {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COLON &kp LS(K) &kp LS(G) &kp LS(I) &kp LS(V) &kp LS(D) &kp LS(O) &kp N9 &kp Y &kp O &kp T &kp D &kp O &kp N7 &kp G &kp L &kp H &kp G &kp A &kp N9 &kp SEMI &kp K &kp A &kp V &kp D &kp SEMI>;
-            label = "MS_WRKD";
-            tap-ms = <30>;
-        };
+    ht_R: ht_R {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HT_R";
+        bindings = <&kp>, <&kp>;
 
-        ms_wrkQ: ms_wrkQ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(S) &kp LS(T) &kp LS(I) &kp LS(C) &kp LS(K) &kp LS(E) &kp LS(R) &kp N9 &kp F &kp R &kp Y &kp E &kp R &kp N7 &kp I &kp N &kp D &kp I &kp A &kp N9 &kp S &kp T &kp A &kp K &kp E &kp S>;
-            label = "MS_WRKQ";
-            tap-ms = <60>;
-        };
-
-        ms_mac: ms_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B>;
-            label = "MS_MAC";
-            tap-ms = <60>;
-        };
-
-        m_2cmd: m_2cmd {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings =
-                <&macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_param_2to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>;
-
-            label = "M_2CMD";
-        };
-
-        m_xv: m_xv {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LC(B)>,
-                <&macro_pause_for_release>,
-                <&macro_tap>,
-                <&kp LC(DOT)>;
-
-            label = "M_XV";
-        };
-
-        m_cv: m_cv {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LC(I)>,
-                <&macro_pause_for_release>,
-                <&macro_tap>,
-                <&kp LC(DOT)>;
-
-            label = "M_CV";
-        };
-
-        m_retup: m_retup {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(RET) &kp UP>;
-            label = "M_RETUP";
-        };
-
-        ms_phnx: ms_rphe {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp D &kp FSLH &kp D &kp V &kp G &kp D &kp P &kp N7 &kp R &kp S &kp P &kp A &kp O &kp G &kp K &kp T &kp N4 &kp LS(U) &kp LS(A) &kp LS(M) &kp LS(M) &kp LS(D) &kp LS(O) &kp N4 &kp N &kp G &kp S &kp K &kp A>;
-            label = "MS_RPHE";
-        };
-
-        m_2tabto0: m_2tabto0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp TAB &to 0>;
-
-            label = "M_2TABTO0";
-        };
+        #binding-cells = <2>;
+        tapping-term-ms = <155>;
+        quick-tap-ms = <135>;
+        require-prior-idle-ms = <125>;
+        flavor = "balanced";
+        hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37>;
+        hold-trigger-on-release;
     };
 
-    combos {
-        compatible = "zmk,combos";
+    dQuoDbq: dQuoDbq {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DQUODBQ";
+        #binding-cells = <0>;
+        bindings = <&kp Q>, <&kp LS(Q)>;
 
-        c_parL {
-            bindings = <&kp LPAR>;
-            key-positions = <1 2>;
-        };
-
-        c_parR {
-            bindings = <&kp RPAR>;
-            key-positions = <3 4>;
-        };
-
-        c_bktL {
-            bindings = <&kp MINUS>;
-            key-positions = <7 8>;
-        };
-
-        c_bktR {
-            bindings = <&kp EQUAL>;
-            key-positions = <10 9>;
-        };
-
-        c_home {
-            bindings = <&kp HOME>;
-            key-positions = <15 16>;
-        };
-
-        c_end {
-            bindings = <&kp END>;
-            key-positions = <16 17>;
-            require-prior-idle-ms = <200>;
-        };
-
-        c_meta {
-            bindings = <&kp LMETA>;
-            key-positions = <13 22>;
-            layers = <0 1 2 3 2>;
-            require-prior-idle-ms = <200>;
-            timeout-ms = <28>;
-        };
-
-        c_dol {
-            bindings = <&kp DLLR>;
-            key-positions = <16 4>;
-        };
-
-        c_pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <5 17>;
-        };
-
-        c_us {
-            bindings = <&kp LS(APOS)>;
-            key-positions = <22 23>;
-        };
-
-        c_pgup {
-            bindings = <&kp PAGE_UP>;
-            key-positions = <30 31>;
-            require-prior-idle-ms = <200>;
-        };
-
-        c_pgdn {
-            bindings = <&kp PG_DN>;
-            key-positions = <31 32>;
-            require-prior-idle-ms = <200>;
-        };
-
-        c_caps {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <17 18>;
-            require-prior-idle-ms = <400>;
-            layers = <0 2>;
-        };
-
-        c_cut {
-            bindings = <&kp LC(B)>;
-            key-positions = <25 27>;
-        };
-
-        c_paste {
-            bindings = <&kp LC(DOT)>;
-            key-positions = <16 14>;
-            require-prior-idle-ms = <350>;
-            timeout-ms = <30>;
-        };
-
-        c_copy {
-            bindings = <&kp LC(I)>;
-            key-positions = <13 15>;
-            timeout-ms = <21>;
-            require-prior-idle-ms = <350>;
-        };
-
-        c_esc {
-            bindings = <&kp ESC>;
-            key-positions = <13 14>;
-        };
-
-        c_lgamlok {
-            bindings = <&tog 1>;
-            key-positions = <41 40>;
-            layers = <0 1>;
-            require-prior-idle-ms = <1000>;
-        };
-
-        c_ltroub {
-            bindings = <&to 4>;
-            key-positions = <24 12 38>;
-            require-prior-idle-ms = <3000>;
-        };
-
-        c_ltroubR {
-            bindings = <&to 4>;
-            key-positions = <39 35 23>;
-            require-prior-idle-ms = <3000>;
-        };
-
-        cs_dwrk {
-            bindings = <&ms_wrkD>;
-            key-positions = <17 13 20 22>;
-            require-prior-idle-ms = <3000>;
-            timeout-ms = <100>;
-        };
-
-        c_qwrk {
-            bindings = <&ms_wrkQ>;
-            key-positions = <20 22 26 13>;
-            require-prior-idle-ms = <3000>;
-            timeout-ms = <100>;
-        };
-
-        cWyrm {
-            bindings = <&ms_mac>;
-            key-positions = <4 31 13 8>;
-            timeout-ms = <100>;
-            require-prior-idle-ms = <3000>;
-        };
-
-        c_dskl {
-            bindings = <&kp LG(LC(LEFT_ARROW))>;
-            key-positions = <0 1 37>;
-        };
-
-        c_deskr {
-            bindings = <&kp LG(LC(RIGHT_ARROW))>;
-            key-positions = <4 5 37>;
-        };
-
-        c_sum {
-            bindings = <&kp RBRC>;
-            key-positions = <16 22 31>;
-        };
-
-        c_eq {
-            bindings = <&kp RBKT>;
-            key-positions = <26 15 16>;
-        };
-
-        c_pow {
-            bindings = <&kp CARET>;
-            key-positions = <4 14 32>;
-        };
-
-        c_ast {
-            bindings = <&kp STAR>;
-            key-positions = <13 22 20>;
-        };
-
-        c_qp {
-            bindings = <&kp P>;
-            key-positions = <1 37>;
-        };
-
-        c_wo {
-            bindings = <&kp O>;
-            key-positions = <2 37>;
-        };
-
-        c_ei {
-            bindings = <&kp I>;
-            key-positions = <3 37>;
-        };
-
-        c_ru {
-            bindings = <&kp U>;
-            key-positions = <4 37>;
-        };
-
-        c_ty {
-            bindings = <&kp Y>;
-            key-positions = <5 37>;
-        };
-
-        c_min {
-            bindings = <&kp SQT>;
-            key-positions = <12 37>;
-        };
-
-        c_asemi {
-            bindings = <&kp SEMI>;
-            key-positions = <13 37>;
-        };
-
-        c_sl {
-            bindings = <&kp L>;
-            key-positions = <14 37>;
-        };
-
-        c_dk {
-            bindings = <&kp K>;
-            key-positions = <15 37>;
-        };
-
-        c_fj {
-            bindings = <&kp J>;
-            key-positions = <16 37>;
-        };
-
-        c_hg {
-            bindings = <&kp H>;
-            key-positions = <17 37>;
-        };
-
-        c_excl {
-            bindings = <&kp EXCL>;
-            key-positions = <24 37>;
-        };
-
-        c_zslsh {
-            bindings = <&kp FSLH>;
-            key-positions = <25 37>;
-        };
-
-        c_xdot {
-            bindings = <&kp DOT>;
-            key-positions = <26 37>;
-        };
-
-        c_ccom {
-            bindings = <&kp COMMA>;
-            key-positions = <27 37>;
-        };
-
-        c_vm {
-            bindings = <&kp M>;
-            key-positions = <28 37>;
-        };
-
-        c_bn {
-            bindings = <&kp N>;
-            key-positions = <29 37>;
-        };
-
-        c_space {
-            bindings = <&kp SPACE>;
-            key-positions = <27 28>;
-        };
-
-        c_btx1 {
-            bindings = <&bt BT_DISC 0>;
-            key-positions = <38 25>;
-        };
-
-        c_btx2 {
-            bindings = <&bt BT_DISC 1>;
-            key-positions = <38 26>;
-        };
-
-        c_btx3 {
-            bindings = <&bt BT_DISC 2>;
-            key-positions = <38 27>;
-        };
-
-        c_btx4 {
-            bindings = <&bt BT_DISC 3>;
-            key-positions = <38 28>;
-        };
-
-        c_btx5 {
-            bindings = <&bt BT_DISC 4>;
-            key-positions = <38 29>;
-        };
-
-        c_bksp {
-            bindings = <&kp BSPC>;
-            key-positions = <26 25>;
-        };
-
-        c_ins {
-            bindings = <&kp INSERT>;
-            key-positions = <33 34>;
-        };
-
-        c_ret {
-            bindings = <&kp RET>;
-            key-positions = <29 28>;
-        };
-
-        cs_phx {
-            bindings = <&ms_phnx>;
-            key-positions = <19 4 29 21>;
-            require-prior-idle-ms = <3000>;
-            timeout-ms = <100>;
-        };
-
-        cBt1 {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <38 13>;
-        };
-
-        cBt2 {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <38 14>;
-        };
-
-        cBt3 {
-            bindings = <&bt BT_SEL 2>;
-            key-positions = <38 15>;
-        };
-
-        cBt4 {
-            bindings = <&bt BT_SEL 3>;
-            key-positions = <38 16>;
-        };
-
-        cBt5 {
-            bindings = <&bt BT_SEL 3>;
-            key-positions = <38 17>;
-        };
+        tapping-term-ms = <235>;
     };
 
-    keymap {
-        compatible = "zmk,keymap";
+    dComCal: dComCal {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DCOMCAL";
+        #binding-cells = <0>;
+        bindings = <&kp W>, <&kp LS(W)>;
 
-        home {
-            bindings = <
+        tapping-term-ms = <235>;
+    };
+
+    dPrdCar: dPrdCar {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DPRDCAR";
+        #binding-cells = <0>;
+        tapping-term-ms = <250>;
+        bindings = <&kp E>, <&kp LS(E)>;
+    };
+
+    dlP: dlP {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLP";
+        #binding-cells = <0>;
+        bindings = <&kp R>, <&kp LS(R)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlY: dlY {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLY";
+        #binding-cells = <0>;
+        bindings = <&kp T>, <&kp LS(T)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dl_htA: dl_htA {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DL_HTA";
+        #binding-cells = <0>;
+        bindings = <&ht_L LGUI A>, <&kp LS(A)>;
+
+        tapping-term-ms = <250>;
+    };
+
+    dl_htO: dl_htO {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DL_HTO";
+        #binding-cells = <0>;
+        bindings = <&ht_L LCTRL S>, <&kp LS(S)>;
+
+        tapping-term-ms = <250>;
+    };
+
+    dl_htE: dl_htE {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DL_HTE";
+        #binding-cells = <0>;
+        bindings = <&ht_L LALT D>, <&kp LS(D)>;
+
+        tapping-term-ms = <250>;
+    };
+
+    dl_htU: dl_htU {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DL_HTU";
+        #binding-cells = <0>;
+        bindings = <&ht_L LSHFT F>, <&kp LS(F)>;
+
+        tapping-term-ms = <250>;
+    };
+
+    dHshAst: dHshAst {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DHSHAST";
+        #binding-cells = <0>;
+        bindings = <&kp HASH>, <&kp STAR>;
+
+        tapping-term-ms = <250>;
+    };
+
+    dAndPer: dAndPer {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DANDPER";
+        #binding-cells = <0>;
+        bindings = <&kp AMPS>, <&kp PERCENT>;
+
+        tapping-term-ms = <250>;
+    };
+
+    dSemCol: dSemCol {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DSEMCOL";
+        #binding-cells = <0>;
+        bindings = <&kp Z>, <&kp LS(Z)>;
+
+        tapping-term-ms = <250>;
+    };
+
+    dlQ: dlQ {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLQ";
+        #binding-cells = <0>;
+        bindings = <&kp X>, <&kp LS(X)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlJ: dlJ {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLJ";
+        #binding-cells = <0>;
+        bindings = <&kp C>, <&kp LS(C)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlK: dlK {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLK";
+        #binding-cells = <0>;
+        bindings = <&kp V>, <&kp LS(V)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlX: dlX {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLX";
+        #binding-cells = <0>;
+        bindings = <&kp B>, <&kp LS(B)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlI: dlI {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLI";
+        #binding-cells = <0>;
+        bindings = <&kp G>, <&kp LS(G)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    mt_L: mt_L {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MT_L";
+        bindings = <&mo>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <145>;
+        flavor = "balanced";
+        hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 41 40 37>;
+        hold-trigger-on-release;
+    };
+
+    mt_R: mt_R {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MT_R";
+        bindings = <&mo>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <160>;
+        quick-tap-ms = <135>;
+        flavor = "balanced";
+        hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 37 40 36>;
+        hold-trigger-on-release;
+    };
+
+    dGrvTld: dGrvTld {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DGRVTLD";
+        #binding-cells = <0>;
+        bindings = <&kp GRAVE>, <&kp TILDE>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dFshBsh: dFshBsh {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DFSHBSH";
+        #binding-cells = <0>;
+        bindings = <&kp LBKT>, <&kp BSLH>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlL: dlL {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLL";
+        #binding-cells = <0>;
+        bindings = <&kp P>, <&kp LS(P)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlR: dlR {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLR";
+        #binding-cells = <0>;
+        bindings = <&kp O>, <&kp LS(O)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlC: dlC {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLC";
+        #binding-cells = <0>;
+        bindings = <&kp I>, <&kp LS(I)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlG: dlG {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLG";
+        #binding-cells = <0>;
+        bindings = <&kp U>, <&kp LS(U)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlF: dlF {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLF";
+        #binding-cells = <0>;
+        bindings = <&kp Y>, <&kp LS(Y)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlD: dlD {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLD";
+        #binding-cells = <0>;
+        bindings = <&kp H>, <&kp LS(H)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dQstExc: dQstExc {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DQSTEXC";
+        #binding-cells = <0>;
+        bindings = <&kp LS(LBKT)>, <&kp EXCL>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlZ: dlZ {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLZ";
+        #binding-cells = <0>;
+        bindings = <&kp SLASH>, <&kp LS(SLASH)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlV: dlV {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLV";
+        #binding-cells = <0>;
+        bindings = <&kp DOT>, <&kp LS(DOT)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlW: dlW {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLW";
+        #binding-cells = <0>;
+        bindings = <&kp COMMA>, <&kp LS(COMMA)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlM: dlM {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLM";
+        #binding-cells = <0>;
+        bindings = <&kp M>, <&kp LS(M)>;
+
+        tapping-term-ms = <235>;
+    };
+
+    dlB: dlB {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DLB";
+        #binding-cells = <0>;
+        bindings = <&kp N>, <&kp LS(N)>;
+
+        tapping-term-ms = <250>;
+    };
+
+    dDshAt: dDshAt {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DDSHAT";
+        #binding-cells = <0>;
+        bindings = <&kp SQT>, <&kp AT>;
+
+        tapping-term-ms = <235>;
+    };
+};
+
+macros {
+    ms_wrkD: ms_wrkD {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp COLON &kp LS(K) &kp LS(G) &kp LS(I) &kp LS(V) &kp LS(D) &kp LS(O) &kp N9 &kp Y &kp O &kp T &kp D &kp O &kp N7 &kp G &kp L &kp H &kp G &kp A &kp N9 &kp SEMI &kp K &kp A &kp V &kp D &kp SEMI>;
+        label = "MS_WRKD";
+        tap-ms = <30>;
+    };
+
+    ms_wrkQ: ms_wrkQ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(S) &kp LS(T) &kp LS(I) &kp LS(C) &kp LS(K) &kp LS(E) &kp LS(R) &kp N9 &kp F &kp R &kp Y &kp E &kp R &kp N7 &kp I &kp N &kp D &kp I &kp A &kp N9 &kp S &kp T &kp A &kp K &kp E &kp S>;
+        label = "MS_WRKQ";
+        tap-ms = <60>;
+    };
+
+    ms_mac: ms_mac {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B>;
+        label = "MS_MAC";
+        tap-ms = <60>;
+    };
+
+    m_2cmd: m_2cmd {
+        compatible = "zmk,behavior-macro-two-param";
+        #binding-cells = <2>;
+        bindings =
+            <&macro_param_1to1>,
+            <&macro_tap>,
+            <&kp MACRO_PLACEHOLDER>,
+            <&macro_pause_for_release>,
+            <&macro_param_2to1>,
+            <&macro_tap>,
+            <&kp MACRO_PLACEHOLDER>;
+
+        label = "M_2CMD";
+    };
+
+    m_xv: m_xv {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+            <&macro_tap>,
+            <&kp LC(B)>,
+            <&macro_pause_for_release>,
+            <&macro_tap>,
+            <&kp LC(DOT)>;
+
+        label = "M_XV";
+    };
+
+    m_cv: m_cv {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+            <&macro_tap>,
+            <&kp LC(I)>,
+            <&macro_pause_for_release>,
+            <&macro_tap>,
+            <&kp LC(DOT)>;
+
+        label = "M_CV";
+    };
+
+    m_retup: m_retup {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp HOME &kp LS(RET) &kp UP>;
+        label = "M_RETUP";
+    };
+
+    ms_phnx: ms_rphe {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp D &kp FSLH &kp D &kp V &kp G &kp D &kp P &kp N7 &kp R &kp S &kp P &kp A &kp O &kp G &kp K &kp T &kp N4 &kp LS(U) &kp LS(A) &kp LS(M) &kp LS(M) &kp LS(D) &kp LS(O) &kp N4 &kp N &kp G &kp S &kp K &kp A>;
+        label = "MS_RPHE";
+    };
+
+    m_2tabto0: m_2tabto0 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&macro_tap>, <&kp TAB &to 0>;
+
+        label = "M_2TABTO0";
+    };
+};
+
+combos {
+    compatible = "zmk,combos";
+
+    c_parL {
+        bindings = <&kp LPAR>;
+        key-positions = <1 2>;
+    };
+
+    c_parR {
+        bindings = <&kp RPAR>;
+        key-positions = <3 4>;
+    };
+
+    c_bktL {
+        bindings = <&kp MINUS>;
+        key-positions = <7 8>;
+    };
+
+    c_bktR {
+        bindings = <&kp EQUAL>;
+        key-positions = <10 9>;
+    };
+
+    c_home {
+        bindings = <&kp HOME>;
+        key-positions = <15 16>;
+    };
+
+    c_end {
+        bindings = <&kp END>;
+        key-positions = <16 17>;
+        require-prior-idle-ms = <200>;
+    };
+
+    c_meta {
+        bindings = <&kp LMETA>;
+        key-positions = <13 22>;
+        layers = <0 1 2 3 2>;
+        require-prior-idle-ms = <200>;
+        timeout-ms = <28>;
+    };
+
+    c_dol {
+        bindings = <&kp DLLR>;
+        key-positions = <16 4>;
+    };
+
+    c_pipe {
+        bindings = <&kp PIPE>;
+        key-positions = <5 17>;
+    };
+
+    c_us {
+        bindings = <&kp LS(APOS)>;
+        key-positions = <22 23>;
+    };
+
+    c_pgup {
+        bindings = <&kp PAGE_UP>;
+        key-positions = <30 31>;
+        require-prior-idle-ms = <200>;
+    };
+
+    c_pgdn {
+        bindings = <&kp PG_DN>;
+        key-positions = <31 32>;
+        require-prior-idle-ms = <200>;
+    };
+
+    c_caps {
+        bindings = <&kp CAPSLOCK>;
+        key-positions = <17 18>;
+        require-prior-idle-ms = <400>;
+        layers = <0 2>;
+    };
+
+    c_cut {
+        bindings = <&kp LC(B)>;
+        key-positions = <25 27>;
+    };
+
+    c_paste {
+        bindings = <&kp LC(DOT)>;
+        key-positions = <16 14>;
+        require-prior-idle-ms = <350>;
+        timeout-ms = <30>;
+    };
+
+    c_copy {
+        bindings = <&kp LC(I)>;
+        key-positions = <13 15>;
+        timeout-ms = <21>;
+        require-prior-idle-ms = <350>;
+    };
+
+    c_esc {
+        bindings = <&kp ESC>;
+        key-positions = <13 14>;
+    };
+
+    c_lgamlok {
+        bindings = <&tog 1>;
+        key-positions = <41 40>;
+        layers = <0 1>;
+        require-prior-idle-ms = <1000>;
+    };
+
+    c_ltroub {
+        bindings = <&to 4>;
+        key-positions = <24 12 38>;
+        require-prior-idle-ms = <3000>;
+    };
+
+    c_ltroubR {
+        bindings = <&to 4>;
+        key-positions = <39 35 23>;
+        require-prior-idle-ms = <3000>;
+    };
+
+    cs_dwrk {
+        bindings = <&ms_wrkD>;
+        key-positions = <17 13 20 22>;
+        require-prior-idle-ms = <3000>;
+        timeout-ms = <100>;
+    };
+
+    c_qwrk {
+        bindings = <&ms_wrkQ>;
+        key-positions = <20 22 26 13>;
+        require-prior-idle-ms = <3000>;
+        timeout-ms = <100>;
+    };
+
+    cWyrm {
+        bindings = <&ms_mac>;
+        key-positions = <4 31 13 8>;
+        timeout-ms = <100>;
+        require-prior-idle-ms = <3000>;
+    };
+
+    c_dskl {
+        bindings = <&kp LG(LC(LEFT_ARROW))>;
+        key-positions = <0 1 37>;
+    };
+
+    c_deskr {
+        bindings = <&kp LG(LC(RIGHT_ARROW))>;
+        key-positions = <4 5 37>;
+    };
+
+    c_sum {
+        bindings = <&kp RBRC>;
+        key-positions = <16 22 31>;
+    };
+
+    c_eq {
+        bindings = <&kp RBKT>;
+        key-positions = <26 15 16>;
+    };
+
+    c_pow {
+        bindings = <&kp CARET>;
+        key-positions = <4 14 32>;
+    };
+
+    c_ast {
+        bindings = <&kp STAR>;
+        key-positions = <13 22 20>;
+    };
+
+    c_qp {
+        bindings = <&kp P>;
+        key-positions = <1 37>;
+    };
+
+    c_wo {
+        bindings = <&kp O>;
+        key-positions = <2 37>;
+    };
+
+    c_ei {
+        bindings = <&kp I>;
+        key-positions = <3 37>;
+    };
+
+    c_ru {
+        bindings = <&kp U>;
+        key-positions = <4 37>;
+    };
+
+    c_ty {
+        bindings = <&kp Y>;
+        key-positions = <5 37>;
+    };
+
+    c_min {
+        bindings = <&kp SQT>;
+        key-positions = <12 37>;
+    };
+
+    c_asemi {
+        bindings = <&kp SEMI>;
+        key-positions = <13 37>;
+    };
+
+    c_sl {
+        bindings = <&kp L>;
+        key-positions = <14 37>;
+    };
+
+    c_dk {
+        bindings = <&kp K>;
+        key-positions = <15 37>;
+    };
+
+    c_fj {
+        bindings = <&kp J>;
+        key-positions = <16 37>;
+    };
+
+    c_hg {
+        bindings = <&kp H>;
+        key-positions = <17 37>;
+    };
+
+    c_excl {
+        bindings = <&kp EXCL>;
+        key-positions = <24 37>;
+    };
+
+    c_zslsh {
+        bindings = <&kp FSLH>;
+        key-positions = <25 37>;
+    };
+
+    c_xdot {
+        bindings = <&kp DOT>;
+        key-positions = <26 37>;
+    };
+
+    c_ccom {
+        bindings = <&kp COMMA>;
+        key-positions = <27 37>;
+    };
+
+    c_vm {
+        bindings = <&kp M>;
+        key-positions = <28 37>;
+    };
+
+    c_bn {
+        bindings = <&kp N>;
+        key-positions = <29 37>;
+    };
+
+    c_space {
+        bindings = <&kp SPACE>;
+        key-positions = <27 28>;
+    };
+
+    c_btx1 {
+        bindings = <&bt BT_DISC 0>;
+        key-positions = <38 25>;
+    };
+
+    c_btx2 {
+        bindings = <&bt BT_DISC 1>;
+        key-positions = <38 26>;
+    };
+
+    c_btx3 {
+        bindings = <&bt BT_DISC 2>;
+        key-positions = <38 27>;
+    };
+
+    c_btx4 {
+        bindings = <&bt BT_DISC 3>;
+        key-positions = <38 28>;
+    };
+
+    c_btx5 {
+        bindings = <&bt BT_DISC 4>;
+        key-positions = <38 29>;
+    };
+
+    c_bksp {
+        bindings = <&kp BSPC>;
+        key-positions = <26 25>;
+    };
+
+    c_ins {
+        bindings = <&kp INSERT>;
+        key-positions = <33 34>;
+    };
+
+    c_ret {
+        bindings = <&kp RET>;
+        key-positions = <29 28>;
+    };
+
+    cs_phx {
+        bindings = <&ms_phnx>;
+        key-positions = <19 4 29 21>;
+        require-prior-idle-ms = <3000>;
+        timeout-ms = <100>;
+    };
+
+    cBt1 {
+        bindings = <&bt BT_SEL 0>;
+        key-positions = <38 13>;
+    };
+
+    cBt2 {
+        bindings = <&bt BT_SEL 1>;
+        key-positions = <38 14>;
+    };
+
+    cBt3 {
+        bindings = <&bt BT_SEL 2>;
+        key-positions = <38 15>;
+    };
+
+    cBt4 {
+        bindings = <&bt BT_SEL 3>;
+        key-positions = <38 16>;
+    };
+
+    cBt5 {
+        bindings = <&bt BT_SEL 3>;
+        key-positions = <38 17>;
+    };
+};
+
+keymap {
+    compatible = "zmk,keymap";
+
+    home {
+        bindings = <
 &dGrvTld  &dQuoDbq      &dComCal       &dPrdCar      &dlP           &dlY           &dlF        &dlG           &dlC          &dlR           &dlL             &dFshBsh
 &dHshAst  &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D  &ht_L LSHFT F  &dlI           &dlD        &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &dDshAt
 &dAndPer  &dSemCol      &dlQ           &dlJ          &dlK           &dlX           &dlB        &dlM           &dlW          &dlV           &dlZ             &dQstExc
                                        &mt_R 2 DEL   &mt_L 3 TAB    &key_repeat    &kp RETURN  &mt_R 2 SPACE  &kp BSPC
-            >;
+        >;
 
-            label = "spy|qrl";
-        };
+        label = "spy|qrl";
+    };
 
-        home-gaming {
-            bindings = <
+    home-gaming {
+        bindings = <
 &kp EQUAL  &kp Q  &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
 &kp SQT    &kp A  &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
 &kp MINUS  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp EXCL
                          &trans  &trans  &trans    &trans  &trans  &trans
-            >;
+        >;
 
-            label = "vidjo";
-        };
+        label = "vidjo";
+    };
 
-        num-sys {
-            bindings = <
+    num-sys {
+        bindings = <
 &kp LBKT  &dQuoDbq  &kp N7          &kp N8         &kp N9          &kp STAR    &none   &kp C_RW            &kp C_STOP       &kp C_FF            &kp C_BRI_UP          &none
 &kp APOS  &kp E     &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &kp RBRC    &none   &ht_R RSHFT C_PREV  &ht_R RALT C_PP  &ht_R RCTRL C_NEXT  &ht_R RMETA C_BRI_DN  &none
 &kp RET   &kp N0    &kp N1          &kp N2         &kp N3          &none       &none   &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP        &none                 &none
                                     &to 0          &trans          &trans      &trans  &trans              &trans
-            >;
+        >;
 
-            label = "num|sys";
-        };
+        label = "num|sys";
+    };
 
-        nav-func {
-            bindings = <
+    nav-func {
+        bindings = <
 &none          &kp LC(LEFT_ARROW)      &kp UP    &kp LC(RIGHT_ARROW)      &kp LC(SLASH)         &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)  &kp F9          &kp F10             &kp F11         &kp F12         &none
 &m_retup       &kp LEFT                &kp DOWN  &kp RIGHT                &ht_L LSHFT LS(HOME)  &kp LS(END)          &none                &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &none
 &kp LC(COMMA)  &kp LC(LS(LEFT_ARROW))  &none     &kp LS(LC(RIGHT_ARROW))  &none                 &none                &none                &kp F1          &kp F2              &kp F3          &kp F4          &none
                                                  &to 0                    &trans                &trans               &trans               &trans          &trans
-            >;
+        >;
 
-            label = "nav|func";
-        };
+        label = "nav|func";
+    };
 
-        system {
-            bindings = <
+    system {
+        bindings = <
 &none  &sys_reset  &bootloader  &bt BT_CLR  &studio_unlock  &none    &none  &studio_unlock  &bt BT_CLR  &bootloader  &sys_reset  &none
 &none  &trans      &trans       &trans      &trans          &none    &none  &trans          &trans      &trans       &trans      &none
 &none  &none       &none        &none       &none           &none    &none  &none           &none       &none        &none       &none
                                 &to 0       &none           &none    &none  &none           &to 0
-            >;
+        >;
 
-            label = "sys";
-        };
+        label = "sys";
     };
+};
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+conditional_layers { compatible = "zmk,conditional-layers"; };
+
 };
