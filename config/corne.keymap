@@ -392,7 +392,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp COLON &kp LS(K) &kp LS(G) &kp LS(I) &kp LS(V) &kp LS(D) &kp LS(O) &kp N9 &kp Y &kp O &kp T &kp D &kp O &kp N7 &kp G &kp L &kp H &kp G &kp A &kp N9 &kp SEMI &kp K &kp A &kp V &kp D &kp SEMI>;
             label = "MS_WRKD";
-            tap-ms = <30>;
         };
 
         ms_wrkQ: ms_wrkQ {
@@ -400,7 +399,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp LS(S) &kp LS(T) &kp LS(I) &kp LS(C) &kp LS(K) &kp LS(E) &kp LS(R) &kp N9 &kp F &kp R &kp Y &kp E &kp R &kp N7 &kp I &kp N &kp D &kp I &kp A &kp N9 &kp S &kp T &kp A &kp K &kp E &kp S>;
             label = "MS_WRKQ";
-            tap-ms = <60>;
         };
 
         ms_mac: ms_mac {
@@ -408,7 +406,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             #binding-cells = <0>;
             bindings = <&kp SEMI &kp J &kp D &kp D &kp L &kp N6 &kp COLON &kp LT &kp LS(D) &kp LS(O) &kp GT &kp LS(D) &kp N9 &kp SEMI &kp K &kp O &kp A &kp L &kp U &kp D &kp O &kp N6 &kp C &kp G &kp L &kp B>;
             label = "MS_MAC";
-            tap-ms = <60>;
         };
 
         m_2cmd: m_2cmd {
@@ -424,19 +421,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
                 <&kp MACRO_PLACEHOLDER>;
 
             label = "M_2CMD";
-        };
-
-        m_xv: m_xv {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LC(B)>,
-                <&macro_pause_for_release>,
-                <&macro_tap>,
-                <&kp LC(DOT)>;
-
-            label = "M_XV";
         };
 
         m_cv: m_cv {
@@ -512,7 +496,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_meta {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
-            layers = <0 1 2 3 2>;
+            layers = <0 4 1 2 1>;
             require-prior-idle-ms = <200>;
             timeout-ms = <28>;
         };
@@ -548,7 +532,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp CAPSLOCK>;
             key-positions = <17 18>;
             require-prior-idle-ms = <400>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         c_cut {
@@ -576,20 +560,20 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_lgamlok {
-            bindings = <&tog 1>;
+            bindings = <&tog 4>;
             key-positions = <41 40>;
-            layers = <0 1>;
+            layers = <0 4>;
             require-prior-idle-ms = <1000>;
         };
 
         c_ltroub {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <24 12 38>;
             require-prior-idle-ms = <3000>;
         };
 
         c_ltroubR {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <39 35 23>;
             require-prior-idle-ms = <3000>;
         };
@@ -813,24 +797,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&dGrvTld  &dQuoDbq      &dComCal       &dPrdCar      &dlP           &dlY           &dlF        &dlG           &dlC          &dlR           &dlL             &dFshBsh
-&dHshAst  &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D  &ht_L LSHFT F  &dlI           &dlD        &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &dDshAt
-&dAndPer  &dSemCol      &dlQ           &dlJ          &dlK           &dlX           &dlB        &dlM           &dlW          &dlV           &dlZ             &dQstExc
-                                       &mt_R 2 DEL   &mt_L 3 TAB    &key_repeat    &kp RETURN  &mt_R 2 SPACE  &kp BSPC
+&dGrvTld  &dQuoDbq      &dComCal       &dPrdCar      &kp R          &kp Y          &kp Y       &kp U          &kp I         &kp O          &kp P            &dFshBsh
+&dHshAst  &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D  &ht_L LSHFT F  &kp G          &kp H       &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &dDshAt
+&dAndPer  &dSemCol      &kp X          &kp C         &kp V          &kp B          &kp N       &kp M          &kp COMMA     &kp DOT        &kp FSLH         &dQstExc
+                                       &mt_R 1 DEL   &mt_L 2 TAB    &key_repeat    &kp RETURN  &mt_R 1 SPACE  &kp BSPC
             >;
 
             label = "spy|qrl";
-        };
-
-        home-gaming {
-            bindings = <
-&kp EQUAL  &kp Q  &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
-&kp SQT    &kp A  &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp MINUS  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp EXCL
-                         &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "vidjo";
         };
 
         num-sys {
@@ -853,6 +826,17 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             >;
 
             label = "nav|func";
+        };
+
+        home-gaming {
+            bindings = <
+&kp EQUAL  &kp Q  &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
+&kp SQT    &kp A  &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp MINUS  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp EXCL
+                         &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "vidjo";
         };
 
         system {
