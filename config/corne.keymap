@@ -797,7 +797,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&dGrvTld  &dQuoDbq      &dComCal       &dPrdCar      &kp R          &kp Y          &kp Y       &kp U          &kp I         &kp O          &kp P            &dFshBsh
+&dGrvTld  &dQuoDbq      &dComCal       &dPrdCar      &kp R          &kp T          &kp Y       &kp U          &kp I         &kp O          &kp P            &dFshBsh
 &dHshAst  &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D  &ht_L LSHFT F  &kp G          &kp H       &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &dDshAt
 &dAndPer  &dSemCol      &kp X          &kp C         &kp V          &kp B          &kp N       &kp M          &kp COMMA     &kp DOT        &kp FSLH         &dQstExc
                                        &mt_R 1 DEL   &mt_L 2 TAB    &key_repeat    &kp RETURN  &mt_R 1 SPACE  &kp BSPC
