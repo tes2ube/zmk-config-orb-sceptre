@@ -531,13 +531,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             label = "M_CV";
         };
 
-        mLab_sys: mLab_sys {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SEMI &kp T &kp SEMI &kp K &kp D &kp M &kp SPACE &kp P &kp A &kp T &kp D &kp O &to 4>;
-            label = "MLAB_SYS";
-        };
-
         mLab_studio: mLab_studio {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -892,15 +885,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <38 17>;
         };
 
-        c_sys {
-            bindings = <&mLab_sys>;
-            key-positions = <24 12 38>;
-            require-prior-idle-ms = <3000>;
-        };
-
         c_syst {
             bindings = <&to 4>;
-            key-positions = <24 12 37>;
+            key-positions = <24 12 38>;
             require-prior-idle-ms = <3000>;
         };
     };
