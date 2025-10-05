@@ -530,6 +530,41 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
             label = "M_CV";
         };
+
+        mLab_sys: mLab_sys {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 4 &kp LEFT_WIN &kp SEMI &kp T &kp SEMI &kp K &kp D &kp M &kp SPACE &kp P &kp A &kp T &kp D &kp O>;
+            label = "MLAB_SYS";
+        };
+
+        mLab_studio: mLab_studio {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp L &kp H &kp D &kp B &kp SPACE &kp SQT &kp SPACE &kp SEMI &kp K &kp F &kp H &kp G &kp S &kp SPACE &kp F &kp L &kp P &kp S &kp I &kp V>;
+            label = "MLAB_STUDIO";
+        };
+
+        mLab_btclr: mLab_btclr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp G &kp H &kp H &kp P &kp D &kp SPACE &kp SQT &kp SPACE &kp N &kp K &kp DQT &kp I &kp P &kp O>;
+            label = "MLAB_BTCLR";
+        };
+
+        mLab_boot: mLab_boot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp G &kp L &kp U &kp SPACE &kp SQT &kp SPACE &kp N &kp S &kp S &kp K &kp P &kp S &kp A &kp H &kp D &kp O>;
+            label = "MLAB_BOOT";
+        };
+
+        mLab_reset: mLab_reset {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp G &kp L &kp V &kp T &kp SPACE &kp SQT &kp SPACE &kp SEMI &kp T &kp SEMI &kp SPACE &kp O &kp D &kp SEMI &kp D &kp K>;
+            label = "MLAB_RESET";
+        };
     };
 
     combos {
@@ -858,8 +893,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_sys {
-            bindings = <&to 4>;
+            bindings = <&mLab_sys>;
             key-positions = <24 12 38>;
+            require-prior-idle-ms = <3000>;
         };
     };
 
@@ -912,10 +948,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         system {
             bindings = <
-&none  &sys_reset  &bootloader  &bt BT_CLR  &studio_unlock  &none    &none  &studio_unlock  &bt BT_CLR  &bootloader  &sys_reset  &none
-&none  &trans      &trans       &trans      &trans          &none    &none  &trans          &trans      &trans       &trans      &none
-&none  &none       &none        &none       &none           &none    &none  &none           &none       &none        &none       &none
-                                &to 0       &none           &none    &none  &none           &to 0
+&none  &sys_reset   &bootloader  &bt BT_CLR   &studio_unlock  &none    &none  &studio_unlock  &bt BT_CLR   &bootloader  &sys_reset   &none
+&none  &mLab_reset  &mLab_boot   &mLab_btclr  &mLab_studio    &none    &none  &mLab_studio    &mLab_btclr  &mLab_boot   &mLab_reset  &none
+&none  &none        &none        &none        &none           &none    &none  &none           &none        &none        &none        &none
+                                 &to 0        &none           &none    &none  &none           &to 0
             >;
 
             label = "sys";
