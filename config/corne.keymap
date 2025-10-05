@@ -534,7 +534,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         mLab_sys: mLab_sys {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 4 &kp LEFT_WIN &kp SEMI &kp T &kp SEMI &kp K &kp D &kp M &kp SPACE &kp P &kp A &kp T &kp D &kp O>;
+            bindings = <&kp SEMI &kp T &kp SEMI &kp K &kp D &kp M &kp SPACE &kp P &kp A &kp T &kp D &kp O &to 4>;
             label = "MLAB_SYS";
         };
 
