@@ -432,14 +432,32 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         ms_wrkD: ms_wrkD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(H) &kp GT &kp LS(P) &kp LS(T) &kp LS(C) &kp LS(B) &kp LS(I) &kp N3 &kp P &kp R &kp A &kp P &kp C &kp B &kp I &kp N6 &kp U &kp N &kp A &kp B &kp A &kp I &kp A &kp B &kp N8 &kp J &kp P &kp C &kp O>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp LS(C) &kp LS(D) &kp LS(O) &kp LS(V) &kp LS(G) &kp LS(L) &kp LS(U)>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N3 &kp O &kp S &kp A &kp O &kp G &kp L &kp U &kp N6 &kp Y &kp P &kp A &kp L &kp A &kp U &kp A &kp L &kp N8 &kp I &kp O &kp G &kp SEMI>;
+
             label = "MS_WRKD";
         };
 
         ms_wrkQ: ms_wrkQ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(J) &kp LS(E) &kp LS(R) &kp LS(K) &kp LS(I) &kp LS(N) &kp LS(G) &kp N3 &kp R &kp O &kp A &kp R &kp I &kp N &kp G &kp N6 &kp F &kp L &kp A &kp N &kp A &kp G &kp A &kp N &kp N8 &kp C &kp R &kp I &kp S>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp J &kp E &kp R &kp K &kp I &kp N &kp G>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N3 &kp R &kp O &kp A &kp R &kp I &kp N &kp G &kp N6 &kp F &kp L &kp A &kp N &kp A &kp G &kp A &kp N &kp N8 &kp C &kp R &kp I &kp S>;
+
             label = "MS_WRKQ";
         };
 
@@ -642,7 +660,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         cWyrm {
             bindings = <&ms_mac>;
-            key-positions = <4 31 13 8>;
+            key-positions = <5 9 31 32>;
             timeout-ms = <100>;
             require-prior-idle-ms = <3000>;
         };
