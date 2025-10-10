@@ -426,6 +426,65 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
             tapping-term-ms = <225>;
         };
+
+        d_av: d_av {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_AV";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kp PERIOD>;
+
+            tapping-term-ms = <200>;
+        };
+
+        d_oy: d_oy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_OY";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&kp T>;
+
+            tapping-term-ms = <200>;
+        };
+
+        d_en: d_en {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_EN";
+            #binding-cells = <0>;
+            bindings = <&kp D>, <&kp L>;
+
+            tapping-term-ms = <200>;
+        };
+
+        d_tp: d_tp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "D_TP";
+            #binding-cells = <0>;
+            bindings = <&kp K>, <&kp R>;
+
+            tapping-term-ms = <200>;
+        };
+
+        pt_av: pt_av {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PT_AV";
+            bindings = <&kp>, <&d_av>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            hold-while-undecided;
+            hold-while-undecided-linger;
+        };
+
+        pt_oy: pt_oy {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PT_OY";
+            bindings = <&kp>, <&d_oy>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            hold-while-undecided;
+        };
     };
 
     macros {
@@ -887,7 +946,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_syst {
             bindings = <&to 4>;
-            key-positions = <24 12 38>;
+            key-positions = <24 12 37>;
             require-prior-idle-ms = <3000>;
         };
     };
@@ -897,10 +956,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         home {
             bindings = <
-&d_cvk    &dQuoDbq      &dComCal       &dPrdCar      &kp R          &kp T          &kp Y       &kp U          &kp I         &kp O          &kp P            &dFshBsh
-&d_xvk    &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D  &ht_L LSHFT F  &kp G          &kp H       &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &dDshAt
-&dAndPer  &dSemCol      &kp X          &kp C         &kp V          &kp B          &kp N       &kp M          &kp COMMA     &kp DOT        &kp FSLH         &dQstExc
-                                       &mt_R 1 DEL   &mt_L 2 TAB    &key_repeat    &kp RETURN  &mt_R 1 SPACE  &kp BSPC
+&d_cvk    &dQuoDbq     &dComCal     &dPrdCar                &kp R            &kp T          &kp Y       &kp U          &kp I         &kp O          &kp P            &dFshBsh
+&d_xvk    &pt_av N0 0  &pt_oy N0 0  &pt_av C_BLUE_BUTTON 0  &pt_oy C_BLUE 0  &kp G          &kp H       &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &dDshAt
+&dAndPer  &dSemCol     &kp X        &kp C                   &kp V            &kp B          &kp N       &kp M          &kp COMMA     &kp DOT        &kp FSLH         &dQstExc
+                                    &mt_R 1 DEL             &mt_L 2 TAB      &key_repeat    &kp RETURN  &mt_R 1 SPACE  &kp BSPC
             >;
 
             label = "spy|qrl";
