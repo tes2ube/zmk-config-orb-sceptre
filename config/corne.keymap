@@ -887,7 +887,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_syst {
             bindings = <&to 4>;
-            key-positions = <24 12 38>;
+            key-positions = <24 12 37>;
             require-prior-idle-ms = <3000>;
         };
     };
