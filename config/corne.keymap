@@ -473,6 +473,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             quick-tap-ms = <200>;
             hold-while-undecided;
             hold-while-undecided-linger;
+            flavor = "tap-preferred";
         };
 
         pt_oy: pt_oy {
@@ -484,6 +485,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             hold-while-undecided;
+            flavor = "tap-preferred";
         };
     };
 
