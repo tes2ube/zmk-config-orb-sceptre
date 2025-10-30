@@ -97,69 +97,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp E>, <&kp LS(E)>;
         };
 
-        dlP: dlP {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLP";
-            #binding-cells = <0>;
-            bindings = <&kp R>, <&kp LS(R)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlY: dlY {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLY";
-            #binding-cells = <0>;
-            bindings = <&kp T>, <&kp LS(T)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dl_htA: dl_htA {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DL_HTA";
-            #binding-cells = <0>;
-            bindings = <&ht_L LGUI A>, <&kp LS(A)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dl_htO: dl_htO {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DL_HTO";
-            #binding-cells = <0>;
-            bindings = <&ht_L LCTRL S>, <&kp LS(S)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dl_htE: dl_htE {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DL_HTE";
-            #binding-cells = <0>;
-            bindings = <&ht_L LALT D>, <&kp LS(D)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dl_htU: dl_htU {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DL_HTU";
-            #binding-cells = <0>;
-            bindings = <&ht_L LSHFT F>, <&kp LS(F)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        dHshAst: dHshAst {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DHSHAST";
-            #binding-cells = <0>;
-            bindings = <&kp HASH>, <&kp STAR>;
-
-            tapping-term-ms = <250>;
-        };
-
         dAndPer: dAndPer {
             compatible = "zmk,behavior-tap-dance";
             label = "DANDPER";
@@ -176,51 +113,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp Z>, <&kp LS(Z)>;
 
             tapping-term-ms = <250>;
-        };
-
-        dlQ: dlQ {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLQ";
-            #binding-cells = <0>;
-            bindings = <&kp X>, <&kp LS(X)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlJ: dlJ {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLJ";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&kp LS(C)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlK: dlK {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLK";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp LS(V)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlX: dlX {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLX";
-            #binding-cells = <0>;
-            bindings = <&kp B>, <&kp LS(B)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlI: dlI {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLI";
-            #binding-cells = <0>;
-            bindings = <&kp G>, <&kp LS(G)>;
-
-            tapping-term-ms = <235>;
         };
 
         mt_L: mt_L {
@@ -266,60 +158,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             tapping-term-ms = <235>;
         };
 
-        dlL: dlL {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLL";
-            #binding-cells = <0>;
-            bindings = <&kp P>, <&kp LS(P)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlR: dlR {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLR";
-            #binding-cells = <0>;
-            bindings = <&kp O>, <&kp LS(O)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlC: dlC {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLC";
-            #binding-cells = <0>;
-            bindings = <&kp I>, <&kp LS(I)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlG: dlG {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLG";
-            #binding-cells = <0>;
-            bindings = <&kp U>, <&kp LS(U)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlF: dlF {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLF";
-            #binding-cells = <0>;
-            bindings = <&kp Y>, <&kp LS(Y)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlD: dlD {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLD";
-            #binding-cells = <0>;
-            bindings = <&kp H>, <&kp LS(H)>;
-
-            tapping-term-ms = <235>;
-        };
-
         dQstExc: dQstExc {
             compatible = "zmk,behavior-tap-dance";
             label = "DQSTEXC";
@@ -327,51 +165,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp LS(LBKT)>, <&kp EXCL>;
 
             tapping-term-ms = <235>;
-        };
-
-        dlZ: dlZ {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLZ";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp LS(SLASH)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlV: dlV {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLV";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp LS(DOT)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlW: dlW {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLW";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp LS(COMMA)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlM: dlM {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLM";
-            #binding-cells = <0>;
-            bindings = <&kp M>, <&kp LS(M)>;
-
-            tapping-term-ms = <235>;
-        };
-
-        dlB: dlB {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DLB";
-            #binding-cells = <0>;
-            bindings = <&kp N>, <&kp LS(N)>;
-
-            tapping-term-ms = <250>;
         };
 
         dDshAt: dDshAt {
@@ -399,7 +192,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         ht_cvk: ht_cvk {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_CVK";
-            bindings = <&m_xv>, <&kp>;
+            bindings = <&m_cv>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <155>;
@@ -425,6 +218,20 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&ht_cvk 0 GRAVE>, <&kp TILDE>;
 
             tapping-term-ms = <225>;
+        };
+
+        ht_W: ht_W {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_W";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <155>;
+            quick-tap-ms = <135>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 36 37>;
+            hold-trigger-on-release;
         };
     };
 
@@ -597,7 +404,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_meta {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
-            layers = <0 4 1 2 1>;
+            layers = <0 5 2 3 2>;
             require-prior-idle-ms = <200>;
             timeout-ms = <28>;
         };
@@ -617,23 +424,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <22 23>;
         };
 
-        c_pgup {
-            bindings = <&kp PAGE_UP>;
-            key-positions = <30 31>;
-            require-prior-idle-ms = <200>;
-        };
-
-        c_pgdn {
-            bindings = <&kp PG_DN>;
-            key-positions = <31 32>;
-            require-prior-idle-ms = <200>;
-        };
-
         c_caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <17 18>;
             require-prior-idle-ms = <400>;
-            layers = <0 1>;
+            layers = <0 2>;
         };
 
         c_cut {
@@ -723,91 +518,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <13 22 20>;
         };
 
-        c_qp {
-            bindings = <&kp P>;
-            key-positions = <1 37>;
-        };
-
-        c_wo {
-            bindings = <&kp O>;
-            key-positions = <2 37>;
-        };
-
-        c_ei {
-            bindings = <&kp I>;
-            key-positions = <3 37>;
-        };
-
-        c_ru {
-            bindings = <&kp U>;
-            key-positions = <4 37>;
-        };
-
-        c_ty {
-            bindings = <&kp Y>;
-            key-positions = <5 37>;
-        };
-
-        c_min {
-            bindings = <&kp SQT>;
-            key-positions = <12 37>;
-        };
-
-        c_asemi {
-            bindings = <&kp SEMI>;
-            key-positions = <13 37>;
-        };
-
-        c_sl {
-            bindings = <&kp L>;
-            key-positions = <14 37>;
-        };
-
-        c_dk {
-            bindings = <&kp K>;
-            key-positions = <15 37>;
-        };
-
-        c_fj {
-            bindings = <&kp J>;
-            key-positions = <16 37>;
-        };
-
-        c_hg {
-            bindings = <&kp H>;
-            key-positions = <17 37>;
-        };
-
-        c_excl {
-            bindings = <&kp EXCL>;
-            key-positions = <24 37>;
-        };
-
-        c_zslsh {
-            bindings = <&kp FSLH>;
-            key-positions = <25 37>;
-        };
-
-        c_xdot {
-            bindings = <&kp DOT>;
-            key-positions = <26 37>;
-        };
-
-        c_ccom {
-            bindings = <&kp COMMA>;
-            key-positions = <27 37>;
-        };
-
-        c_vm {
-            bindings = <&kp M>;
-            key-positions = <28 37>;
-        };
-
-        c_bn {
-            bindings = <&kp N>;
-            key-positions = <29 37>;
-        };
-
         c_space {
             bindings = <&kp SPACE>;
             key-positions = <27 28>;
@@ -841,11 +551,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_bksp {
             bindings = <&kp BSPC>;
             key-positions = <26 25>;
-        };
-
-        c_ins {
-            bindings = <&kp INSERT>;
-            key-positions = <33 34>;
         };
 
         c_ret {
@@ -886,9 +591,101 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_syst {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <24 12 37>;
             require-prior-idle-ms = <3000>;
+        };
+
+        cw_bktl {
+            bindings = <&kp MINUS>;
+            key-positions = <0 1>;
+            layers = <1>;
+        };
+
+        cw_bktr {
+            bindings = <&kp EQUAL>;
+            key-positions = <5 4>;
+            layers = <1>;
+        };
+
+        cw_ins {
+            bindings = <&kp INS>;
+            key-positions = <3 2>;
+        };
+
+        cw_lgui {
+            bindings = <&sk LEFT_GUI>;
+            key-positions = <13 37>;
+            layers = <1>;
+            require-prior-idle-ms = <125>;
+        };
+
+        cw_ctrl {
+            bindings = <&sk LCTRL>;
+            key-positions = <37 14>;
+            layers = <1>;
+            require-prior-idle-ms = <125>;
+        };
+
+        cw_alt {
+            bindings = <&sk LEFT_ALT>;
+            key-positions = <37 15>;
+            layers = <1>;
+            require-prior-idle-ms = <125>;
+        };
+
+        cw_shft {
+            bindings = <&sk LSHFT>;
+            key-positions = <37 16>;
+            layers = <1>;
+            require-prior-idle-ms = <125>;
+        };
+
+        cw_toggle {
+            bindings = <&tog 1>;
+            key-positions = <13 14 15 16>;
+        };
+
+        cw_tab {
+            bindings = <&kp TAB>;
+            key-positions = <14 15>;
+            require-prior-idle-ms = <125>;
+            layers = <1>;
+        };
+
+        c_r0 {
+            bindings = <&kp N0>;
+            key-positions = <35 34>;
+        };
+
+        c_n1 {
+            bindings = <&kp N1>;
+            key-positions = <34 33>;
+        };
+
+        c_n2 {
+            bindings = <&kp N2>;
+            key-positions = <33 32>;
+        };
+
+        c_n3 {
+            bindings = <&kp N3>;
+            key-positions = <32 31>;
+        };
+
+        c_n4 {
+            bindings = <&kp NUMBER_4>;
+            key-positions = <22 21>;
+        };
+
+        c_n5 {
+            bindings = <&kp N5>;
+            key-positions = <21 20>;
+        };
+
+        c_n6 {
+            bindings = <&kp N6>;
+            key-positions = <20 19>;
         };
     };
 
@@ -900,10 +697,19 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 &d_cvk    &dQuoDbq      &dComCal       &dPrdCar      &kp R          &kp T          &kp Y       &kp U          &kp I         &kp O          &kp P            &dFshBsh
 &d_xvk    &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D  &ht_L LSHFT F  &kp G          &kp H       &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &dDshAt
 &dAndPer  &dSemCol      &kp X          &kp C         &kp V          &kp B          &kp N       &kp M          &kp COMMA     &kp DOT        &kp FSLH         &dQstExc
-                                       &mt_R 1 DEL   &mt_L 2 TAB    &key_repeat    &kp RETURN  &mt_R 1 SPACE  &kp BSPC
+                                       &mt_R 2 DEL   &mt_L 3 TAB    &key_repeat    &kp RETURN  &mt_R 2 SPACE  &kp BSPC
             >;
 
             label = "spy|qrl";
+        };
+
+        wilber {
+            bindings = <
+&ht_W GRAVE U  &kp P  &ht_W Q G  &ht_W B S  &ht_W V O      &ht_W C M         &trans  &trans  &trans  &trans  &trans  &trans
+&ht_W SQT H    &kp K  &ht_W E A  &ht_W N D  &ht_W T L      &ht_W DOT SEMI    &trans  &trans  &trans  &trans  &trans  &trans
+&kp COMMA      &kp I  &ht_W W F  &ht_W X R  &ht_W SLASH J  &kp Y             &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans     &mt_L 3 SPACE  &trans            &trans  &trans  &trans
+            >;
         };
 
         num-sys {
@@ -921,7 +727,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <
 &none          &kp LC(LEFT_ARROW)      &kp UP    &kp LC(RIGHT_ARROW)      &kp LC(SLASH)         &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)  &kp F9          &kp F10             &kp F11         &kp F12         &none
 &m_retup       &kp LEFT                &kp DOWN  &kp RIGHT                &ht_L LSHFT LS(HOME)  &kp LS(END)          &none                &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &none
-&kp LC(COMMA)  &kp LC(LS(LEFT_ARROW))  &none     &kp LS(LC(RIGHT_ARROW))  &none                 &none                &none                &kp F1          &kp F2              &kp F3          &kp F4          &none
+&kp LC(COMMA)  &kp LC(LS(LEFT_ARROW))  &none     &kp LS(LC(RIGHT_ARROW))  &kp PG_UP             &kp PG_DN            &none                &kp F1          &kp F2              &kp F3          &kp F4          &none
                                                  &to 0                    &trans                &trans               &trans               &trans          &trans
             >;
 
