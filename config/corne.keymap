@@ -404,7 +404,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_meta {
             bindings = <&kp LMETA>;
             key-positions = <13 22>;
-            layers = <0 5 2 3 2>;
+            layers = <0 7 3 4 3>;
             require-prior-idle-ms = <200>;
             timeout-ms = <28>;
         };
@@ -428,7 +428,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp CAPSLOCK>;
             key-positions = <17 18>;
             require-prior-idle-ms = <400>;
-            layers = <0 2>;
+            layers = <0 3>;
         };
 
         c_cut {
@@ -456,13 +456,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_ltroub {
-            bindings = <&to 5>;
+            bindings = <&to 7>;
             key-positions = <24 12 38>;
             require-prior-idle-ms = <3000>;
         };
 
         c_ltroubR {
-            bindings = <&to 5>;
+            bindings = <&to 7>;
             key-positions = <39 35 23>;
             require-prior-idle-ms = <3000>;
         };
@@ -591,7 +591,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_syst {
-            bindings = <&to 5>;
+            bindings = <&to 7>;
             key-positions = <24 12 37>;
             require-prior-idle-ms = <3000>;
         };
@@ -599,13 +599,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cw_bktl {
             bindings = <&kp MINUS>;
             key-positions = <0 1>;
-            layers = <1>;
+            layers = <2>;
         };
 
         cw_bktr {
             bindings = <&kp EQUAL>;
             key-positions = <5 4>;
-            layers = <1>;
+            layers = <2>;
         };
 
         cw_ins {
@@ -616,33 +616,33 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cw_lgui {
             bindings = <&sk LEFT_GUI>;
             key-positions = <13 37>;
-            layers = <1>;
+            layers = <2>;
             require-prior-idle-ms = <125>;
         };
 
         cw_ctrl {
             bindings = <&sk LCTRL>;
             key-positions = <37 14>;
-            layers = <1>;
+            layers = <2>;
             require-prior-idle-ms = <125>;
         };
 
         cw_alt {
             bindings = <&sk LEFT_ALT>;
             key-positions = <37 15>;
-            layers = <1>;
+            layers = <2>;
             require-prior-idle-ms = <125>;
         };
 
         cw_shft {
             bindings = <&sk LSHFT>;
             key-positions = <37 16>;
-            layers = <1>;
+            layers = <2>;
             require-prior-idle-ms = <125>;
         };
 
         cw_toggle {
-            bindings = <&tog 1>;
+            bindings = <&tog 2>;
             key-positions = <13 14 15 16>;
         };
 
@@ -650,7 +650,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp TAB>;
             key-positions = <14 15>;
             require-prior-idle-ms = <125>;
-            layers = <1>;
+            layers = <2>;
         };
 
         c_r0 {
@@ -661,31 +661,98 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_n1 {
             bindings = <&kp N1>;
             key-positions = <34 33>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <350>;
         };
 
         c_n2 {
             bindings = <&kp N2>;
             key-positions = <33 32>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <350>;
         };
 
         c_n3 {
             bindings = <&kp N3>;
             key-positions = <32 31>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <350>;
         };
 
         c_n4 {
             bindings = <&kp NUMBER_4>;
             key-positions = <22 21>;
+            require-prior-idle-ms = <350>;
+            timeout-ms = <30>;
         };
 
         c_n5 {
             bindings = <&kp N5>;
             key-positions = <21 20>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <350>;
         };
 
         c_n6 {
             bindings = <&kp N6>;
             key-positions = <20 19>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <350>;
+        };
+
+        c_at {
+            bindings = <&kp AT>;
+            key-positions = <13 1>;
+        };
+
+        c_hsh {
+            bindings = <&kp POUND>;
+            key-positions = <14 2>;
+        };
+
+        c_per {
+            bindings = <&kp PRCNT>;
+            key-positions = <15 3>;
+        };
+
+        c_btck {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 12>;
+        };
+
+        c_tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <24 12>;
+        };
+
+        c_lt {
+            bindings = <&kp LT>;
+            key-positions = <13 25>;
+        };
+
+        c_gt {
+            bindings = <&kp GT>;
+            key-positions = <15 27>;
+        };
+
+        c_powl {
+            bindings = <&kp CARET>;
+            key-positions = <14 26>;
+        };
+
+        c_ul {
+            bindings = <&kp UNDER>;
+            key-positions = <16 28>;
+        };
+
+        c_bslsh {
+            bindings = <&kp BSLH>;
+            key-positions = <29 17>;
+        };
+
+        cmac_toggle {
+            bindings = <&tog 1>;
+            key-positions = <3 2 5 0>;
         };
     };
 
@@ -697,18 +764,29 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 &d_cvk    &dQuoDbq      &dComCal       &dPrdCar      &kp R          &kp T          &kp Y       &kp U          &kp I         &kp O          &kp P            &dFshBsh
 &d_xvk    &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D  &ht_L LSHFT F  &kp G          &kp H       &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &dDshAt
 &dAndPer  &dSemCol      &kp X          &kp C         &kp V          &kp B          &kp N       &kp M          &kp COMMA     &kp DOT        &kp FSLH         &dQstExc
-                                       &mt_R 2 DEL   &mt_L 3 TAB    &key_repeat    &kp RETURN  &mt_R 2 SPACE  &kp BSPC
+                                       &mt_R 3 DEL   &mt_L 4 SPACE  &key_repeat    &kp RETURN  &mt_R 3 TAB    &kp BSPC
             >;
 
             label = "spy|qrl";
         };
 
+        macmode {
+            bindings = <
+&trans  &trans         &trans         &trans  &trans  &trans    &trans  &trans  &trans  &trans         &trans            &trans
+&trans  &ht_L LCTRL A  &ht_L LMETA S  &trans  &trans  &trans    &trans  &trans  &trans  &ht_R RMETA L  &ht_R RCTRL SEMI  &trans
+&trans  &trans         &trans         &trans  &trans  &trans    &trans  &trans  &trans  &trans         &trans            &trans
+                                      &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "macmode";
+        };
+
         wilber {
             bindings = <
-&ht_W GRAVE U  &kp P  &ht_W Q G  &ht_W B S  &ht_W V O      &ht_W C M         &trans  &trans  &trans  &trans  &trans  &trans
-&ht_W SQT H    &kp K  &ht_W E A  &ht_W N D  &ht_W T L      &ht_W DOT SEMI    &trans  &trans  &trans  &trans  &trans  &trans
-&kp COMMA      &kp I  &ht_W W F  &ht_W X R  &ht_W SLASH J  &kp Y             &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans     &mt_L 3 SPACE  &trans            &trans  &trans  &trans
+&ht_W SQT U    &ht_W LS(Q) P     &ht_W Q G  &ht_W B S  &ht_W V O      &ht_W C M         &trans  &trans  &trans  &trans  &trans  &trans
+&ht_W LS(Z) H  &ht_W LS(LBKT) K  &ht_W E A  &ht_W N D  &ht_W T L      &ht_W DOT SEMI    &trans  &trans  &trans  &trans  &trans  &trans
+&ht_W Z COMMA  &ht_W EXCL I      &ht_W W F  &ht_W X R  &ht_W SLASH J  &kp Y             &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans     &trans         &trans            &trans  &trans  &trans
             >;
         };
 
@@ -725,13 +803,24 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         nav-func {
             bindings = <
-&none          &kp LC(LEFT_ARROW)      &kp UP    &kp LC(RIGHT_ARROW)      &kp LC(SLASH)         &kp LC(LS(SLASH))    &mt PSCRN LC(PSCRN)  &kp F9          &kp F10             &kp F11         &kp F12         &none
-&m_retup       &kp LEFT                &kp DOWN  &kp RIGHT                &ht_L LSHFT LS(HOME)  &kp LS(END)          &none                &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &none
-&kp LC(COMMA)  &kp LC(LS(LEFT_ARROW))  &none     &kp LS(LC(RIGHT_ARROW))  &kp PG_UP             &kp PG_DN            &none                &kp F1          &kp F2              &kp F3          &kp F4          &none
-                                                 &to 0                    &trans                &trans               &trans               &trans          &trans
+&mt PSCRN LC(PSCRN)  &kp LC(LEFT_ARROW)      &kp UP    &kp LC(RIGHT_ARROW)      &kp LC(SLASH)         &kp LC(LS(SLASH))    &none   &kp F9          &kp F10             &kp F11         &kp F12         &none
+&m_retup             &kp LEFT                &kp DOWN  &kp RIGHT                &ht_L LSHFT LS(HOME)  &kp LS(END)          &none   &ht_R RSHFT F5  &ht_R RIGHT_ALT F6  &ht_R RCTRL F7  &ht_R RMETA F8  &none
+&kp LC(COMMA)        &kp LC(LS(LEFT_ARROW))  &none     &kp LS(LC(RIGHT_ARROW))  &kp PG_UP             &kp PG_DN            &none   &kp F1          &kp F2              &kp F3          &kp F4          &none
+                                                       &to 0                    &trans                &trans               &trans  &trans          &trans
             >;
 
             label = "nav|func";
+        };
+
+        macnav {
+            bindings = <
+&trans  &kp LA(LEFT)      &trans  &kp LA(RIGHT)      &kp LG(SLASH)  &kp LS(LG(SLASH))    &trans  &trans  &trans  &trans          &trans          &trans
+&trans  &trans            &trans  &trans             &trans         &trans               &trans  &trans  &trans  &ht_R RMETA F7  &ht_R RCTRL F8  &trans
+&trans  &kp LA(LS(LEFT))  &trans  &kp LA(LS(RIGHT))  &trans         &trans               &trans  &trans  &trans  &trans          &trans          &trans
+                                  &to 1              &trans         &trans               &trans  &trans  &trans
+            >;
+
+            label = "macnav";
         };
 
         home-gaming {
@@ -757,5 +846,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        macmode {
+            if-layers = <1 4>;
+            then-layer = <5>;
+        };
+    };
 };
