@@ -726,12 +726,12 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_lt {
-            bindings = <&kp LT>;
+            bindings = <&kp LS(W)>;
             key-positions = <13 25>;
         };
 
         c_gt {
-            bindings = <&kp GT>;
+            bindings = <&kp LS(E)>;
             key-positions = <15 27>;
         };
 
@@ -741,7 +741,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         };
 
         c_ul {
-            bindings = <&kp UNDER>;
+            bindings = <&kp LS(SQT)>;
             key-positions = <16 28>;
         };
 
@@ -753,6 +753,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cmac_toggle {
             bindings = <&tog 1>;
             key-positions = <3 2 5 0>;
+        };
+
+        c_capsl {
+            bindings = <&kp CAPS>;
+            key-positions = <24 25>;
         };
     };
 
@@ -792,10 +797,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         num-sys {
             bindings = <
-&kp LBKT  &dQuoDbq  &kp N7          &kp N8         &kp N9          &kp STAR    &none   &kp C_RW            &kp C_STOP       &kp C_FF            &kp C_BRI_UP          &none
-&kp APOS  &kp E     &ht_L LCTRL N4  &ht_L LALT N5  &ht_L LSHFT N6  &kp RBRC    &none   &ht_R RSHFT C_PREV  &ht_R RALT C_PP  &ht_R RCTRL C_NEXT  &ht_R RMETA C_BRI_DN  &none
-&kp RET   &kp N0    &kp N1          &kp N2         &kp N3          &none       &none   &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP        &none                 &none
-                                    &to 0          &trans          &trans      &trans  &trans              &trans
+&kp LBKT  &dQuoDbq   &kp KP_N7          &kp KP_N8         &kp KP_N9          &kp STAR    &none   &kp C_RW            &kp C_STOP       &kp C_FF            &kp C_BRI_UP          &none
+&kp APOS  &kp E      &ht_L LCTRL KP_N4  &ht_L LALT KP_N5  &ht_L LSHFT KP_N6  &kp RBRC    &none   &ht_R RSHFT C_PREV  &ht_R RALT C_PP  &ht_R RCTRL C_NEXT  &ht_R RMETA C_BRI_DN  &none
+&kp RET   &kp KP_N0  &kp KP_N1          &kp KP_N2         &kp KP_N3          &none       &none   &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP        &none                 &none
+                                        &to 0             &trans             &trans      &trans  &trans              &trans
             >;
 
             label = "num|sys";
