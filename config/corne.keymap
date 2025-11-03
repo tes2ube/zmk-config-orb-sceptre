@@ -380,16 +380,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <3 4>;
         };
 
-        c_bktL {
-            bindings = <&kp MINUS>;
-            key-positions = <7 8>;
-        };
-
-        c_bktR {
-            bindings = <&kp EQUAL>;
-            key-positions = <10 9>;
-        };
-
         c_home {
             bindings = <&kp HOME>;
             key-positions = <15 16>;
@@ -401,22 +391,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             require-prior-idle-ms = <200>;
         };
 
-        c_meta {
-            bindings = <&kp LMETA>;
-            key-positions = <13 22>;
-            layers = <0 7 3 4 3>;
-            require-prior-idle-ms = <200>;
-            timeout-ms = <28>;
-        };
-
         c_dol {
             bindings = <&kp DLLR>;
-            key-positions = <16 4>;
+            key-positions = <36 28 27>;
         };
 
         c_pipe {
             bindings = <&kp PIPE>;
-            key-positions = <5 17>;
+            key-positions = <28 16 4>;
         };
 
         c_us {
@@ -521,6 +503,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_space {
             bindings = <&kp TAB>;
             key-positions = <27 28>;
+            layers = <2>;
         };
 
         c_btx1 {
@@ -599,13 +582,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cw_bktl {
             bindings = <&kp MINUS>;
             key-positions = <0 1>;
-            layers = <2>;
         };
 
         cw_bktr {
             bindings = <&kp EQUAL>;
             key-positions = <5 4>;
-            layers = <2>;
         };
 
         cw_ins {
@@ -616,28 +597,24 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cw_lgui {
             bindings = <&sk LEFT_GUI>;
             key-positions = <13 37>;
-            layers = <2>;
             require-prior-idle-ms = <125>;
         };
 
         cw_ctrl {
             bindings = <&sk LCTRL>;
             key-positions = <37 14>;
-            layers = <2>;
             require-prior-idle-ms = <125>;
         };
 
         cw_alt {
             bindings = <&sk LEFT_ALT>;
             key-positions = <37 15>;
-            layers = <2>;
             require-prior-idle-ms = <125>;
         };
 
         cw_shft {
             bindings = <&sk LSHFT>;
             key-positions = <37 16>;
-            layers = <2>;
             require-prior-idle-ms = <125>;
         };
 
@@ -730,7 +707,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_powl {
             bindings = <&kp CARET>;
-            key-positions = <14 26>;
+            key-positions = <16 3 14>;
         };
 
         c_ul {
@@ -740,7 +717,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         c_bslsh {
             bindings = <&kp BSLH>;
-            key-positions = <29 17>;
+            key-positions = <28 3>;
         };
 
         cmac_toggle {
@@ -751,6 +728,27 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_capsl {
             bindings = <&kp CAPS>;
             key-positions = <24 25>;
+        };
+
+        c_n7 {
+            bindings = <&kp N7>;
+            key-positions = <10 9>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <350>;
+        };
+
+        c_n8 {
+            bindings = <&kp N8>;
+            key-positions = <9 8>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <350>;
+        };
+
+        c_n9 {
+            bindings = <&kp N9>;
+            key-positions = <8 7>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <350>;
         };
     };
 
