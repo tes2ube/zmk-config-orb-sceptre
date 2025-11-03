@@ -500,7 +500,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <13 22 20>;
         };
 
-        c_space {
+        c_tab {
             bindings = <&kp TAB>;
             key-positions = <27 28>;
             layers = <2>;
@@ -571,12 +571,6 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cBt5 {
             bindings = <&bt BT_SEL 4>;
             key-positions = <38 17>;
-        };
-
-        c_syst {
-            bindings = <&to 7>;
-            key-positions = <24 12 37>;
-            require-prior-idle-ms = <3000>;
         };
 
         cw_bktl {
@@ -670,18 +664,18 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             require-prior-idle-ms = <350>;
         };
 
-        c_at {
-            bindings = <&kp AT>;
+        c_lthan {
+            bindings = <&kp LS(W)>;
             key-positions = <13 1>;
         };
 
-        c_hsh {
-            bindings = <&kp POUND>;
+        c_colon {
+            bindings = <&kp LS(Z)>;
             key-positions = <14 2>;
         };
 
-        c_per {
-            bindings = <&kp PRCNT>;
+        c_dash {
+            bindings = <&kp APOS>;
             key-positions = <15 3>;
         };
 
@@ -695,13 +689,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <24 12>;
         };
 
-        c_lt {
-            bindings = <&kp LS(W)>;
+        c_gthan {
+            bindings = <&kp LS(E)>;
             key-positions = <13 25>;
         };
 
-        c_gt {
-            bindings = <&kp LS(E)>;
+        c_uscor {
+            bindings = <&kp LS(APOS)>;
             key-positions = <15 27>;
         };
 
@@ -710,8 +704,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             key-positions = <16 3 14>;
         };
 
-        c_ul {
-            bindings = <&kp LS(SQT)>;
+        c_prcnt {
+            bindings = <&kp PRCNT>;
             key-positions = <16 28>;
         };
 
@@ -750,6 +744,26 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             timeout-ms = <30>;
             require-prior-idle-ms = <350>;
         };
+
+        c_amps {
+            bindings = <&kp AMPS>;
+            key-positions = <16 4>;
+        };
+
+        c_hsh {
+            bindings = <&kp HASH>;
+            key-positions = <5 17>;
+        };
+
+        c_at {
+            bindings = <&kp AT>;
+            key-positions = <17 29>;
+        };
+
+        c_semicol {
+            bindings = <&kp Z>;
+            key-positions = <14 26>;
+        };
     };
 
     keymap {
@@ -760,7 +774,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 &d_cvk    &dQuoDbq      &dComCal       &dPrdCar      &kp R          &kp T          &kp Y       &kp U          &kp I         &kp O          &kp P            &dFshBsh
 &d_xvk    &ht_L LGUI A  &ht_L LCTRL S  &ht_L LALT D  &ht_L LSHFT F  &kp G          &kp H       &ht_R RSHFT J  &ht_R RALT K  &ht_R RCTRL L  &ht_R RGUI SEMI  &dDshAt
 &dAndPer  &dSemCol      &kp X          &kp C         &kp V          &kp B          &kp N       &kp M          &kp COMMA     &kp DOT        &kp FSLH         &dQstExc
-                                       &mt_R 3 DEL   &mt_L 4 SPACE  &key_repeat    &kp RETURN  &mt_R 3 TAB    &kp BSPC
+                                       &mt_R 3 DEL   &mt_L 4 TAB    &key_repeat    &kp RETURN  &mt_R 3 SPACE  &kp BSPC
             >;
 
             label = "spy|qrl";
@@ -779,10 +793,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         wilber {
             bindings = <
-&ht_W SQT U    &ht_W LS(Q) P     &ht_W Q G  &ht_W B S  &ht_W V O      &ht_W C M         &trans  &trans  &trans  &trans  &trans  &trans
-&ht_W LS(Z) H  &ht_W LS(LBKT) K  &ht_W E A  &ht_W N D  &ht_W T L      &ht_W DOT SEMI    &trans  &trans  &trans  &trans  &trans  &trans
-&ht_W Z COMMA  &ht_W EXCL I      &ht_W W F  &ht_W X R  &ht_W SLASH J  &kp Y             &trans  &trans  &trans  &trans  &trans  &trans
-                                            &trans     &trans         &trans            &trans  &trans  &trans
+&ht_W X U          &ht_W V P             &ht_W DOT G    &ht_W T S     &ht_W N O      &ht_W B M         &trans  &trans  &trans  &trans  &trans  &trans
+&ht_W LS(Q) H      &ht_W LS(LBKT) LMETA  &ht_W LCTRL A  &ht_W LALT D  &ht_W LSHFT L  &ht_W DOT SEMI    &trans  &trans  &trans  &trans  &trans  &trans
+&ht_W SLASH COMMA  &ht_W EXCL I          &ht_W LBRC F   &ht_W W R     &ht_W E J      &ht_W C Y         &trans  &trans  &trans  &trans  &trans  &trans
+                                                        &trans        &mt_L 4 SPACE  &trans            &trans  &trans  &trans
             >;
         };
 
