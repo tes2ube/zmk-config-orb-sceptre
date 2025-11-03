@@ -764,6 +764,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp Z>;
             key-positions = <14 26>;
         };
+
+        c_win {
+            bindings = <&kp LWIN>;
+            key-positions = <13 22>;
+        };
     };
 
     keymap {
@@ -793,10 +798,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         wilber {
             bindings = <
-&ht_W X U          &ht_W V P          &ht_W DOT G    &ht_W T S     &ht_W N O      &ht_W B M       &trans  &trans  &trans  &trans  &trans  &trans
-&ht_W LS(Q) H      &ht_W LS(LMETA) K  &ht_W LCTRL A  &ht_W LALT D  &ht_W LSHFT L  &ht_W Q SEMI    &trans  &trans  &trans  &trans  &trans  &trans
-&ht_W SLASH COMMA  &ht_W EXCL I       &ht_W LBRC F   &ht_W W R     &ht_W E J      &ht_W C Y       &trans  &trans  &trans  &trans  &trans  &trans
-                                                     &trans        &mt_L 4 SPACE  &trans          &trans  &trans  &trans
+&ht_W X U          &ht_W V P      &ht_W DOT G    &ht_W T S     &ht_W N O      &ht_W B M       &trans  &trans  &trans  &trans  &trans  &trans
+&ht_W LS(Q) H      &ht_W LMETA K  &ht_W LCTRL A  &ht_W LALT D  &ht_W LSHFT L  &ht_W Q SEMI    &trans  &trans  &trans  &trans  &trans  &trans
+&ht_W SLASH COMMA  &ht_W EXCL I   &ht_W LBRC F   &ht_W W R     &ht_W E J      &ht_W C Y       &trans  &trans  &trans  &trans  &trans  &trans
+                                                 &trans        &mt_L 4 SPACE  &trans          &trans  &trans  &trans
             >;
         };
 
