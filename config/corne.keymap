@@ -226,11 +226,45 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <155>;
-            quick-tap-ms = <135>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <130>;
+            quick-tap-ms = <110>;
+            require-prior-idle-ms = <105>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 36 37>;
+            hold-trigger-on-release;
+        };
+
+        mdt_L: mdt_L {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MDT_L";
+            bindings = <&mo>, <&gresc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <145>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 41 40 37>;
+            hold-trigger-on-release;
+        };
+
+        spc_tab: spc_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPC_TAB";
+            bindings = <&kp SPACE>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LALT)>;
+            mods = <(MOD_LALT)>;
+        };
+
+        mm_L: mm_L {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MM_L";
+            bindings = <&mo>, <&spc_tab>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <145>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 41 40 37>;
             hold-trigger-on-release;
         };
     };
@@ -801,7 +835,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 &ht_W X U          &ht_W V P      &ht_W DOT G    &ht_W T S     &ht_W N O      &ht_W B M       &trans  &trans  &trans  &trans  &trans  &trans
 &ht_W LS(Q) H      &ht_W LMETA K  &ht_W LCTRL A  &ht_W LALT D  &ht_W LSHFT L  &ht_W Q SEMI    &trans  &trans  &trans  &trans  &trans  &trans
 &ht_W SLASH COMMA  &ht_W EXCL I   &ht_W LBRC F   &ht_W W R     &ht_W E J      &ht_W C Y       &trans  &trans  &trans  &trans  &trans  &trans
-                                                 &trans        &mt_L 4 SPACE  &trans          &trans  &trans  &trans
+                                                 &trans        &mm_L 4 0      &trans          &trans  &trans  &trans
             >;
         };
 
