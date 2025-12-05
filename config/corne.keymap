@@ -15,6 +15,8 @@
 
 &mt { flavor = "balanced"; };
 
+&sk { release-after-ms = <2000>; };
+
 /* Homerow mods
 
 #define QUICK_TAP_MS 175
@@ -226,12 +228,10 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <105>;
             quick-tap-ms = <110>;
-            require-prior-idle-ms = <105>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 36 37>;
-            hold-trigger-on-release;
         };
 
         mdt_L: mdt_L {
@@ -249,7 +249,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         spc_tab: spc_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "SPC_TAB";
-            bindings = <&kp SPACE>, <&kp TAB>;
+            bindings = <&mm_L 4 SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
             keep-mods = <(MOD_LALT)>;
@@ -259,7 +259,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         mm_L: mm_L {
             compatible = "zmk,behavior-hold-tap";
             label = "MM_L";
-            bindings = <&mo>, <&spc_tab>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <145>;
@@ -407,22 +407,26 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_parL {
             bindings = <&kp LPAR>;
             key-positions = <1 2>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <130>;
         };
 
         c_parR {
             bindings = <&kp RPAR>;
             key-positions = <3 4>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <130>;
         };
 
         c_home {
             bindings = <&kp HOME>;
             key-positions = <15 16>;
+            require-prior-idle-ms = <150>;
         };
 
         c_end {
             bindings = <&kp END>;
             key-positions = <16 17>;
-            require-prior-idle-ms = <200>;
         };
 
         c_dol {
@@ -433,11 +437,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_pipe {
             bindings = <&kp PIPE>;
             key-positions = <28 16 4>;
-        };
-
-        c_us {
-            bindings = <&kp LS(APOS)>;
-            key-positions = <22 23>;
+            timeout-ms = <200>;
         };
 
         c_caps {
@@ -469,6 +469,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_esc {
             bindings = <&kp ESC>;
             key-positions = <13 14>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <30>;
         };
 
         c_ltroub {
@@ -507,11 +509,13 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_dskl {
             bindings = <&kp LG(LC(LEFT_ARROW))>;
             key-positions = <0 1 37>;
+            timeout-ms = <150>;
         };
 
         c_deskr {
             bindings = <&kp LG(LC(RIGHT_ARROW))>;
             key-positions = <4 5 37>;
+            timeout-ms = <150>;
         };
 
         c_sum {
@@ -568,6 +572,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         c_bksp {
             bindings = <&kp BSPC>;
             key-positions = <26 25>;
+            timeout-ms = <30>;
         };
 
         c_ret {
@@ -620,6 +625,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
         cw_ins {
             bindings = <&kp INS>;
             key-positions = <3 2>;
+            timeout-ms = <30>;
         };
 
         cw_lgui {
@@ -648,12 +654,15 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         cw_toggle {
             bindings = <&tog 2>;
-            key-positions = <13 14 15 16>;
+            key-positions = <14 15>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <350>;
         };
 
         c_r0 {
             bindings = <&kp N0>;
             key-positions = <35 34>;
+            timeout-ms = <50>;
         };
 
         c_n1 {
@@ -750,7 +759,9 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
         cmac_toggle {
             bindings = <&tog 1>;
-            key-positions = <3 2 5 0>;
+            key-positions = <13 16>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <350>;
         };
 
         c_capsl {
@@ -803,6 +814,11 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&kp LWIN>;
             key-positions = <13 22>;
         };
+
+        c_fslsh {
+            bindings = <&kp LBKT>;
+            key-positions = <4 27>;
+        };
     };
 
     keymap {
@@ -835,7 +851,7 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 &ht_W X U          &ht_W V P      &ht_W DOT G    &ht_W T S     &ht_W N O      &ht_W B M       &trans  &trans  &trans  &trans  &trans  &trans
 &ht_W LS(Q) H      &ht_W LMETA K  &ht_W LCTRL A  &ht_W LALT D  &ht_W LSHFT L  &ht_W Q SEMI    &trans  &trans  &trans  &trans  &trans  &trans
 &ht_W SLASH COMMA  &ht_W EXCL I   &ht_W LBRC F   &ht_W W R     &ht_W E J      &ht_W C Y       &trans  &trans  &trans  &trans  &trans  &trans
-                                                 &trans        &mm_L 4 0      &trans          &trans  &trans  &trans
+                                                 &trans        &spc_tab       &trans          &trans  &trans  &trans
             >;
         };
 
