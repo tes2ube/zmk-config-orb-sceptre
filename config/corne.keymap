@@ -274,14 +274,15 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&kp A &kp F &kp K &kp S &kp N &kp S &kp K &kp SEMI &kp N8>,
                 <&macro_press>,
                 <&kp LSHFT>,
                 <&macro_tap>,
-                <&kp LS(C) &kp LS(D) &kp LS(O) &kp LS(V) &kp LS(G) &kp LS(L) &kp LS(U)>,
+                <&kp M &kp A &kp O &kp DOT &kp G &kp L>,
                 <&macro_release>,
                 <&kp LSHFT>,
                 <&macro_tap>,
-                <&kp N3 &kp O &kp S &kp A &kp O &kp G &kp L &kp U &kp N6 &kp Y &kp P &kp A &kp L &kp A &kp U &kp A &kp L &kp N8 &kp I &kp O &kp G &kp SEMI>;
+                <&kp N8 &kp H &kp D &kp D &kp L &kp A &kp N6 &kp SEMI &kp A &kp O &kp U &kp D>;
 
             label = "MS_WRKD";
         };
@@ -290,14 +291,15 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&kp A &kp U &kp T &kp O &kp B &kp O &kp T &kp S &kp N8>,
                 <&macro_press>,
                 <&kp LSHFT>,
                 <&macro_tap>,
-                <&kp J &kp E &kp R &kp K &kp I &kp N &kp G>,
+                <&kp M &kp A &kp R &kp V &kp I &kp N>,
                 <&macro_release>,
                 <&kp LSHFT>,
                 <&macro_tap>,
-                <&kp N3 &kp R &kp O &kp A &kp R &kp I &kp N &kp G &kp N6 &kp F &kp L &kp A &kp N &kp A &kp G &kp A &kp N &kp N8 &kp C &kp R &kp I &kp S>;
+                <&kp N8 &kp D &kp E &kp E &kp N &kp A &kp N6 &kp S &kp A &kp R &kp G &kp E>;
 
             label = "MS_WRKQ";
         };
