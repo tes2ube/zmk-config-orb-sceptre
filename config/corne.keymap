@@ -252,8 +252,8 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             bindings = <&mm_L 4 SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
-            keep-mods = <(MOD_LALT)>;
-            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT|MOD_LGUI)>;
+            mods = <(MOD_LALT|MOD_LGUI)>;
         };
 
         mm_L: mm_L {
@@ -274,15 +274,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp A &kp F &kp K &kp S &kp N &kp S &kp K &kp SEMI &kp N8>,
+                <&macro_tap>,
+                <&kp SEMI &kp COMMA &kp D &kp H &kp D &kp SEMI &kp N2 &kp M &kp A &kp O &kp K &kp T &kp N8 &kp I &kp J &kp D &kp D &kp K &kp A &kp J &kp N4>,
                 <&macro_press>,
                 <&kp LSHFT>,
                 <&macro_tap>,
-                <&kp M &kp A &kp O &kp DOT &kp G &kp L>,
+                <&kp S &kp GT &kp D &kp O &kp P &kp S &kp S &kp V>,
                 <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N8 &kp H &kp D &kp D &kp L &kp A &kp N6 &kp SEMI &kp A &kp O &kp U &kp D>;
+                <&kp LSHFT>;
 
             label = "MS_WRKD";
         };
@@ -291,15 +290,14 @@ MAKE_HRM(lt_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp A &kp U &kp T &kp O &kp B &kp O &kp T &kp S &kp N8>,
+                <&macro_tap>,
+                <&kp S &kp W &kp E &kp D &kp E &kp S &kp N2 &kp M &kp A &kp R &kp T &kp Y &kp N8 &kp C &kp H &kp E &kp E &kp T &kp A &kp H &kp N4>,
                 <&macro_press>,
                 <&kp LSHFT>,
                 <&macro_tap>,
-                <&kp M &kp A &kp R &kp V &kp I &kp N>,
+                <&kp O &kp V &kp E &kp R &kp L &kp O &kp O &kp K>,
                 <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N8 &kp D &kp E &kp E &kp N &kp A &kp N6 &kp S &kp A &kp R &kp G &kp E>;
+                <&kp LSHFT>;
 
             label = "MS_WRKQ";
         };
