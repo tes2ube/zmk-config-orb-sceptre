@@ -20,3 +20,9 @@ include:
     shield: corne_right
   - board: nice_nano//zmk
     shield: settings_reset
+  # TEMPORARY test build: left half with Studio AND the USB debug log (second COM port).
+  # Flash corne_left-logging.uf2 to the left half to read the keyboard's own log; remove this entry afterwards.
+  - board: nice_nano//zmk
+    shield: corne_left
+    cmake-args: -DSNIPPET="studio-rpc-usb-uart;zmk-usb-logging"
+    artifact-name: corne_left-logging
